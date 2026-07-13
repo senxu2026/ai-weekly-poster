@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>森旭产研 · AI情报周报（浅色版）</title>
+<!-- 字体：使用系统原生字体栈，国内全平台可用 -->
+<style>
+@font-face{font-family:'Rajdhani';src:local('Rajdhani'),local('Arial'),local('Helvetica Neue');font-weight:500;font-style:normal}
+</style>
+<style>
+  :root{
+    --bg:#eef2f8;
+    --ink:#16203a;
+    --muted:#5c6b88;
+    --line:rgba(30,64,140,.14);
+    --cyan:#0ca5c4;
+    --blue:#2563eb;
+    --teal:#0d9488;
+    --gold:#c07c00;
+    --card:#ffffff;
+    --card2:#ffffff;
+    --shadow:0 2px 16px rgba(24,48,96,.07);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:var(--bg);}
+  body{
+    font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+    color:var(--ink);
+    width:100%;
+    margin:0 auto;
+    -webkit-font-smoothing:antialiased;
+  }
+  .poster{
+    position:relative;
+    width:100%;
+    background:
+      radial-gradient(1200px 600px at 80% -5%, rgba(37,99,235,.07), transparent 60%),
+      radial-gradient(1000px 700px at -10% 30%, rgba(13,148,136,.06), transparent 55%),
+      linear-gradient(180deg,#f5f8fd 0%,#eef3fb 45%,#f2f6fc 100%);
+    overflow:hidden;
+  }
+  /* grid texture */
+  .poster::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:
+      linear-gradient(rgba(30,64,140,.045) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(30,64,140,.045) 1px,transparent 1px);
+    background-size:44px 44px;
+    mask-image:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.12));
+  }
+  .wrap{position:relative;z-index:2;padding:0 clamp(20px,4.2vw,56px) clamp(38px,5vw,56px)}
+
+  /* ---------- HEADER ---------- */
+  .hd{position:relative;padding:clamp(34px,4.6vw,54px) 0 30px;border-bottom:1px solid var(--line)}
+  .kicker{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px rgba(12,165,196,.55)}
+  .kicker span{font-family:"Rajdhani";font-weight:700;letter-spacing:.42em;font-size:15px;color:var(--blue);text-transform:uppercase}
+  .title{font-family:"STSong","Songti SC","Noto Serif SC",serif;font-weight:900;font-size:clamp(36px,5.4vw,76px);line-height:1.04;letter-spacing:.01em;color:var(--ink)}
+  .title em{font-style:normal;color:transparent;background:linear-gradient(120deg,var(--blue),var(--cyan) 58%,var(--teal));-webkit-background-clip:text;background-clip:text}
+  .sub{display:flex;align-items:flex-end;justify-content:space-between;margin-top:22px;gap:20px;flex-wrap:wrap}
+  .sub .en{font-family:"Rajdhani";font-weight:600;font-size:20px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase}
+  .daterange{text-align:right}
+  .daterange .lbl{font-size:13px;color:var(--muted);letter-spacing:.2em;margin-bottom:4px}
+  .daterange .val{font-family:"Rajdhani";font-weight:700;font-size:34px;color:var(--ink);letter-spacing:.04em}
+  .scan{position:absolute;top:0;right:0;width:330px;height:100%;opacity:.5;pointer-events:none}
+
+  /* ---------- STAT STRIP ---------- */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:14px;margin:26px 0 34px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+  .stat::after{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:linear-gradient(var(--blue),rgba(37,99,235,0))}
+  .stat .num{font-family:"Rajdhani";font-weight:700;font-size:38px;line-height:1;color:var(--blue)}
+  .stat .num small{font-size:20px;color:var(--ink)}
+  .stat .cap{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.4}
+
+  /* ---------- LEAD ---------- */
+  .lead{background:linear-gradient(100deg,rgba(37,99,235,.07),rgba(13,148,136,.035));border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:14px;padding:22px 26px;margin-bottom:38px}
+  .lead h3{font-size:15px;letter-spacing:.2em;color:var(--blue);font-weight:700;margin-bottom:14px}
+  .lead ol{list-style:none;counter-reset:l;display:grid;gap:11px}
+  .lead li{counter-increment:l;position:relative;padding-left:40px;font-size:16.5px;line-height:1.55;color:#2b3653}
+  .lead li::before{content:counter(l);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:7px;background:rgba(37,99,235,.10);border:1px solid rgba(37,99,235,.32);color:var(--blue);font-family:"Rajdhani";font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center}
+  .lead b{color:#0f1830}
+
+  /* ---------- SECTIONS ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:20px}
+  .card{background:var(--card2);border:1px solid var(--line);border-radius:16px;padding:22px 24px 20px;position:relative;box-shadow:var(--shadow)}
+  .card.span{grid-column:1 / -1}
+  .chd{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:13px;border-bottom:1px dashed var(--line)}
+  .ico{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex:0 0 auto;background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.22)}
+  .chd h2{font-size:21px;font-weight:900;letter-spacing:.01em;color:var(--ink)}
+  .chd .tag{margin-left:auto;font-family:"Rajdhani";font-weight:700;font-size:12px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+  .item{display:flex;gap:11px;padding:10px 0;font-size:14.5px;line-height:1.52;color:#33405c;border-top:1px solid rgba(30,64,140,.08)}
+  .item:first-of-type{border-top:none}
+  .item .mk{flex:0 0 auto;margin-top:2px}
+  .item b{color:#0f1830;font-weight:700}
+  .item .ext{color:#6b7a99;font-size:13px}
+  .star{color:var(--gold);font-size:15px}
+  .bul{color:var(--blue)}
+
+  /* highlight card (算电协同) */
+  .hot{background:
+      radial-gradient(600px 200px at 90% 0%,rgba(192,124,0,.09),transparent 60%),
+      linear-gradient(120deg,rgba(13,148,136,.07),#ffffff);
+    border:1px solid rgba(13,148,136,.32)}
+  .hot .ico{background:rgba(192,124,0,.12);border-color:rgba(192,124,0,.32)}
+  .hot .chd .tag{color:var(--gold)}
+  .insight{margin-top:14px;background:rgba(13,148,136,.08);border:1px solid rgba(13,148,136,.24);border-radius:10px;padding:13px 16px;font-size:14px;line-height:1.55;color:#0c5f57}
+  .insight b{color:#0a7d6f}
+
+  .twocol{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:6px 28px}
+
+  /* ---------- FOOTER ---------- */
+  .ft{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .ft .brand{display:flex;align-items:center;gap:15px}
+  .logobox{background:#ffffff;border:1px solid var(--line);border-radius:12px;padding:10px 18px;display:flex;align-items:center;box-shadow:var(--shadow)}
+  .logobox img{height:34px;display:block}
+  .ft .bn{font-size:17px;font-weight:700;color:var(--ink)}
+  .ft .bn small{display:block;font-size:12px;color:var(--muted);font-weight:400;letter-spacing:.08em;margin-top:2px}
+  .ft .note{text-align:right;font-size:12px;color:var(--muted);line-height:1.6}
+  .disc{margin-top:16px;font-size:11.5px;color:#8090ac;line-height:1.6;text-align:center;letter-spacing:.02em;border-top:1px dashed var(--line);padding-top:14px}
+
+  /* ---------- 自适应补充：栅格已由上方 auto-fit 按容器宽度自动折行 ---------- */
+  @media (max-width:680px){
+    .scan{display:none}
+    .sub{flex-direction:column;align-items:flex-start}
+    .daterange{text-align:left}
+    .ft .note{text-align:left}
+  }
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <header class="hd">
+      <svg class="scan" viewBox="0 0 330 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#2563eb" stroke-width="1" opacity="0.32">
+          <path d="M10 40 H120 L150 70 H320"/>
+          <path d="M10 110 H80 L110 140 H230 L260 110 H320"/>
+          <path d="M40 200 H170 L200 230 H320"/>
+          <path d="M10 300 H110 L140 270 H320"/>
+        </g>
+        <g fill="#2563eb" opacity="0.55">
+          <circle cx="120" cy="40" r="4"/><circle cx="230" cy="140" r="4"/>
+          <circle cx="170" cy="200" r="4"/><circle cx="110" cy="300" r="4"/>
+          <circle cx="150" cy="70" r="3"/><circle cx="260" cy="110" r="3"/>
+        </g>
+        <g fill="#0d9488" opacity="0.7">
+          <circle cx="320" cy="70" r="5"/><circle cx="320" cy="230" r="5"/>
+        </g>
+      </svg>
+      <div class="kicker"><span class="dot"></span><span>R&amp;D INTELLIGENCE BRIEFING · 周刊</span></div>
+      <h1 class="title">森旭产研 · <em>AI情报周报</em></h1>
+      <div class="sub">
+        <div class="en">Agent · LLM · Compute · RAG · Power-Compute Synergy</div>
+        <div class="daterange">
+          <div class="lbl">本期覆盖 / COVERAGE</div>
+          <div class="val">2026.07.06 — 07.13</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- STAT STRIP -->
+    <div class="stats">
+      <div class="stat"><div class="num">5.6<small></small></div><div class="cap">OpenAI 发布 GPT-5.6 新旗舰，跑分登顶、前沿代差再拉大</div></div>
+      <div class="stat"><div class="num">1/4<small></small></div><div class="cap">Meta 付费大模型 Muse Spark 定价仅 Anthropic 四分之一</div></div>
+      <div class="stat"><div class="num">100<small>亿$</small></div><div class="cap">Meta 在加拿大建 1GW 全清洁能源 AI 数据中心</div></div>
+      <div class="stat"><div class="num">41.3<small>%</small></div><div class="cap">国产 AI 加速卡市场份额，国产替代持续提速</div></div>
+    </div>
+
+    <!-- LEAD -->
+    <div class="lead">
+      <h3>本期三条主线 / KEY THEMES</h3>
+      <ol>
+        <li><b>前沿模型军备升级 + 中美工具脱钩</b>：OpenAI 发 GPT-5.6、Meta 付费大模型压价搅局；阿里全系禁用 Claude Code，"国产可控" 在合规上再收紧。</li>
+        <li><b>算电协同持续获国家级加持</b>："十五五" 碳达峰方案首次把数据中心/AI 基建纳入控碳版图，Meta 百亿绿电数据中心落地 —— 与森旭抽蓄/电网主业同频。</li>
+        <li><b>自研芯片 + WAIC 前哨战</b>：DeepSeek、智谱先后入局自研推理芯片，华为 Atlas 950 超节点将亮相 WAIC 2026，国产算力补链提速。</li>
+      </ol>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+
+      <!-- 国外模型 -->
+      <section class="card">
+        <div class="chd"><div class="ico">🌐</div><h2>全球模型前沿</h2><div class="tag">Global LLM</div></div>
+        <div class="item"><span class="mk star">★</span><div><b>OpenAI 发布 GPT-5.6 系列</b>（7/9），在 Artificial Analysis 榜超越 Google、xAI，主打 "随宏大目标灵活扩展"。<br><span class="ext">头部把跑分优势重新拉开，前沿代差再度扩大，选型继续向少数几家集中。</span></div></div>
+        <div class="item"><span class="mk star">★</span><div><b>Meta 首推付费大模型 Muse Spark 1.1</b>（7/9），定价仅 Anthropic 的 1/4，Alexandr Wang 领衔超级智能实验室。<br><span class="ext">以低价强攻开发者市场，大模型 API 进入价格战，成本曲线加速下行。</span></div></div>
+        <div class="item"><span class="mk bul">▸</span><div><b>Google Gemini 3.5 Pro 延期至 7 月</b>，核心人才出走 OpenAI/Anthropic，Alphabet 一度蒸发约 $225B。<br><span class="ext">第一梯队洗牌，人才与市值同步向两强倾斜。</span></div></div>
+      </section>
+
+      <!-- 国产模型 -->
+      <section class="card">
+        <div class="chd"><div class="ico">🇨🇳</div><h2>国产模型崛起</h2><div class="tag">China LLM</div></div>
+        <div class="item"><span class="mk star">★</span><div><b>阿里紧急禁用 Claude Code 全系</b>：要求全员 7/10 前卸载 Anthropic 全系产品（含 Sonnet/Opus/Fable）。<br><span class="ext">中国大厂对国外 AI 工具从 "放开用" 转向 "全员禁"，"国产可控" 在合规上再收紧。</span></div></div>
+        <div class="item"><span class="mk bul">▸</span><div><b>智谱 GLM-5.2 成美企 "高价 Agent 的低价替代"</b>（The Atlantic 专文）。<br><span class="ext">国产开源持续做海外降本首选，利好我们私有化/信创底座落地。</span></div></div>
+        <div class="item"><span class="mk bul">▸</span><div><b>MiniMax 港股解禁首日一度跌 18%</b>（7/9），逾 48% 股本解禁流通。<br><span class="ext">大模型公司二级估值回调，一级热度与二级承压并存。</span></div></div>
+      </section>
+
+      <!-- Agent -->
+      <section class="card">
+        <div class="chd"><div class="ico">🤖</div><h2>Agent 落地</h2><div class="tag">Agents</div></div>
+        <div class="item"><span class="mk star">★</span><div><b>百度多款智能体应用将亮相 WAIC 2026</b>（7/17–20），"AI 从模型阶段走向应用阶段，智能体成落地主流形态"。<br><span class="ext">大厂把 Agent 作为大会主秀，竞争从拼模型转向拼落地场景。</span></div></div>
+        <div class="item"><span class="mk star">★</span><div><b>支付宝 "碰一下" 升级为 "碰设备 Agent"</b>，构建全球首个线下 AI 经营网络，百万级商家设备一次性 AI 化。<br><span class="ext">Agent 从线上走进线下商业闭环，是难得的规模化落地样本。</span></div></div>
+        <div class="item"><span class="mk bul">▸</span><div><b>Azure Functions 发布 Serverless 智能体运行时</b>：以 .agent.md 定义、接 MCP 与 1400+ 连接器。<br><span class="ext">云厂把 Agent 编排下沉为基础设施，MCP 正成事实标准接口。</span></div></div>
+      </section>
+
+      <!-- 算力 -->
+      <section class="card">
+        <div class="chd"><div class="ico">⚙️</div><h2>算力博弈</h2><div class="tag">Compute</div></div>
+        <div class="item"><span class="mk star">★</span><div><b>DeepSeek 秘密自研推理芯片</b>（路透 7/7，一年前启动），专攻大模型推理、降低对英伟达依赖；智谱亦入局自研。<br><span class="ext">头部模型公司向下游造芯延伸，"模型 + 芯片" 闭环成新终局。</span></div></div>
+        <div class="item"><span class="mk star">★</span><div><b>华为 Atlas 950 真机将亮相 WAIC</b>，国产算力迎 "超节点时代"。<br><span class="ext">国产超节点补齐大规模训练底座，算力自主可控再进一步。</span></div></div>
+        <div class="item"><span class="mk bul">▸</span><div><b>国产 AI 加速卡市场份额升至 41.3%</b>，国产替代加速、格局重塑。<br><span class="ext">供应链环境 + 政策共同驱动，国产智算芯片盈利拐点临近。</span></div></div>
+      </section>
+
+      <!-- 算电协同 重点大卡 -->
+      <section class="card span hot">
+        <div class="chd"><div class="ico">🔋</div><h2>算电协同 · AI 与电力</h2><div class="tag">★ 本期重点 / Power-Compute</div></div>
+        <div class="twocol">
+          <div class="item"><span class="mk star">★</span><div><b>国务院印发《"十五五" 碳达峰行动方案》</b>（7/9），数据中心与 AI 基建首次纳入控碳版图。<br><span class="ext">顶层政策把算力用能纳入双碳约束，绿电 + 储能配套成硬要求。</span></div></div>
+          <div class="item"><span class="mk star">★</span><div><b>Meta 投 $100 亿建加拿大 1GW 超级数据中心</b>，承诺全清洁能源供电、承担全部能源成本（7/9）。<br><span class="ext">巨头 AIDC 直接绑定清洁能源，"算力找绿电" 成全球趋势。</span></div></div>
+          <div class="item"><span class="mk bul">▸</span><div><b>"AI 的尽头是电力"：AIDC 电源产业链全解析</b>，从虚拟电厂到太空算力勾勒能源新版图。<br><span class="ext">AI 用电从后台成本升为前台战略，电力基建价值被重新定价。</span></div></div>
+          <div class="item" style="border:none"><span class="mk bul">▸</span><div><b>全国储能政策密集出台</b>，储能作为新型电力系统 "稳定器" 地位持续强化。<br><span class="ext">抽蓄/储能在调峰与消纳中的价值被政策反复抬升。</span></div></div>
+        </div>
+        <div class="insight">🧭 <b>产研视角：</b>数据中心/AI 基建被写进碳达峰版图、巨头百亿绑定绿电，正是森旭抽蓄电站 "为电网/算力做储能与调峰" 的价值锚点 —— 可继续做 "<b>蓄能智筑 + AI</b>" 对外叙事的政策级切入点。</div>
+      </section>
+
+      <!-- RAG -->
+      <section class="card">
+        <div class="chd"><div class="ico">🧠</div><h2>RAG / 长期记忆</h2><div class="tag">RAG</div></div>
+        <div class="item"><span class="mk star">★</span><div><b>Cognee：基于知识图谱实现 RAG 与 Agent 持久记忆</b>，突破纯向量相似度召回。<br><span class="ext">RAG 正与知识图谱 + 记忆融合，决定 Agent 能否走向持续学习与协作。</span></div></div>
+        <div class="item"><span class="mk bul">▸</span><div><b>小型 LLM 舍弃 68% RAG 上下文仍保留 96% 召回</b>，查询成本降约 1/3。<br><span class="ext">上下文压缩成降本关键，长文档 RAG 走向 "精调而非堆量"。</span></div></div>
+      </section>
+
+      <!-- AI编程 -->
+      <section class="card">
+        <div class="chd"><div class="ico">💻</div><h2>AI 编程 / Coding Agent</h2><div class="tag">Coding</div></div>
+        <div class="item"><span class="mk star">★</span><div><b>从 Vibe Coding 到 Spec Coding</b>：Trellis 解决 AI 编程的 "失忆" 与失控（7/12）。<br><span class="ext">规范驱动补齐可控性，编程 Agent 从 "随手写" 转向 "按规格交付"。</span></div></div>
+        <div class="item"><span class="mk bul">▸</span><div><b>AI 险 "一键删库"（rm -rf）</b>，终端权限守护类开源工具走红（7/13）。<br><span class="ext">给 Agent 完整终端权限的安全边界成刚需，护栏工具兴起。</span></div></div>
+        <div class="item"><span class="mk bul">▸</span><div><b>best-skills 开源通用 Agent Skills 合集</b>，覆盖论文与代码全流程、支持 Cursor（7/13）。<br><span class="ext">Skills 生态快速丰富，非专业开发者复用门槛进一步下探。</span></div></div>
+      </section>
+
+      <!-- 具身智能 -->
+      <section class="card">
+        <div class="chd"><div class="ico">🦾</div><h2>具身智能</h2><div class="tag">Embodied AI</div></div>
+        <div class="item"><span class="mk star">★</span><div><b>宇树科技科创板 IPO 注册生效</b>（7/6），"具身智能第一股" 临近。<br><span class="ext">头部率先打通退出通道，为赛道抬升估值锚、加速 "商业化元年"。</span></div></div>
+        <div class="item"><span class="mk bul">▸</span><div><b>具身智能扎堆 IPO，2026 被称 "商业化元年"</b>。<br><span class="ext">一级资本与二级通道同时打开，人形机器人进入规模验证期。</span></div></div>
+        <div class="item"><span class="mk bul">▸</span><div><b>车企集体 "造人"</b>：赛力斯/广汽/小鹏/比亚迪推进人形机器人研发与量产。<br><span class="ext">整车供应链外溢到具身赛道，量产能力成新竞争点。</span></div></div>
+      </section>
+
+      <!-- 政策治理 -->
+      <section class="card">
+        <div class="chd"><div class="ico">📜</div><h2>政策 / 安全治理</h2><div class="tag">Policy</div></div>
+        <div class="item"><span class="mk star">★</span><div><b>AI 治理进入 "大国时刻"</b>：华盛顿 "硅和平" 峰会扩至 24 国，与上海 WAIC 全球治理方案同台对垒（7/12）。<br><span class="ext">美主导排他性联盟与中方全球方案并行，治理规则进入多极博弈。</span></div></div>
+        <div class="item"><span class="mk bul">▸</span><div><b>清华 AI 国际治理研究院联合 IAGA 办前沿治理研讨会</b>（日内瓦，7/8）。<br><span class="ext">"安全、包容、全球协调" 成中方治理话语关键词，学界智库前置卡位。</span></div></div>
+      </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="ft">
+      <div class="brand">
+        <div class="logobox"><span style="font-family:'Rajdhani';font-weight:700;font-size:24px;color:var(--blue);letter-spacing:.06em;">SENXU</span><span style="font-size:16px;font-weight:700;color:var(--ink);margin-left:8px;">森旭服务</span></div>
+        <div class="bn">产研 · AI 情报周报<small>SENXU R&amp;D · WEEKLY AI BRIEFING</small></div>
+      </div>
+      <div class="note">信息来源：公开网络（新华网 / 财联社 / 36Kr / 华尔街见闻 / 机器之心 等）<br>仅供产研线内部参考 · 数据截至 2026.07.13</div>
+    </footer>
+
+    <div class="disc">免责声明：本周报整理自公开网络资讯，仅供内部参考，不构成任何投资、经营或决策建议；具体信息以各主体官方发布为准，如涉版权请联系删除。</div>
+
+  </div>
+</div>
+</body>
+</html>
