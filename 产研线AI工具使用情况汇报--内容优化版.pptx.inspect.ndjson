@@ -1,0 +1,159 @@
+{"kind":"deck","id":"pr/zdewec","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"","type":"master","placeholders":[{"name":"title","type":"title"},{"name":"body","type":"body"},{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"TITLE","type":"title","placeholders":[{"name":"title","type":"title"},{"name":"subtitle","type":"subtitle"},{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout2.xml","name":"OBJECT","type":"obj","placeholders":[{"name":"title","type":"title"},{"name":"body","type":"body"},{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout3.xml","name":"SECTION_HEADER","type":"secHead","placeholders":[{"name":"title","type":"title"},{"name":"body","type":"body"},{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout4.xml","name":"TWO_OBJECTS","type":"twoObj","placeholders":[{"name":"title","type":"title"},{"name":"body","type":"body"},{"name":"body","type":"body"},{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout5.xml","name":"TWO_OBJECTS_WITH_TEXT","type":"twoTxTwoObj","placeholders":[{"name":"title","type":"title"},{"name":"body","type":"body"},{"name":"body","type":"body"},{"name":"body","type":"body"},{"name":"body","type":"body"},{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout6.xml","name":"TITLE_ONLY","type":"titleOnly","placeholders":[{"name":"title","type":"title"},{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout7.xml","name":"BLANK","type":"blank","placeholders":[{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout8.xml","name":"OBJECT_WITH_CAPTION_TEXT","type":"objTx","placeholders":[{"name":"title","type":"title"},{"name":"body","type":"body"},{"name":"body","type":"body"},{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout9.xml","name":"PICTURE_WITH_CAPTION_TEXT","type":"picTx","placeholders":[{"name":"title","type":"title"},{"name":"picture","type":"picture"},{"name":"body","type":"body"},{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout10.xml","name":"VERTICAL_TEXT","type":"vertTx","placeholders":[{"name":"title","type":"title"},{"name":"body","type":"body"},{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout11.xml","name":"VERTICAL_TITLE_AND_VERTICAL_TEXT","type":"vertTitleAndTx","placeholders":[{"name":"title","type":"title"},{"name":"body","type":"body"},{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster2.xml","name":"","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout12.xml","name":"","type":"title"}
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"产研线 AI 赋能阶段成效与规模化建议","textShapes":2}
+{"kind":"textbox","id":"sh/547294r6","slide":1,"name":"AutoShape 2","text":"产研线 AI 赋能阶段成效与规模化建议","textPreview":"产研线 AI 赋能阶段成效与规模化建议","textChars":19,"textLines":1,"bbox":[106.67,240,1066.67,93.33]}
+{"kind":"shape","id":"sh/k3yl0zql","slide":1,"name":"AutoShape 3","bbox":[106.67,344.8,199.2,8]}
+{"kind":"shape","id":"sh/wn6dc7eh","slide":1,"name":"Connector 5","bbox":[106.67,599.33,1066.67,1.33]}
+{"kind":"textbox","id":"sh/sryl4zqx","slide":1,"name":"AutoShape 7","text":"汇报时间：2026年6月","textPreview":"汇报时间：2026年6月","textChars":12,"textLines":1,"bbox":[666.67,620,506.67,53.33]}
+{"kind":"notes","id":"nt/y90nupkv","slide":1,"text":""}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"AI 已覆盖产研全流程，提效证据集中在四类场景","textShapes":1}
+{"kind":"textbox","id":"sh/9072xkry","slide":2,"name":"AutoShape 2","text":"AI 已覆盖产研全流程，提效证据集中在四类场景","textPreview":"AI 已覆盖产研全流程，提效证据集中在四类场景","textChars":23,"textLines":1,"bbox":[80,66.67,1120,60]}
+{"kind":"shape","id":"sh/ozy1ofad","slide":2,"name":"AutoShape 3","bbox":[80,146.67,1120,2.67]}
+{"kind":"table","id":"tb/6hg3ylc3","slide":2,"name":"Table 4","rows":6,"cols":4,"preview":"岗位 | AI 参与环节 | 已验证结果 | 下一步验证","bbox":[80,169.33,1120,493.33]}
+{"kind":"notes","id":"nt/hwbqtkby","slide":2,"text":""}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"产品：3个原型样本均由5天降至3天，工时节省40%","textShapes":11}
+{"kind":"textbox","id":"sh/cza94vmx","slide":3,"name":"AutoShape 2","text":"产品：3个原型样本均由5天降至3天，工时节省40%","textPreview":"产品：3个原型样本均由5天降至3天，工时节省40%","textChars":25,"textLines":1,"bbox":[80,66.67,1120,60]}
+{"kind":"shape","id":"sh/d0jax03i","slide":3,"name":"AutoShape 3","bbox":[80,146.67,1120,1.33]}
+{"kind":"shape","id":"sh/943mhgre","slide":3,"name":"AutoShape 12","bbox":[81.07,182.67,306.87,386.67]}
+{"kind":"shape","id":"sh/83ulovat","slide":3,"name":"AutoShape 13","bbox":[81.07,182.67,306.87,8]}
+{"kind":"textbox","id":"sh/a5c3ql8z","slide":3,"name":"AutoShape 15","text":"40%","textPreview":"40%","textChars":3,"textLines":1,"bbox":[161.2,289.33,146.67,66.67]}
+{"kind":"textbox","id":"sh/x8nml0ra","slide":3,"name":"AutoShape 16","text":"AI 工作台","textPreview":"AI 工作台","textChars":6,"textLines":1,"bbox":[101.07,386.67,265.27,32]}
+{"kind":"textbox","id":"sh/w7ulsvqp","slide":3,"name":"AutoShape 17","text":"5天 → 3天\n节省2个工作日","textPreview":"5天 → 3天 | 节省2个工作日","textChars":15,"textLines":2,"bbox":[101.07,454.67,265.27,80]}
+{"kind":"shape","id":"sh/ja54na9g","slide":3,"name":"AutoShape 18","bbox":[474,182.67,306.87,386.67]}
+{"kind":"shape","id":"sh/i9w3u58v","slide":3,"name":"AutoShape 19","bbox":[474,182.67,306.87,8]}
+{"kind":"textbox","id":"sh/f29gbyx0","slide":3,"name":"AutoShape 21","text":"40%","textPreview":"40%","textChars":3,"textLines":1,"bbox":[554.13,289.33,146.67,66.67]}
+{"kind":"textbox","id":"sh/03ix43e5","slide":3,"name":"AutoShape 22","text":"人员管理","textPreview":"人员管理","textChars":4,"textLines":1,"bbox":[554.13,386.67,146.67,32]}
+{"kind":"textbox","id":"sh/14ryd8fq","slide":3,"name":"AutoShape 23","text":"5天 → 3天\n节省2个工作日","textPreview":"5天 → 3天 | 节省2个工作日","textChars":15,"textLines":2,"bbox":[494.87,461.47,265.27,66.6]}
+{"kind":"shape","id":"sh/6d0fytg3","slide":3,"name":"AutoShape 24","bbox":[871.8,182.67,306.87,386.67]}
+{"kind":"shape","id":"sh/re9g7yxo","slide":3,"name":"AutoShape 25","bbox":[871.8,182.67,306.87,8]}
+{"kind":"textbox","id":"sh/tgry9ofu","slide":3,"name":"AutoShape 27","text":"40%","textPreview":"40%","textChars":3,"textLines":1,"bbox":[951.93,289.33,146.67,66.67]}
+{"kind":"textbox","id":"sh/a9kfadwn","slide":3,"name":"AutoShape 28","text":"AI+BI 中台","textPreview":"AI+BI 中台","textChars":8,"textLines":1,"bbox":[951.93,386.67,146.67,32]}
+{"kind":"textbox","id":"sh/l4fi9cza","slide":3,"name":"AutoShape 23","text":"5天 → 3天\n节省2个工作日","textPreview":"5天 → 3天 | 节省2个工作日","textChars":15,"textLines":2,"bbox":[892.67,461.47,265.27,66.6]}
+{"kind":"textbox","id":"sh/k3m1g7yp","slide":3,"name":"s4-task-1-time","text":"口径：工时节省率40%；对应产出效率提升约67%","textPreview":"口径：工时节省率40%；对应产出效率提升约67%","textChars":24,"textLines":1,"bbox":[81.13,625.33,1097.53,44]}
+{"kind":"image","id":"im/4jyt0zix","slide":3,"name":"Picture 14","bbox":[212.33,216,42.67,42.67]}
+{"kind":"image","id":"im/547at4zi","slide":3,"name":"Picture 20","bbox":[606.33,216,42.67,42.67]}
+{"kind":"image","id":"im/udwrup0v","slide":3,"name":"Picture 26","bbox":[1003.93,216,42.67,42.67]}
+{"kind":"notes","id":"nt/ofy9wn61","slide":3,"text":""}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"UI：设计周期工时节省33%–65%，前端还原度达到80%","textShapes":7}
+{"kind":"textbox","id":"sh/1cj2d8b6","slide":4,"name":"AutoShape 2","text":"UI：设计周期工时节省33%–65%，前端还原度达到80%","textPreview":"UI：设计周期工时节省33%–65%，前端还原度达到80%","textChars":29,"textLines":1,"bbox":[80,66.67,1120,60]}
+{"kind":"shape","id":"sh/5ony1oj6","slide":4,"name":"Connector 3","bbox":[80,152.67,1120,1.33]}
+{"kind":"shape","id":"sh/p0batw72","slide":4,"name":"AutoShape 20","bbox":[80,180,813.33,220]}
+{"kind":"textbox","id":"sh/oz29krqh","slide":4,"name":"AutoShape 21","text":"IP形象设计周期","textPreview":"IP形象设计周期","textChars":8,"textLines":1,"bbox":[100,200,466.67,32]}
+{"kind":"shape","id":"sh/wzex4z2p","slide":4,"name":"Connector 22","bbox":[100,246.65,751.67,0.01]}
+{"kind":"textbox","id":"sh/2xkrih8b","slide":4,"name":"AutoShape 23","text":"33%–65%\n工时节省率","textPreview":"33%–65% | 工时节省率","textChars":13,"textLines":2,"bbox":[100,266.67,220,100]}
+{"kind":"shape","id":"sh/mtcfypkn","slide":4,"name":"Connector 24","bbox":[286.67,319.34,93.33,1.33]}
+{"kind":"textbox","id":"sh/gv29g7q5","slide":4,"name":"AutoShape 25","text":"传统15–20天，AI辅助后7–10天；建议按同类型任务配对核算。","textPreview":"传统15–20天，AI辅助后7–10天；建议按同类型任务配对核算。","textChars":33,"textLines":1,"bbox":[346.67,266.67,500.67,106.67]}
+{"kind":"shape","id":"sh/fu9sn2p0","slide":4,"name":"AutoShape 26","bbox":[386.67,453.33,813.33,220]}
+{"kind":"textbox","id":"sh/et0reh8f","slide":4,"name":"AutoShape 27","text":"设计交付质量","textPreview":"设计交付质量","textChars":6,"textLines":1,"bbox":[406.67,473.33,466.67,32]}
+{"kind":"shape","id":"sh/18nu50nu","slide":4,"name":"Connector 28","bbox":[406.67,520,748.07,0]}
+{"kind":"textbox","id":"sh/sri9s7q9","slide":4,"name":"AutoShape 29","text":"80%\n前端还原度","textPreview":"80% | 前端还原度","textChars":9,"textLines":2,"bbox":[406.67,546.67,220,100]}
+{"kind":"shape","id":"sh/rilczq5s","slide":4,"name":"Connector 30","bbox":[593.33,599.34,93.33,1.33]}
+{"kind":"textbox","id":"sh/jm5gze1g","slide":4,"name":"AutoShape 31","text":"同步记录修改轮次、设计返工工时与前端二次调整工时。","textPreview":"同步记录修改轮次、设计返工工时与前端二次调整工时。","textChars":25,"textLines":1,"bbox":[653.33,546.67,510.2,106.67]}
+{"kind":"notes","id":"nt/jyx0ra1s","slide":4,"text":""}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"研发：典型任务工时节省33%–50%，需扣除审查与返工","textShapes":7}
+{"kind":"textbox","id":"sh/dgbulwnm","slide":5,"name":"AutoShape 2","text":"研发：典型任务工时节省33%–50%，需扣除审查与返工","textPreview":"研发：典型任务工时节省33%–50%，需扣除审查与返工","textChars":27,"textLines":1,"bbox":[80,66.67,1120,53.33]}
+{"kind":"shape","id":"sh/fe94nm1w","slide":5,"name":"Connector 3","bbox":[80,152.67,1120,1.33]}
+{"kind":"shape","id":"sh/z2tcnm5s","slide":5,"name":"AutoShape 4","bbox":[80,186.67,5.33,32]}
+{"kind":"textbox","id":"sh/yhkbe1o7","slide":5,"name":"AutoShape 5","text":"已验证的编码场景","textPreview":"已验证的编码场景","textChars":8,"textLines":1,"bbox":[98.67,182.67,266.67,40]}
+{"kind":"shape","id":"sh/m5kbi1oj","slide":5,"name":"AutoShape 9","bbox":[80,253.33,447.27,147.73]}
+{"kind":"textbox","id":"sh/w32dkbuh","slide":5,"name":"AutoShape 10","text":"点云大屏地图交互\n4天→2天｜节省50%｜效率提升100%","textPreview":"点云大屏地图交互 | 4天→2天｜节省50%｜效率提升100%","textChars":29,"textLines":2,"bbox":[100,262.07,400.87,126.6]}
+{"kind":"shape","id":"sh/x4vedgvm","slide":5,"name":"AutoShape 11","bbox":[659.13,253.33,447.27,147.8]}
+{"kind":"textbox","id":"sh/ahkvi1cb","slide":5,"name":"AutoShape 12","text":"文件管理：6天→4天｜节省33%\n站内信：18h→12h｜节省33%","textPreview":"文件管理：6天→4天｜节省33% | 站内信：18h→12h｜节省33%","textChars":34,"textLines":2,"bbox":[680.87,262.27,400.93,126]}
+{"kind":"shape","id":"sh/kny587i9","slide":5,"name":"Connector 13","bbox":[80,424.07,1120,1.33]}
+{"kind":"shape","id":"sh/k7mxovud","slide":5,"name":"AutoShape 14","bbox":[80,451.4,5.33,32]}
+{"kind":"textbox","id":"sh/58vehgvy","slide":5,"name":"AutoShape 15","text":"净效率核算与质量护栏","textPreview":"净效率核算与质量护栏","textChars":10,"textLines":1,"bbox":[98.67,447.4,340.2,40]}
+{"kind":"shape","id":"sh/i54fmlc7","slide":5,"name":"AutoShape 16","bbox":[80,505.67,447.27,147.73]}
+{"kind":"textbox","id":"sh/sb6xsvu9","slide":5,"name":"AutoShape 18","text":"AI净工时\n生成 + 提示词 + 审查 + 修改 + 调试返工","textPreview":"AI净工时 | 生成 + 提示词 + 审查 + 修改 + 调试返工","textChars":31,"textLines":2,"bbox":[98.67,521.6,413.73,118.87]}
+{"kind":"shape","id":"sh/tcfel0vu","slide":5,"name":"AutoShape 19","bbox":[659.13,503.73,447.27,149.8]}
+{"kind":"textbox","id":"sh/hgrmpwj2","slide":5,"name":"AutoShape 20","text":"必须同步\n有效采纳率｜审查占比｜返工率｜缺陷密度","textPreview":"必须同步 | 有效采纳率｜审查占比｜返工率｜缺陷密度","textChars":24,"textLines":2,"bbox":[680.87,513.53,400.93,126.07]}
+{"kind":"notes","id":"nt/i107q5of","slide":5,"text":""}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"测试：用例设计工时由6天降至3天，质量指标需同步验证","textShapes":8}
+{"kind":"textbox","id":"sh/yhg7epsj","slide":6,"name":"AutoShape 2","text":"测试：用例设计工时由6天降至3天，质量指标需同步验证","textPreview":"测试：用例设计工时由6天降至3天，质量指标需同步验证","textChars":26,"textLines":1,"bbox":[80,66.67,1120,66.67]}
+{"kind":"shape","id":"sh/ydgnit07","slide":6,"name":"Connector 3","bbox":[80,159.33,1120,1.33]}
+{"kind":"shape","id":"sh/oryp8fah","slide":6,"name":"AutoShape 8","bbox":[754,233,8,153.27]}
+{"kind":"textbox","id":"sh/h4bupgn6","slide":6,"name":"AutoShape 10","text":"覆盖：文件管理、土方算量、CMMI5\n人工：审查、修改、返工工时\n质量：用例有效率、漏测率、逃逸率","textPreview":"覆盖：文件管理、土方算量、CMMI5 | 人工：审查、修改、返工工时 | 质量：用例有效率、漏测率、逃逸率","textChars":49,"textLines":3,"bbox":[779.53,233.07,340.67,153.2]}
+{"kind":"shape","id":"sh/v2tcn650","slide":6,"name":"AutoShape 12","bbox":[80.13,220,603.07,185.8]}
+{"kind":"shape","id":"sh/u1kbu1ov","slide":6,"name":"AutoShape 13","bbox":[80.13,213.47,603.13,10.47]}
+{"kind":"textbox","id":"sh/47mt0b6x","slide":6,"name":"AutoShape 15","text":"50%","textPreview":"50%","textChars":3,"textLines":1,"bbox":[346.8,272.93,320,80]}
+{"kind":"textbox","id":"sh/j6dcr65c","slide":6,"name":"AutoShape 16","text":"工时节省率","textPreview":"工时节省率","textChars":5,"textLines":1,"bbox":[106.8,286.27,319.93,53.33]}
+{"kind":"shape","id":"sh/i54bylor","slide":6,"name":"AutoShape 17","bbox":[80.07,431.13,282.07,173.33]}
+{"kind":"textbox","id":"sh/twfux0ne","slide":6,"name":"AutoShape 18","text":"传统模式","textPreview":"传统模式","textChars":4,"textLines":1,"bbox":[93.4,451.13,197.33,33.33]}
+{"kind":"shape","id":"sh/u907axkf","slide":6,"name":"Connector 19","bbox":[93.4,497.79,219.2,0.01]}
+{"kind":"textbox","id":"sh/cbe5g3ih","slide":6,"name":"AutoShape 20","text":"6天\n两个模块各3天","textPreview":"6天 | 两个模块各3天","textChars":10,"textLines":2,"bbox":[93.4,517.8,242.4,80]}
+{"kind":"shape","id":"sh/dcnm98zm","slide":6,"name":"AutoShape 21","bbox":[414.13,431.13,269.07,173.33]}
+{"kind":"textbox","id":"sh/qpwnet0b","slide":6,"name":"AutoShape 22","text":"AI辅助模式","textPreview":"AI辅助模式","textChars":6,"textLines":1,"bbox":[427.47,451.13,197.33,33.33]}
+{"kind":"shape","id":"sh/m5076xkj","slide":6,"name":"Connector 23","bbox":[427.47,497.13,197.33,1.33]}
+{"kind":"textbox","id":"sh/0fy5k3id","slide":6,"name":"AutoShape 24","text":"3天\n产出效率×2","textPreview":"3天 | 产出效率×2","textChars":9,"textLines":2,"bbox":[427.47,517.8,197.33,80]}
+{"kind":"notes","id":"nt/x8f69ofe","slide":6,"text":""}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"工具选型转向“场景适配 + 成本、质量与风险可控”","textShapes":12}
+{"kind":"textbox","id":"sh/cb2tkvap","slide":7,"name":"AutoShape 2","text":"工具选型转向“场景适配 + 成本、质量与风险可控”","textPreview":"工具选型转向“场景适配 + 成本、质量与风险可控”","textChars":25,"textLines":1,"bbox":[80,66.67,1120,60]}
+{"kind":"shape","id":"sh/dcbud0ra","slide":7,"name":"AutoShape 3","bbox":[80,153.33,1120,2.67]}
+{"kind":"shape","id":"sh/ydkbm5sv","slide":7,"name":"AutoShape 4","bbox":[80,213.33,266.67,8]}
+{"kind":"textbox","id":"sh/kzmdova1","slide":7,"name":"AutoShape 6","text":"产品经理","textPreview":"产品经理","textChars":4,"textLines":1,"bbox":[128,250.67,218.67,42.67]}
+{"kind":"shape","id":"sh/honq18ru","slide":7,"name":"Connector 7","bbox":[80,326,266.67,1.33]}
+{"kind":"textbox","id":"sh/eh0ba1sr","slide":7,"name":"AutoShape 8","text":"Codex / DeepSeek\nPRD、分析与原型","textPreview":"Codex / DeepSeek | PRD、分析与原型","textChars":26,"textLines":2,"bbox":[80,360,266.67,120]}
+{"kind":"textbox","id":"sh/fi9c369c","slide":7,"name":"AutoShape 9","text":"准入要求\n需求评审、事实核验、版本留痕","textPreview":"准入要求 | 需求评审、事实核验、版本留痕","textChars":19,"textLines":2,"bbox":[71.6,512,266.67,120]}
+{"kind":"shape","id":"sh/8jupo3ad","slide":7,"name":"Connector 10","bbox":[160,459.33,413.33,1.33]}
+{"kind":"shape","id":"sh/a9ojq5kz","slide":7,"name":"AutoShape 11","bbox":[380,213.33,266.67,8]}
+{"kind":"textbox","id":"sh/cbq1sv25","slide":7,"name":"AutoShape 13","text":"UI 设计","textPreview":"UI 设计","textChars":5,"textLines":1,"bbox":[428,250.67,218.67,42.67]}
+{"kind":"shape","id":"sh/sfy907ah","slide":7,"name":"Connector 14","bbox":[380,326,266.67,1.33]}
+{"kind":"textbox","id":"sh/25ojml43","slide":7,"name":"AutoShape 15","text":"Figma + 即梦\n视觉生成与组件化设计\n准入：版权、品牌规范、设计复核","textPreview":"Figma + 即梦 | 视觉生成与组件化设计 | 准入：版权、品牌规范、设计复核","textChars":37,"textLines":3,"bbox":[380,360,266.67,113.33]}
+{"kind":"shape","id":"sh/na9sz6tk","slide":7,"name":"Connector 17","bbox":[460,459.33,413.33,1.33]}
+{"kind":"shape","id":"sh/f2d0b6lc","slide":7,"name":"AutoShape 18","bbox":[680,213.33,266.67,8]}
+{"kind":"textbox","id":"sh/id4ju1oz","slide":7,"name":"AutoShape 20","text":"研发工程师","textPreview":"研发工程师","textChars":5,"textLines":1,"bbox":[728,250.67,218.67,42.67]}
+{"kind":"shape","id":"sh/betc36tg","slide":7,"name":"Connector 21","bbox":[680,326,266.67,1.33]}
+{"kind":"textbox","id":"sh/4fm1wb6p","slide":7,"name":"AutoShape 22","text":"Trae + 统一模型API\n编码、文档与代码理解","textPreview":"Trae + 统一模型API | 编码、文档与代码理解","textChars":25,"textLines":2,"bbox":[680,360,266.67,120]}
+{"kind":"shape","id":"sh/xgbu5gbm","slide":7,"name":"Connector 24","bbox":[760,459.33,413.33,1.33]}
+{"kind":"shape","id":"sh/r2dkrq5g","slide":7,"name":"AutoShape 25","bbox":[980,213.33,266.67,8]}
+{"kind":"textbox","id":"sh/d4f2t0nm","slide":7,"name":"AutoShape 27","text":"测试工程师","textPreview":"测试工程师","textChars":5,"textLines":1,"bbox":[1028,250.67,218.67,42.67]}
+{"kind":"shape","id":"sh/uponm90b","slide":7,"name":"Connector 28","bbox":[980,326,266.67,1.33]}
+{"kind":"textbox","id":"sh/f6xkvq5c","slide":7,"name":"AutoShape 29","text":"Trae + 自动化框架\n用例、脚本与报告","textPreview":"Trae + 自动化框架 | 用例、脚本与报告","textChars":21,"textLines":2,"bbox":[980,360,266.67,120]}
+{"kind":"textbox","id":"sh/ozq5szq9","slide":7,"name":"AutoShape 9","text":"准入要求\nAI代码留痕、Review、CI与安全扫描","textPreview":"准入要求 | AI代码留痕、Review、CI与安全扫描","textChars":26,"textLines":2,"bbox":[680.93,512,266.67,120]}
+{"kind":"textbox","id":"sh/p8fih03e","slide":7,"name":"AutoShape 29","text":"准入要求\n人工审查、结果复核、全过程可追溯","textPreview":"准入要求 | 人工审查、结果复核、全过程可追溯","textChars":21,"textLines":2,"bbox":[978.8,511.13,266.67,120]}
+{"kind":"image","id":"im/sny5sji5","slide":7,"name":"Picture 5","bbox":[80,253.33,37.33,37.33]}
+{"kind":"image","id":"im/7mpojehk","slide":7,"name":"Picture 12","bbox":[380,253.33,37.33,37.33]}
+{"kind":"image","id":"im/6lgnq90z","slide":7,"name":"Picture 19","bbox":[680,253.33,37.33,37.33]}
+{"kind":"image","id":"im/5kn6h4ze","slide":7,"name":"Picture 26","bbox":[980,253.33,37.33,37.33]}
+{"kind":"notes","id":"nt/gnmp4jqx","slide":7,"text":""}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":8,"title":"下一阶段：用统一SOP把局部提效转化为可复制的净收益","textShapes":11}
+{"kind":"textbox","id":"sh/18byd4zy","slide":8,"name":"AutoShape 2","text":"下一阶段：用统一SOP把局部提效转化为可复制的净收益","textPreview":"下一阶段：用统一SOP把局部提效转化为可复制的净收益","textChars":26,"textLines":1,"bbox":[80,66.67,1120,60]}
+{"kind":"shape","id":"sh/g72x4zyd","slide":8,"name":"AutoShape 3","bbox":[80,146.67,1120,2.67]}
+{"kind":"shape","id":"sh/ri9g7uhw","slide":8,"name":"AutoShape 4","bbox":[80,213.33,213.33,360]}
+{"kind":"shape","id":"sh/6h0fypgb","slide":8,"name":"AutoShape 5","bbox":[80,213.33,213.33,5.33]}
+{"kind":"textbox","id":"sh/tkby9kzm","slide":8,"name":"AutoShape 6","text":"01 产品经理","textPreview":"01 产品经理","textChars":7,"textLines":1,"bbox":[93.33,233.33,186.67,40]}
+{"kind":"shape","id":"sh/y5sbed4j","slide":8,"name":"Connector 7","bbox":[93.34,286,186.67,1.33]}
+{"kind":"textbox","id":"sh/je9g3ahk","slide":8,"name":"AutoShape 8","text":"输入：业务目标与约束\n\nAI产出：PRD、交互原型\n\n质量闸门：需求评审、一次通过率","textPreview":"输入：业务目标与约束 |  | AI产出：PRD、交互原型 |  | 质量闸门：需求评审、一次通过率","textChars":42,"textLines":5,"bbox":[93.33,306.67,186.67,246.67]}
+{"kind":"shape","id":"sh/id0fu50z","slide":8,"name":"AutoShape 9","bbox":[314.67,213.33,213.33,360]}
+{"kind":"shape","id":"sh/o7ydoret","slide":8,"name":"AutoShape 10","bbox":[314.67,213.33,213.33,5.33]}
+{"kind":"textbox","id":"sh/98rehwve","slide":8,"name":"AutoShape 11","text":"02 UI 设计","textPreview":"02 UI 设计","textChars":8,"textLines":1,"bbox":[328,233.33,186.67,40]}
+{"kind":"shape","id":"sh/b2hs3il8","slide":8,"name":"Connector 12","bbox":[328,286,186.67,1.33]}
+{"kind":"textbox","id":"sh/n6pwfmd8","slide":8,"name":"AutoShape 13","text":"输入：原型与品牌规范\n\nAI产出：高保真稿、组件\n\n质量闸门：修改轮次、前端还原度","textPreview":"输入：原型与品牌规范 |  | AI产出：高保真稿、组件 |  | 质量闸门：修改轮次、前端还原度","textChars":41,"textLines":5,"bbox":[328,306.67,186.67,246.67]}
+{"kind":"shape","id":"sh/0jydkreh","slide":8,"name":"AutoShape 14","bbox":[549.33,213.33,213.33,360]}
+{"kind":"shape","id":"sh/1k7edwv2","slide":8,"name":"AutoShape 15","bbox":[549.33,213.33,213.33,5.33]}
+{"kind":"textbox","id":"sh/ehgvihwr","slide":8,"name":"AutoShape 16","text":"03 前端开发","textPreview":"03 前端开发","textChars":7,"textLines":1,"bbox":[562.67,233.33,186.67,40]}
+{"kind":"shape","id":"sh/fq1obeps","slide":8,"name":"Connector 17","bbox":[562.67,286,186.67,1.33]}
+{"kind":"textbox","id":"sh/kfixwbe1","slide":8,"name":"AutoShape 18","text":"输入：设计稿与交互逻辑\n\nAI产出：页面、组件、联调代码\n\n质量闸门：采纳率、Review、CI","textPreview":"输入：设计稿与交互逻辑 |  | AI产出：页面、组件、联调代码 |  | 质量闸门：采纳率、Review、CI","textChars":48,"textLines":5,"bbox":[562.67,306.67,186.67,246.67]}
+{"kind":"shape","id":"sh/lgbepgvm","slide":8,"name":"AutoShape 19","bbox":[784,213.33,213.33,360]}
+{"kind":"shape","id":"sh/tw7e9gnq","slide":8,"name":"AutoShape 20","bbox":[784,213.33,213.33,5.33]}
+{"kind":"textbox","id":"sh/svydgb65","slide":8,"name":"AutoShape 21","text":"04 后端开发","textPreview":"04 后端开发","textChars":7,"textLines":1,"bbox":[797.33,233.33,186.67,40]}
+{"kind":"shape","id":"sh/6187yp8b","slide":8,"name":"Connector 22","bbox":[797.34,286,186.67,1.33]}
+{"kind":"textbox","id":"sh/6twve1oz","slide":8,"name":"AutoShape 23","text":"输入：业务规则与接口约定\n\nAI产出：业务代码、API、文档\n\n质量闸门：单测、安全扫描、缺陷","textPreview":"输入：业务规则与接口约定 |  | AI产出：业务代码、API、文档 |  | 质量闸门：单测、安全扫描、缺陷","textChars":47,"textLines":5,"bbox":[797.33,306.67,186.67,246.67]}
+{"kind":"shape","id":"sh/5sne5wne","slide":8,"name":"AutoShape 24","bbox":[1013.33,213.33,213.33,360]}
+{"kind":"shape","id":"sh/kredcr6t","slide":8,"name":"AutoShape 25","bbox":[1013.33,213.33,213.33,5.33]}
+{"kind":"textbox","id":"sh/jq5w365o","slide":8,"name":"AutoShape 26","text":"05 测试验收","textPreview":"05 测试验收","textChars":7,"textLines":1,"bbox":[1026.67,233.33,186.67,40]}
+{"kind":"shape","id":"sh/kjmdwbit","slide":8,"name":"Connector 27","bbox":[1026.67,286,186.67,1.33]}
+{"kind":"textbox","id":"sh/x4ne1wni","slide":8,"name":"AutoShape 28","text":"输入：PRD与可测版本\n\nAI产出：用例、脚本、报告\n\n质量闸门：有效率、漏测率、逃逸率","textPreview":"输入：PRD与可测版本 |  | AI产出：用例、脚本、报告 |  | 质量闸门：有效率、漏测率、逃逸率","textChars":44,"textLines":5,"bbox":[1026.67,306.67,186.67,246.67]}
+{"kind":"notes","id":"nt/fu1gfa1s","slide":8,"text":""}
