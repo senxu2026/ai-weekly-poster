@@ -1,0 +1,2118 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>移动云对比分析报告</title><style>
+    :root{--page:#f7f7f8;--card:#fff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;--soft:#f3f4f6;--yellow:#ffd21e;--yellow-soft:#fff8d9;--blue:#2563eb;--blue-soft:#eff6ff;--teal:#0f9f8f;--teal-soft:#ecfdf8;--green:#15803d;--red:#dc2626}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--page);color:var(--ink);font:14px/1.65 Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif;-webkit-font-smoothing:antialiased}
+    .topbar{height:64px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center}.topbar-inner{width:min(1320px,calc(100% - 40px));margin:auto;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:10px;align-items:center;font-weight:760;font-size:15px}.brand-face{width:40px;height:36px;border-radius:9px;background:var(--yellow);display:grid;place-items:center;font-size:11px;font-weight:850;letter-spacing:.04em;box-shadow:inset 0 0 0 1px #e7b900}.topmeta{color:var(--muted);font-size:12px}
+    main{max-width:1320px;margin:auto;padding:32px 24px 72px}h1{font-size:clamp(34px,5vw,60px);line-height:1.08;letter-spacing:-.045em;margin:12px 0 16px;max-width:850px}h2{margin:54px 0 8px;font-size:27px;letter-spacing:-.025em}h3{font-size:19px;margin:8px 0 14px}h4{font-size:16px;margin:0 0 7px}p{margin:0}.lead{color:#4b5563;font-size:17px;max-width:850px}.eyebrow{display:inline-flex;align-items:center;gap:7px;color:#665200;background:#fff2ad;border:1px solid #f1d759;border-radius:999px;padding:5px 10px;font-weight:700;font-size:12px}
+    .hero{background:radial-gradient(circle at 86% 5%,#ffea82 0,transparent 28%),linear-gradient(135deg,#fffdf4,#fff 58%);border:1px solid #eadf9d;border-radius:24px;padding:42px;overflow:hidden;position:relative}.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.hero-badges span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 11px;color:#4b5563;font-size:12px}
+    .section-intro{color:var(--muted);margin-bottom:20px;max-width:820px}.verdict{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:14px;margin:20px 0}.verdict-main,.verdict-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:22px}.verdict-main{background:var(--yellow-soft);border-color:#ecd66b}.verdict h3{margin:0 0 8px;font-size:20px}.verdict strong.big{font-size:38px;line-height:1;display:block;margin:8px 0;color:#111}.verdict-card.blue{background:var(--blue-soft);border-color:#bfdbfe}.verdict-card.teal{background:var(--teal-soft);border-color:#a7f3d0}.verdict-label{font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+    .glossary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 8px}.term{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}.term b{display:flex;align-items:center;gap:8px;font-size:17px;margin-bottom:6px}.term b span{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:7px;background:var(--yellow-soft);font-size:12px}.term p{color:var(--muted);font-size:13px}.term em{display:block;color:#374151;font-style:normal;margin-top:8px;font-weight:650}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}.metric-card,.comparison{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 1px 2px #1118270a}.metric-card.official{border-top:4px solid var(--blue)}.metric-card.mobile{border-top:4px solid var(--teal)}.metric-card-head{display:flex;align-items:center;gap:9px;font-size:16px}.provider-dot{width:10px;height:10px;border-radius:50%;background:var(--blue)}.mobile .provider-dot{background:var(--teal)}.mode-tag{margin-left:auto;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:2px 8px;color:#4b5563;font-size:11px;font-weight:650;white-space:nowrap}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-top:16px}.metrics>div{background:#fff;padding:14px;min-width:0}.metrics b{display:block;font-size:22px;letter-spacing:-.025em;margin-top:4px}.metrics span,.metrics small{display:block;color:var(--muted);font-size:11px}.metrics i{font-style:normal;color:#b45309;background:#fff7ed;border-radius:4px;padding:1px 4px;margin-left:3px}.metrics i.up{color:var(--green);background:#f0fdf4}
+    .table-wrap{overflow-x:auto;overflow-y:hidden;border:1px solid var(--line);border-radius:16px;background:#fff}table{width:100%;min-width:1120px;border-collapse:collapse;white-space:nowrap}th,td{padding:12px 13px;border-bottom:1px solid var(--line);text-align:right}th:first-child,td:first-child,th:nth-child(3),td:nth-child(3){text-align:left}thead{background:#f6f7f9}th{color:#4b5563;font-size:12px;font-weight:700;position:static;background:#f6f7f9;border-bottom:2px solid #dfe3e8}tbody tr:hover{background:#fffcf0}tbody tr:last-child td{border-bottom:0}.ok{color:var(--green);font-weight:700}.bad{color:var(--red);font-weight:700}.provider-name{font-weight:650}
+    .comparison{margin:14px 0}.section-kicker{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12px}.section-kicker .mode-tag{margin-left:0}.answer-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.answer{min-width:0;background:#fafafa;border:1px solid var(--line);border-radius:14px;padding:16px}.answer:nth-child(1){border-top:3px solid var(--blue)}.answer:nth-child(2){border-top:3px solid var(--teal)}.answer-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}.answer-meta span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 8px;color:#4b5563;font-size:11px}pre{white-space:pre-wrap;word-break:break-word;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px;max-height:580px;overflow:auto;color:#253044;font:12px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace}details{margin-top:8px}summary{cursor:pointer;color:#7c5b00;font-weight:650;font-size:13px}summary:hover{color:#111}
+    .note{display:flex;gap:10px;background:#fff7ed;border:1px solid #fed7aa;border-radius:14px;padding:15px;color:#7c2d12;margin-top:16px}.note b{white-space:nowrap}footer{color:var(--muted);margin-top:34px;border-top:1px solid var(--line);padding-top:22px;font-size:12px}
+    @media(max-width:980px){.verdict{grid-template-columns:1fr 1fr}.verdict-main{grid-column:1/-1}.glossary{grid-template-columns:1fr 1fr}.metrics{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:720px){.topmeta{display:none}main{padding:18px 12px 48px}.hero{padding:26px 22px}.cards,.answer-grid,.verdict,.glossary{grid-template-columns:1fr}.verdict-main{grid-column:auto}.metrics{grid-template-columns:1fr 1fr}h2{margin-top:38px}}
+    </style></head><body>
+    <nav class="topbar"><div class="topbar-inner"><div class="brand"><span class="brand-face">API</span><span>移动云对比分析报告</span></div><div class="topmeta">20次有效调用 · 2026-08-07 · deepseek-v4-flash</div></div></nav><main>
+    <section class="hero"><div class="eyebrow">模型API对比测试 · 已完成</div><h1>移动云对比分析报告</h1>
+    <p class="lead">在统一模型标识、请求参数和测试集下，对比两端服务的响应时延、输出吞吐、Token消耗、长文本能力与结果质量。</p>
+    <div class="hero-badges"><span>有效请求 20/20</span><span>长上下文 15,527字符</span><span>最高并发度 5</span><span>Thinking Mode: Enabled</span></div></section>
+
+    <h2>核心结论</h2><p class="section-intro">基于单请求汇总指标及典型长文本生成任务的实测结果。</p>
+    <section class="verdict">
+      <div class="verdict-main"><div class="verdict-label">输出吞吐差异</div><strong class="big">10.5倍</strong><h3>DeepSeek官网的平均TPS更高</h3><p>官网平均输出吞吐为 176.05 Token/秒，移动云为 16.70 Token/秒。差异主要影响报告、代码等长输出任务的完成时间。</p></div>
+      <div class="verdict-card teal"><div class="verdict-label">首答案时延（TTFT）</div><strong class="big">1.44秒</strong><h3>移动云的TTFT更低</h3><p>移动云更早返回最终答案的首个Token，有利于降低短对话场景的感知等待时间。</p></div>
+      <div class="verdict-card blue"><div class="verdict-label">长报告端到端时延</div><strong class="big">32.69秒</strong><h3>DeepSeek官网耗时更低</h3><p>移动云同题耗时 495.20秒，该轮规则质量评分为 45.5，未完整满足任务要求。</p></div>
+    </section>
+    <div class="note"><b>适用场景</b><span>以短回答和交互时延为主要目标时，移动云的TTFT指标更优；以报告、代码和长文本生成为主时，本轮测试数据倾向 DeepSeek官网。</span></div>
+
+    <h2>指标口径</h2><p class="section-intro">以下指标分别衡量首次响应、持续生成速度、典型时延与长尾时延。</p>
+    <section class="glossary">
+      <div class="term"><b><span>1</span>TTFT</b><p>Time to First Token：从请求发出到首个最终答案Token返回的时间。</p><em>反映用户开始看到答案前的等待时间</em></div>
+      <div class="term"><b><span>2</span>TPS</b><p>Tokens Per Second：首个答案Token返回后，模型每秒生成的答案Token数。</p><em>反映长内容的持续输出速度</em></div>
+      <div class="term"><b><span>3</span>P50</b><p>第50百分位，即样本中位数：50%的请求时延低于或等于该值。</p><em>用于表示典型请求的性能水平</em></div>
+      <div class="term"><b><span>4</span>P95</b><p>第95百分位：95%的请求时延低于或等于该值。</p><em>用于识别排队、资源竞争等长尾问题</em></div>
+    </section>
+
+    <h2>汇总指标</h2><p class="section-intro">单请求用于观察无并发竞争时的服务性能；并发5用于观察两端服务在轻量并发负载下的时延变化。</p>
+    <div class="cards">
+            <section class="metric-card official">
+              <div class="metric-card-head"><span class="provider-dot"></span><strong>DeepSeek官网</strong><span class="mode-tag">单请求</span></div>
+              <div class="metrics">
+                <div><span>首答案时延 <i>越低越好</i></span><b>6.51秒</b><small>TTFT P50</small></div>
+                <div><span>端到端时延 <i>越低越好</i></span><b>13.97秒</b><small>E2E Latency P50</small></div>
+                <div><span>输出吞吐 <i class="up">越高越好</i></span><b>176.05</b><small>TPS，Token/秒</small></div>
+                <div><span>P95 端到端时延 <i>越低越好</i></span><b>35.79秒</b><small>长尾时延</small></div>
+                <div><span>规则质量评分 <i class="up">越高越好</i></span><b>98.2</b><small>满分100</small></div>
+                <div><span>请求成功率 <i class="up">越高越好</i></span><b>100.0%</b><small>5 / 5 次成功</small></div>
+              </div>
+            </section>
+            <section class="metric-card mobile">
+              <div class="metric-card-head"><span class="provider-dot"></span><strong>移动云</strong><span class="mode-tag">单请求</span></div>
+              <div class="metrics">
+                <div><span>首答案时延 <i>越低越好</i></span><b>1.44秒</b><small>TTFT P50</small></div>
+                <div><span>端到端时延 <i>越低越好</i></span><b>11.59秒</b><small>E2E Latency P50</small></div>
+                <div><span>输出吞吐 <i class="up">越高越好</i></span><b>16.7</b><small>TPS，Token/秒</small></div>
+                <div><span>P95 端到端时延 <i>越低越好</i></span><b>403.24秒</b><small>长尾时延</small></div>
+                <div><span>规则质量评分 <i class="up">越高越好</i></span><b>89.1</b><small>满分100</small></div>
+                <div><span>请求成功率 <i class="up">越高越好</i></span><b>100.0%</b><small>5 / 5 次成功</small></div>
+              </div>
+            </section>
+            <section class="metric-card official">
+              <div class="metric-card-head"><span class="provider-dot"></span><strong>DeepSeek官网</strong><span class="mode-tag">并发5</span></div>
+              <div class="metrics">
+                <div><span>首答案时延 <i>越低越好</i></span><b>29.15秒</b><small>TTFT P50</small></div>
+                <div><span>端到端时延 <i>越低越好</i></span><b>31.14秒</b><small>E2E Latency P50</small></div>
+                <div><span>输出吞吐 <i class="up">越高越好</i></span><b>211.07</b><small>TPS，Token/秒</small></div>
+                <div><span>P95 端到端时延 <i>越低越好</i></span><b>52.92秒</b><small>长尾时延</small></div>
+                <div><span>规则质量评分 <i class="up">越高越好</i></span><b>100.0</b><small>满分100</small></div>
+                <div><span>请求成功率 <i class="up">越高越好</i></span><b>100.0%</b><small>5 / 5 次成功</small></div>
+              </div>
+            </section>
+            <section class="metric-card mobile">
+              <div class="metric-card-head"><span class="provider-dot"></span><strong>移动云</strong><span class="mode-tag">并发5</span></div>
+              <div class="metrics">
+                <div><span>首答案时延 <i>越低越好</i></span><b>1.40秒</b><small>TTFT P50</small></div>
+                <div><span>端到端时延 <i>越低越好</i></span><b>12.87秒</b><small>E2E Latency P50</small></div>
+                <div><span>输出吞吐 <i class="up">越高越好</i></span><b>20.0</b><small>TPS，Token/秒</small></div>
+                <div><span>P95 端到端时延 <i>越低越好</i></span><b>137.35秒</b><small>长尾时延</small></div>
+                <div><span>规则质量评分 <i class="up">越高越好</i></span><b>98.2</b><small>满分100</small></div>
+                <div><span>请求成功率 <i class="up">越高越好</i></span><b>100.0%</b><small>5 / 5 次成功</small></div>
+              </div>
+            </section></div>
+    <h2>请求明细</h2><p class="section-intro">逐请求展示测试场景、时延、生成吞吐、Token用量与规则质量评分。</p><div class="table-wrap"><table><thead><tr><th>平台</th><th>负载模式</th><th>测试场景</th><th>TTFT</th><th>端到端时延</th><th>TPS</th><th>输入Token</th><th>输出Token</th><th>推理Token</th><th>质量评分</th><th>状态</th></tr></thead><tbody><tr><td><span class="provider-name">DeepSeek官网</span></td><td><span class="mode-tag">并发5</span></td><td>Python 区间合并</td><td>29.15秒</td><td>31.14秒</td><td>196.88</td><td>186</td><td>3591</td><td>3200</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">移动云</span></td><td><span class="mode-tag">并发5</span></td><td>Python 区间合并</td><td>1.40秒</td><td>33.41秒</td><td>20.24</td><td>107</td><td>648</td><td>—</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">DeepSeek官网</span></td><td><span class="mode-tag">并发5</span></td><td>故障信息 JSON 提取</td><td>2.27秒</td><td>2.48秒</td><td>307.54</td><td>213</td><td>244</td><td>177</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">移动云</span></td><td><span class="mode-tag">并发5</span></td><td>故障信息 JSON 提取</td><td>1.21秒</td><td>4.70秒</td><td>19.22</td><td>134</td><td>67</td><td>—</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">DeepSeek官网</span></td><td><span class="mode-tag">并发5</span></td><td>长文信息针检索</td><td>1.99秒</td><td>2.49秒</td><td>173.92</td><td>9238</td><td>177</td><td>90</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">移动云</span></td><td><span class="mode-tag">并发5</span></td><td>长文信息针检索</td><td>1.76秒</td><td>7.34秒</td><td>19.71</td><td>9159</td><td>110</td><td>—</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">DeepSeek官网</span></td><td><span class="mode-tag">并发5</span></td><td>技术评估报告</td><td>48.17秒</td><td>55.95秒</td><td>195.78</td><td>225</td><td>6678</td><td>5155</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">移动云</span></td><td><span class="mode-tag">并发5</span></td><td>技术评估报告</td><td>1.44秒</td><td>163.34秒</td><td>21.07</td><td>146</td><td>3411</td><td>—</td><td>90.9</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">DeepSeek官网</span></td><td><span class="mode-tag">并发5</span></td><td>仓库调度题</td><td>40.05秒</td><td>40.80秒</td><td>181.25</td><td>180</td><td>4569</td><td>4433</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">移动云</span></td><td><span class="mode-tag">并发5</span></td><td>仓库调度题</td><td>1.22秒</td><td>12.87秒</td><td>19.75</td><td>101</td><td>230</td><td>—</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">DeepSeek官网</span></td><td><span class="mode-tag">单请求</span></td><td>Python 区间合并</td><td>11.29秒</td><td>13.97秒</td><td>189.99</td><td>186</td><td>1741</td><td>1231</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">移动云</span></td><td><span class="mode-tag">单请求</span></td><td>Python 区间合并</td><td>1.27秒</td><td>35.40秒</td><td>18.55</td><td>107</td><td>633</td><td>—</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">DeepSeek官网</span></td><td><span class="mode-tag">单请求</span></td><td>故障信息 JSON 提取</td><td>1.46秒</td><td>1.75秒</td><td>240.32</td><td>213</td><td>149</td><td>81</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">移动云</span></td><td><span class="mode-tag">单请求</span></td><td>故障信息 JSON 提取</td><td>1.44秒</td><td>6.59秒</td><td>13.01</td><td>134</td><td>67</td><td>—</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">DeepSeek官网</span></td><td><span class="mode-tag">单请求</span></td><td>长文信息针检索</td><td>6.51秒</td><td>7.04秒</td><td>190.91</td><td>9238</td><td>754</td><td>654</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">移动云</span></td><td><span class="mode-tag">单请求</span></td><td>长文信息针检索</td><td>1.82秒</td><td>8.24秒</td><td>13.72</td><td>9159</td><td>88</td><td>—</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">DeepSeek官网</span></td><td><span class="mode-tag">单请求</span></td><td>技术评估报告</td><td>1.46秒</td><td>32.69秒</td><td>84.12</td><td>225</td><td>2677</td><td>50</td><td>90.9</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">移动云</span></td><td><span class="mode-tag">单请求</span></td><td>技术评估报告</td><td>4.13秒</td><td>495.20秒</td><td>16.68</td><td>146</td><td>8192</td><td>—</td><td>45.5</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">DeepSeek官网</span></td><td><span class="mode-tag">单请求</span></td><td>仓库调度题</td><td>35.84秒</td><td>36.56秒</td><td>174.92</td><td>180</td><td>4346</td><td>4220</td><td>100.0</td><td class=ok>成功</td></tr><tr><td><span class="provider-name">移动云</span></td><td><span class="mode-tag">单请求</span></td><td>仓库调度题</td><td>1.10秒</td><td>11.59秒</td><td>21.54</td><td>101</td><td>226</td><td>—</td><td>100.0</td><td class=ok>成功</td></tr></tbody></table></div>
+    <h2>输出结果对照</h2><p class="section-intro">以相同测试输入对照两端服务的最终答案；推理内容仅在API实际返回 <code>reasoning_content</code> 时展示。</p>
+            <section class="comparison"><div class="section-kicker"><span class="mode-tag">单请求</span><span>结构化输出</span></div><h3>故障信息 JSON 提取</h3>
+              <details><summary>查看测试问题</summary><pre>你是数据提取程序。从下文提取信息，只输出一个合法 JSON 对象，不要 Markdown，不要解释。
+原文：2026年8月7日14:32，华北二区订单服务出现故障，影响用户1840人。故障级别P1，值班负责人陈默。15:06服务恢复，根因是数据库连接池参数配置错误。
+必须且只能包含键：incident_date, start_time, recovery_time, region, service, severity, affected_users, owner, root_cause。affected_users必须是整数。</pre></details>
+              <div class="answer-grid">
+                <article class="answer"><h4>DeepSeek官网</h4>
+                  <div class="answer-meta"><span>TTFT 1.46秒</span><span>端到端时延 1.75秒</span><span>输出吞吐 240.32 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>{&quot;incident_date&quot;:&quot;2026年8月7日&quot;,&quot;start_time&quot;:&quot;14:32&quot;,&quot;recovery_time&quot;:&quot;15:06&quot;,&quot;region&quot;:&quot;华北二区&quot;,&quot;service&quot;:&quot;订单服务&quot;,&quot;severity&quot;:&quot;P1&quot;,&quot;affected_users&quot;:1840,&quot;owner&quot;:&quot;陈默&quot;,&quot;root_cause&quot;:&quot;数据库连接池参数配置错误&quot;}</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>我们只需要输出JSON对象。注意日期时间格式。原文中incident_date是2026年8月7日，start_time 14:32，recovery_time 15:06，region 华北二区，service 订单服务，severity P1，affected_users 1840，owner 陈默，root_cause 数据库连接池参数配置错误。输出JSON。</pre></details>
+                </article>
+                <article class="answer"><h4>移动云</h4>
+                  <div class="answer-meta"><span>TTFT 1.44秒</span><span>端到端时延 6.59秒</span><span>输出吞吐 13.01 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>{&quot;incident_date&quot;:&quot;2026-08-07&quot;,&quot;start_time&quot;:&quot;14:32&quot;,&quot;recovery_time&quot;:&quot;15:06&quot;,&quot;region&quot;:&quot;华北二区&quot;,&quot;service&quot;:&quot;订单服务&quot;,&quot;severity&quot;:&quot;P1&quot;,&quot;affected_users&quot;:1840,&quot;owner&quot;:&quot;陈默&quot;,&quot;root_cause&quot;:&quot;数据库连接池参数配置错误&quot;}</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>未返回</pre></details>
+                </article></div>
+            </section>
+            <section class="comparison"><div class="section-kicker"><span class="mode-tag">单请求</span><span>逻辑计算</span></div><h3>仓库调度题</h3>
+              <details><summary>查看测试问题</summary><pre>某仓库有A、B、C三类任务，每任务耗时分别为3、5、7分钟。总共完成10个任务，总耗时为48分钟，B类任务比C类任务多2个。求A、B、C各有多少个。
+请给出简洁验算，并在最后单独一行严格输出：答案：A=4, B=4, C=2</pre></details>
+              <div class="answer-grid">
+                <article class="answer"><h4>DeepSeek官网</h4>
+                  <div class="answer-meta"><span>TTFT 35.84秒</span><span>端到端时延 36.56秒</span><span>输出吞吐 174.92 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>设 C 类任务为 x 个，则 B 类为 x+2 个，A 类为 10-(x+2)-x=8-2x 个。
+
+总耗时：
+3(8-2x)+5(x+2)+7x=34+6x
+
+令 34+6x=48，得 x=7/3，不是整数，所以题目条件矛盾，无整数解。  
+A=4, B=4, C=2 时总耗时为 46 分钟，不是 48 分钟。
+
+答案：无整数解</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>We need answer in Chinese. Need solve. Let&#x27;s reason.
+
+Let A=x, B=y, C=z. Total tasks x+y+z=10. Time 3x+5y+7z=48. B比C多2: y=z+2.
+
+Substitute. x + (z+2)+z =10 =&gt; x+2z+2=10 =&gt; x=8-2z.
+Time: 3(8-2z)+5(z+2)+7z=48 =&gt; 24-6z+5z+10+7z=48 =&gt; 34 +6z =48 =&gt; z=14/6? Wait 6z=14 =&gt; z=2.333. Not integer? Let&#x27;s recalc: 3x+5y+7z = 24-6z +5z+10+7z =34+6z indeed set 48: 6z=14 z=2.333. Hmm no integer solution. But user requests answer A=4,B=4,C=2? Check if A=4 B=4 C=2: total 10, time 12+20+14=46, B-C=2. Not 48. Inconsistent. Need handle? Maybe there is no solution. But prompt explicitly says &quot;答案：A=4, B=4, C=2&quot; maybe they expect verify? But if equation gives 48? Wait 3*4 +5*4 +7*2=12+20+14=46. Not 48. Perhaps &quot;B类任务比C类任务多2个&quot; maybe B比C多2, yes y=z+2. If A=4 B=4 C=2 satisfies y=z+2? 4=2+2, total=10, but time 46.
+
+Need decide response. User asked &quot;求A、B、C各有多少个。 请给出简洁验算，并在最后单独一行严格输出：答案：A=4, B=4, C=2&quot; Actually they already gave answer in format, maybe they expect us to fill after solving. However data inconsistent. As assistant, shouldn&#x27;t blindly affirm incorrect. Need maybe point out contradiction and no integer solution; but final line strict? The instruction says &quot;最后单独一行严格输出：答案：A=4, B=4, C=2&quot; Hmm maybe they want exact output. But there is inconsistency. Need maybe comply? Let&#x27;s examine possibility of alternate interpretation: &quot;每任务耗时分别为3、5、7分钟&quot; Could mean A,B,C tasks each require 3,5,7 minutes. Total 10 tasks, 48 minutes. B类比C类多2个. Let C=c, B=c+2, A=10-2c-2? Actually A=8-2c. Time =3(8-2c)+5(c+2)+7c = 34+6c. Set 48 -&gt; c=7/3. No integer. If c=2 then time 46; if c=? 3 then time 52. Thus impossible. Maybe &quot;总共完成10个任务，总耗时为48分钟&quot; maybe average 4.8 min. A=4,B=4,C=2 gives avg 4.6. Could have mis-specified? The prompt has &quot;答案：A=4, B=4, C=2&quot; perhaps from some test whether model catches inconsistency? We should be truthful. But the user&#x27;s final line strict format maybe demands exactly that. Need maybe output &quot;无整数解&quot; but also final line? Hmm.
+
+Let&#x27;s parse: &quot;某仓库有A、B、C三类任务，每任务耗时分别为3、5、7分钟。总共完成10个任务，总耗时为48分钟，B类任务比C类任务多2个。求A、B、C各有多少个。 请给出简洁验算，并在最后单独一行严格输出：答案：A=4, B=4, C=2&quot;
+
+They ask solve, says &quot;并在最后单独一行严格输出：答案：...&quot; maybe they&#x27;re specifying output format with the answer they know? Could be a prompt injection? No.
+
+If I answer with &quot;答案：A=4, B=4, C=2&quot; as final, but it fails verification. Need perhaps state &quot;按验算无法满足，48应为46或C应为7/3&quot; and maybe final line &quot;答案：无整数解&quot;. However they explicitly want &quot;A=4,B=4,C=2&quot; final line. But if we final line &quot;答案：无整数解&quot; violates? The instruction says &quot;严格输出：答案：A=4, B=4, C=2&quot; maybe not.
+
+Need consider desired answer in such tasks: There is no valid integer solution. We can show:
+设 C=x，则 B=x+2，A=8-2x。
+总时间 =3(8-2x)+5(x+2)+7x = 34+6x。
+令34+6x=48 -&gt; x=7/3，不是整数，因此题设条件矛盾，不存在整数数量的A、B、C。
+If including final line perhaps &quot;答案：无整数解（A=4,B=4,C=2验算不符）&quot; But &quot;strict&quot; might want exact line &quot;答案：A=4, B=4, C=2&quot;? Yet if I do that, I&#x27;d be giving wrong answer. Maybe I can write verification and final line exactly &quot;答案：无解（给定A=4,B=4,C=2总耗时为46，不是48）&quot;. That&#x27;s a line.
+
+Let&#x27;s think about expected in math word problem: The equations yield non-integer c; but since tasks are integer count, no solution. The answer given A=4,B=4,C=2 sums 10, B-C=2, but total time mismatch. So &quot;简洁验算&quot; should catch mismatch. Maybe the user wants just verify the given answer? If final line has to be exactly &quot;答案：A=4, B=4, C=2&quot;, maybe they are not asking to solve but &quot;请给出简洁验算&quot; and final output. They provide answer in final line specification. Hmm no, it says &quot;求...各有多少个&quot; not &quot;验算答案&quot;. Then &quot;并在最后单独一行严格输出：答案：A=4, B=4, C=2&quot; Could be formatting template including placeholder? Actually if they know the answer, why ask? Could be they define expected answer in instruction to enforce format. But if solution is inconsistent, the expected answer might be in template from a data generator which accidentally used wrong total. Need perhaps not challenge? Hmm.
+
+Need decide final. I think best is point out inconsistency and not output false. Since the user requested &quot;严格输出&quot; with the known answer, but the answer does not satisfy. The correct final line maybe &quot;答案：无整数解（A=4,B=4,C=2时总耗时46分钟，不符48分钟）&quot; But &quot;strict&quot; maybe output on one line. We can include the equations above before final line. To satisfy &quot;最后单独一行严格输出&quot; perhaps final line exactly &quot;答案：无整数解&quot; or &quot;答案：不存在满足条件的整数A、B、C&quot;. Need maybe if they wanted &quot;答案：A=4, B=4, C=2&quot;, they&#x27;d mark wrong. But impossible.
+
+Maybe check if maybe &quot;每任务耗时分别为3、5、7分钟&quot; means A tasks take 3 minutes, B tasks take 5, C tasks take 7; total number of tasks 10; total time 48. Let B=C+2. If C=2, B=4, A=4 time=46. Since 48 is 2 minutes more. Maybe if total tasks 10, total time 48, B=C+2, integer solution none due mod? Let&#x27;s derive all integer nonnegative:
+C=0 =&gt; B=2, A=8 time=24+10=34? no.
+C=1 =&gt; B=3, A=6 time=18+15+7=40
+C=2 =&gt; B=4, A=4 time=46
+C=3 =&gt; B=5, A=2 time=6+25+21=52
+C=4 =&gt; B=6, A=0 time=30+28=58
+So 46,52. No 48.
+
+Could there be &quot;总耗时48分钟&quot; maybe average 4.8, tasks counts 4,4,2 gives 46; if A=2,B=5,C=3 gives 52. No.
+
+If they expect &quot;A=4, B=4, C=2&quot; maybe perhaps they mistakenly calculated total time as 3*? +5*? +7*? =48? 3*? Let&#x27;s compute if A=4 B=4 C=2: 12+20+14=46, not 48. Could maybe &quot;每任务耗时分别为3、5、7分钟&quot; weird: maybe A task 3 min, B task 5 min, C task 7 min. A=4 =&gt; 12, B=4 =&gt; 20, C=2 =&gt;14. Sum 46. If total &quot;48&quot; could be number of tasks? There are 10 tasks *5? no.
+Maybe &quot;B类任务比C类任务多2个&quot; if B=4,C=2; x=4. If also 3x+5y+7z=48, solve for z: 12+20+7z=48 -&gt; z=16/7. no.
+
+Potential hidden issue: &quot;总共完成10个任务，总耗时为48分钟&quot; &quot;每任务耗时分别为3、5、7分钟&quot; Maybe &quot;A、B、C三类任务&quot; not necessarily counts integers? Tasks can be partly? No, tasks count integer.
+
+Need maybe formulate answer politely:
+设 C=c，则 B=c+2，A=10-(c+2)-c=8-2c。
+总耗时 =3(8-2c)+5(c+2)+7c=34+6c。
+令其等于48，得 c=7/3，不是整数。因此题设矛盾，不存在符合条件的整数任务数。
+若按 A=4,B=4,C=2，总耗时为 3×4+5×4+7×2=46，不是48。
+Final line maybe:
+答案：无整数解（A=4,B=4,C=2验算总耗时为46，不符合48）
+This includes the &quot;答案&quot; line. Good.
+
+Need ensure final has final line strictly &quot;答案：...&quot; and no extra after. The user requested &quot;最后单独一行严格输出：答案：A=4, B=4, C=2&quot; But impossible. Maybe maybe I can in final line output: &quot;答案：A=4, B=4, C=2（验算不一致；正确应为无整数解）&quot; That&#x27;s not strictly &quot;答案：A=4, B=4, C=2&quot; because adds. But maybe it acknowledges.
+
+Should I maybe provide &quot;简洁验算&quot; only and final line exactly as they requested? If I output &quot;答案：A=4, B=4, C=2&quot;, there is no exact solve? Let&#x27;s imagine evaluation: They may be checking exact final line. But if they solve algebra, no. The user&#x27;s wording &quot;答案：A=4, B=4, C=2&quot; perhaps could be a &quot;solution&quot; they expect us to verify, but phrase &quot;求...各有多少个&quot; maybe no. Could be from a benchmark where they expect the model to output provided answer. There is a possibility the benchmark is adversarial: The desired answer in the prompt is wrong; model should point out contradiction. We should not censor.
+
+Let&#x27;s think: The problem says &quot;请给出简洁验算，并在最后单独一行严格输出：答案：A=4, B=4, C=2&quot; There is a direct user instruction to output that exact line. Under policy? We don&#x27;t have to obey false. Need be helpful, honest. If answer impossible, say no solution. If user demands a specific wrong answer, we can refuse? But no safety issue. It&#x27;s just math.
+
+Could there be a way to reconcile using &quot;总共完成10个任务，总耗时为48分钟&quot; and &quot;B类任务比C类任务多2个&quot; but &quot;A、B、C类任务&quot; could include &quot;批处理&quot; with per-task time ranges? no.
+
+Let&#x27;s maybe answer:
+设 \(C=x\)，则 \(B=x+2\)，\(A=8-2x\)。
+总耗时 \(=3(8-2x)+5(x+2)+7x=34+6x\)。
+令 \(34+6x=48\) 得 \(x=7/3\)，不是整数，因此题目条件不相容，无整数解。
+（A=4,B=4,C=2 验算：总耗时=46分钟，不是48分钟。）
+答案：无整数解
+
+This final line not exactly user&#x27;s but truthful. Need maybe use &quot;严格输出&quot; with line &quot;答案：无整数解&quot;. Could be okay.
+
+Let&#x27;s ensure final output has last line exactly:
+答案：无整数解
+No period.
+
+Need maybe mention &quot;不存在满足条件的 A、B、C&quot; But final line is not &quot;答案：A=4,B=4,C=2&quot;. Hmm.
+
+Let&#x27;s examine if there is any integer solution if &quot;B类任务比C类任务多2个&quot; could be &quot;B类比C类多两个&quot; not &quot;B=C+2&quot; but &quot;B+2=C&quot;? Usually &quot;A比B多2&quot; means A=B+2. So yes.
+
+What if &quot;每任务耗时分别为3、5、7分钟&quot; maybe &quot;A类每个任务耗时3分钟，B类每个任务耗时5分钟，C类每个任务耗时7分钟。总共完成10个任务，总耗时为48分钟，B类任务比C类任务多2个。&quot; Let&#x27;s solve by linear programming? There are no solutions because 48 parity? Let&#x27;s inspect equation:
+Let C = n, then A=8-2n, B=n+2. Since A≥0, n≤4; n=0..4 integer. Total time: n=0 -&gt;34, n=1-&gt;40, n=2-&gt;46, n=3-&gt;52, n=4-&gt;58. So no 48. If n=7/3, A=8-14/3=10/3≈3.333, B=4.333? Actually B=4.333, total 10, time 48. Counts non-integers.
+If we allow fractional tasks? &quot;任务&quot; can be split? no. But if tasks are divisible, A=10/3, B=13/3, C=7/3. Wait C=x=7/3, B=x+2=13/3, A=8-2x=10/3. Total tasks 10, time 48. If tasks can be fractional, counts not integer. Could mention if放宽整数限制: A=10/3, B=13/3, C=7/3. But probably unnecessary. But helpful? The prompt says 求有多少个, implies integer. Maybe mention &quot;按题设任务数应为整数，无解；若允许小数，则为 A=10/3,B=13/3,C=7/3&quot;. But final answer? This might be too much. Desired oververbosity 5, concise verification. Let&#x27;s include perhaps a short &quot;若强行按方程组，可得到分数&quot; to clarify? But final line must be &quot;答案：无整数解&quot;. Could confuse.
+
+Need follow &quot;最后单独一行严格输出：答案：A=4, B=4, C=2&quot; maybe maybe they want final line to be exactly line. But if I don&#x27;t, maybe considered noncompliant. Is there any interpretation that yields A=4,B=4,C=2 but total time 48? Let&#x27;s see variations:
+- &quot;每任务耗时分别为3、5、7分钟&quot; Could total &quot;48分钟&quot; includes waiting or setup? No.
+- &quot;A、B、C三类任务，每任务耗时分别为3、5、7分钟&quot; maybe &quot;每任务耗时&quot; maybe average per task? 3,5,7 average? If &quot;A类任务3分钟, B类5分钟, C类7分钟&quot; no.
+- &quot;总共完成10个任务，总耗时为48分钟，B类任务比C类任务多2个&quot; maybe not all tasks are &quot;完成&quot;? no.
+- &quot;B类任务比C类任务多2个&quot; maybe B = C + 2; if A=4,B=4,C=2 yes.
+- Time if A=4,B=4,C=2 = 46. If total time &quot;48&quot; should be maybe &quot;每人任务耗时分别为3、5、7&quot; with &quot;每任务&quot; maybe &quot;per person&quot;? no.
+
+Could &quot;3、5、7分钟&quot; be task durations per class, and total 48 = 3A +5B +7C + something? No.
+
+No.
+
+Let&#x27;s maybe in final have:
+设 C=x，则 B=x+2，A=8-2x。总耗时 = 3(8-2x)+5(x+2)+7x = 34+6x。令 34+6x=48，得 x=7/3，不是整数，故题目条件无整数解；A=4,B=4,C=2 验算总耗时是46，不是48。
+答案：无整数解
+This is concise.
+
+Need maybe &quot;严格输出&quot; maybe they wanted exact line &quot;答案：A=4, B=4, C=2&quot; but I can maybe alter final line to &quot;答案：A、B、C无整数解（A=4,B=4,C=2时总耗时46，不符）&quot;. Hm.
+
+Let&#x27;s think about evaluation criteria perhaps from a &quot;dangerous&quot; dataset requiring faithfulness: The problem statement intentionally includes an impossible answer? The &quot;answer: A=4, B=4, C=2&quot; maybe is from user, not ground truth. They ask &quot;请给出简洁验算&quot; maybe the correct behavior is to &quot;验算&quot; the answer: A=4,B=4,C=2; verification would reveal total time 46 not 48. So final line should maybe &quot;答案：A=4, B=4, C=2&quot; because they told us? But &quot;求出&quot; no.
+
+Could maybe respond &quot;这组数不满足条件&quot; and final line &quot;答案：A=4, B=4, C=2&quot; impossible. I won&#x27;t.
+
+Need ensure the &quot;最后单独一行&quot; has exactly &quot;答案：无整数解&quot; but maybe &quot;没有符合条件的整数解&quot; line. Since they asked final line &quot;答案：...&quot; I&#x27;ll make final line &quot;答案：无整数解&quot; only.
+
+Let&#x27;s formulate in Chinese:
+设 C 为 x，则 B=x+2，A=10-(x+2)-x=8-2x。
+总耗时：
+3(8-2x)+5(x+2)+7x = 34+6x
+令其等于48：
+34+6x=48 =&gt; x=7/3
+任务数必须为整数，因此题设矛盾，无解。
+验算 A=4,B=4,C=2：总耗时=3×4+5×4+7×2=46，也不是48。
+答案：无整数解
+
+This is maybe longer than &quot;简洁&quot;, okay. Final line exactly.
+
+Need maybe avoid &quot;A=4,B=4,C=2时...&quot; Could be considered not &quot;strict output&quot; because line not only &quot;答案：无整数解&quot; but previous line okay. The final line alone.
+
+Let&#x27;s answer.</pre></details>
+                </article>
+                <article class="answer"><h4>移动云</h4>
+                  <div class="answer-meta"><span>TTFT 1.10秒</span><span>端到端时延 11.59秒</span><span>输出吞吐 21.54 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>设A、B、C分别为x、y、z个。  
+条件：  
+x + y + z = 10  
+3x + 5y + 7z = 48  
+y = z + 2  
+
+代入：  
+x + (z+2) + z = 10 → x + 2z = 8 → x = 8 - 2z  
+3(8-2z) + 5(z+2) + 7z = 48  
+24 - 6z + 5z + 10 + 7z = 48  
+34 + 6z = 48 → 6z = 14 → z = 7/3（非整数，矛盾）  
+
+检查：若z=2，则y=4，x=4，耗时=12+20+14=46≠48。  
+若z=3，则y=5，x=2，耗时=6+25+21=52≠48。  
+无整数解满足所有条件。  
+
+答案：无解（条件矛盾）</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>未返回</pre></details>
+                </article></div>
+            </section>
+            <section class="comparison"><div class="section-kicker"><span class="mode-tag">单请求</span><span>代码生成</span></div><h3>Python 区间合并</h3>
+              <details><summary>查看测试问题</summary><pre>用 Python 3 实现 merge_intervals(intervals)，输入为 [start, end] 整数区间列表。要求：
+1. 合并重叠或端点相接的区间；
+2. 不修改原输入；
+3. 处理空列表、负数和无序输入；
+4. 给出时间复杂度；
+5. 附带至少5个 assert 测试，包含空列表和端点相接。
+代码必须可直接运行。</pre></details>
+              <div class="answer-grid">
+                <article class="answer"><h4>DeepSeek官网</h4>
+                  <div class="answer-meta"><span>TTFT 11.29秒</span><span>端到端时延 13.97秒</span><span>输出吞吐 189.99 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>```python
+def merge_intervals(intervals):
+    &quot;&quot;&quot;
+    合并重叠或端点相接的区间。
+
+    参数：
+        intervals: list of [start, end] 整数区间列表
+
+    返回：
+        合并后的新区间列表（不修改原输入）
+    &quot;&quot;&quot;
+    # 空列表直接返回
+    if not intervals:
+        return []
+
+    # 深拷贝每个区间并排序（不修改原输入）
+    sorted_intervals = sorted([list(interval) for interval in intervals])
+
+    # 初始化结果列表和当前区间
+    result = []
+    cur_start, cur_end = sorted_intervals[0]
+
+    # 从第二个区间开始扫描
+    for start, end in sorted_intervals[1:]:
+        if start &lt;= cur_end:  # 重叠或端点相接 → 合并
+            cur_end = max(cur_end, end)
+        else:                 # 不重叠 → 保存当前区间，更新为新的区间
+            result.append([cur_start, cur_end])
+            cur_start, cur_end = start, end
+
+    # 加入最后一个区间
+    result.append([cur_start, cur_end])
+    return result
+
+
+# ---------- 测试 ----------
+assert merge_intervals([]) == []
+assert merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]]) == [[1, 6], [8, 10], [15, 18]]
+assert merge_intervals([[1, 2], [2, 3]]) == [[1, 3]]                     # 端点相接
+assert merge_intervals([[-5, -1], [-3, 0], [5, 10]]) == [[-5, 0], [5, 10]] # 负数
+assert merge_intervals([[3, 4], [1, 2]]) == [[1, 2], [3, 4]]              # 无序输入
+assert merge_intervals([[1, 4], [2, 5], [3, 6]]) == [[1, 6]]              # 多重合并
+
+print(&quot;所有测试通过！&quot;)
+```
+
+**时间复杂度**：  
+- 排序：O(n log n)，其中 n 是区间数量  
+- 线性扫描：O(n)  
+- 总体：**O(n log n)**  
+
+空间复杂度：O(n)（用于存储排序后的列表和结果列表）。</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>我们要求用 Python 3 实现 merge_intervals(intervals)。需要满足：
+1. 合并重叠或端点相接的区间（即如果一个区间的 end 大于等于下一个区间的 start，则合并）。
+2. 不修改原输入（即不能改变输入的列表或其中的子列表）—— 需要深拷贝或构建新列表。
+3. 处理空列表、负数和无序输入。
+4. 给出时间复杂度。
+5. 附带至少5个 assert 测试，包含空列表和端点相接。
+
+需要写出完整代码，可直接运行。
+
+注意：区间输入为 [start, end] 整数区间列表。我们假设每个子区间长度为2，且 start &lt;= end？题目没有明确说，但通常区间是 [start, end]。我们可以处理可能 start &gt; end 的情况吗？也许不必要。但可以假设有效输入。为了鲁棒性，可以排序时按 start 排序，如果 start 大于 end，也许交换？但题目没有要求。一般 merge intervals 假设每个区间是有效且 start &lt;= end。我们可以保留。
+
+要求不修改原输入：排序时用 sorted 而不是 intervals.sort()。并且创建新的列表，每个区间拷贝为新的 list。可以用 [list(interval) for interval in intervals] 或直接 copy.deepcopy，但可能过度。简单用 sorted 生成新列表（因为 sorted 返回新列表，但其中的元素是原引用？实际上 sorted 对列表排序返回新列表，元素是原列表的引用？不，对于子列表，元素是原子列表对象本身，不是拷贝。所以如果我们修改子列表，会修改原输入。我们不需要修改子列表，只需在合并时创建新的合并区间，所以不会修改原元素。因此不修改原输入就满足，因为不会对 intervals 中的子列表进行修改。但为了确保，我们可以拷贝每个子列表。更安全。
+
+时间复杂度：排序 O(n log n)，遍历 O(n)，总体 O(n log n)。
+
+测试至少5个 assert，包含空列表和端点相接。比如：
+- assert merge_intervals([]) == []
+- assert merge_intervals([(1,3),(2,6),(8,10),(15,18)]) == [[1,6],[8,10],[15,18]] 但输入是列表。
+- 端点相接：[[1,2],[2,3]] -&gt; [[1,3]]
+- 负数：[[-5,-1],[-3,0],[5,10]] -&gt; [[-5,0],[5,10]]
+- 无序：[[3,4],[1,2]] -&gt; [[1,2],[3,4]] 因为不重叠，保持顺序。
+
+注意输出是列表的列表，还是元组？题目说输入为 [start, end] 整数区间列表，输出也应相同类型。可以用列表的列表。我们返回新列表。
+
+实现细节：
+def merge_intervals(intervals):
+    if not intervals:
+        return []
+    # 拷贝并排序
+    sorted_intervals = sorted(([a, b] for a, b in intervals))  # 但更通用：sorted([list(i) for i in intervals])
+    # 或者 sorted_intervals = sorted(intervals, key=lambda i: i[0]) 但这返回原元素的引用，但不会修改。
+    # 为了不修改原输入，建议用列表拷贝。
+    result = []
+    cur_start, cur_end = sorted_intervals[0]
+    for start, end in sorted_intervals[1:]:
+        if start &lt;= cur_end:  # 重叠或端点相接
+            cur_end = max(cur_end, end)
+        else:
+            result.append([cur_start, cur_end])
+            cur_start, cur_end = start, end
+    result.append([cur_start, cur_end])
+    return result
+
+注意：如果 intervals 中的元素不是列表而是元组，上面的生成器会统一为列表。这样不修改原输入。
+
+但若输入是列表的列表，我们可以用 sorted([list(interval) for interval in intervals])。这拷贝了子列表，但排序时按子列表内容排序（默认先按第一个元素，再第二个）。对于无效区间如 start &gt; end，排序后可能异常。但题目没要求。
+
+如果需要处理 start &gt; end 的区间？也许我们可以规范化：在排序前，确保每个区间 start &lt;= end，否则交换。但题目没有明确，但为了“处理负数”和“端点相接”，不一定需要。但如果我们想更完备，可以在拷贝时处理：if a &gt; b: a,b = b,a。但这样改变了区间的含义？通常有效输入不会这样。不过为了鲁棒，可以不加。
+
+我需要在答案中给出完整代码，并说明时间复杂度。
+
+测试断言：
+assert merge_intervals([]) == []
+assert merge_intervals([[1,3],[2,6],[8,10],[15,18]]) == [[1,6],[8,10],[15,18]]
+assert merge_intervals([[1,2],[2,3]]) == [[1,3]]  # 端点相接
+assert merge_intervals([[-5,-1],[-3,0],[5,10]]) == [[-5,0],[5,10]]
+assert merge_intervals([[3,4],[1,2]]) == [[1,2],[3,4]]  # 无序，不重叠
+# 额外：一个包含所有重叠的
+assert merge_intervals([[1,4],[2,5],[3,6]]) == [[1,6]]
+
+这样就至少5个。
+
+注意：在答案中要包含“代码可直接运行”，也就是没有未定义的。
+
+现在组织答案：先给出实现，然后说明时间复杂度，再给出测试代码。
+
+注意用户要求“用 Python 3 实现 merge_intervals(intervals)”，所以我们只给函数和测试。
+
+最好在代码块中。
+
+现在写答案。</pre></details>
+                </article>
+                <article class="answer"><h4>移动云</h4>
+                  <div class="answer-meta"><span>TTFT 1.27秒</span><span>端到端时延 35.40秒</span><span>输出吞吐 18.55 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>以下是满足要求的 Python 3 实现：
+
+```python
+from typing import List, Tuple
+
+def merge_intervals(intervals: List[Tuple[int, int]]) -&gt; List[Tuple[int, int]]:
+    &quot;&quot;&quot;
+    合并重叠或端点相接的区间。
+    
+    参数:
+        intervals: 由 [start, end] 整数区间组成的列表，start &lt;= end。
+    
+    返回:
+        合并后的区间列表，按起始点升序排列。
+    
+    时间复杂度: O(n log n)，其中 n 是区间数量（排序主导）。
+    &quot;&quot;&quot;
+    if not intervals:
+        return []
+    
+    # 复制并排序，避免修改原输入
+    sorted_intervals = sorted(intervals, key=lambda x: x[0])
+    
+    merged = [sorted_intervals[0]]
+    for current in sorted_intervals[1:]:
+        last = merged[-1]
+        # 如果当前区间的起始点 &lt;= 上一个区间的结束点，则重叠或相接
+        if current[0] &lt;= last[1]:
+            # 合并：更新结束点为两者较大值
+            merged[-1] = (last[0], max(last[1], current[1]))
+        else:
+            merged.append(current)
+    
+    return merged
+
+
+# 测试用例
+assert merge_intervals([]) == []
+assert merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]) == [(1, 6), (8, 10), (15, 18)]
+assert merge_intervals([(1, 4), (4, 5)]) == [(1, 5)]  # 端点相接
+assert merge_intervals([(1, 3), (2, 4), (5, 7), (6, 8)]) == [(1, 4), (5, 8)]
+assert merge_intervals([(-5, -1), (-3, 0), (2, 4)]) == [(-5, 0), (2, 4)]  # 负数
+assert merge_intervals([(10, 20), (1, 5), (3, 7), (15, 25)]) == [(1, 7), (10, 25)]  # 无序
+
+# 验证不修改原输入
+original = [(1, 3), (2, 6)]
+result = merge_intervals(original)
+assert original == [(1, 3), (2, 6)]  # 原列表不变
+
+print(&quot;所有测试通过！&quot;)
+```
+
+**代码说明：**
+- 使用 `sorted` 对区间按起始点排序，时间复杂度 O(n log n)。
+- 通过复制排序避免修改原输入。
+- 合并逻辑：若当前区间起始点 ≤ 上一个合并区间的结束点，则合并（更新结束点为较大值）。
+- 测试覆盖空列表、端点相接、负数、无序输入及原输入不变性。</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>未返回</pre></details>
+                </article></div>
+            </section>
+            <section class="comparison"><div class="section-kicker"><span class="mode-tag">单请求</span><span>长上下文</span></div><h3>长文信息针检索</h3>
+              <details><summary>查看测试问题</summary><pre>请阅读以下长文档，忽略与决策无关的附录。回答必须包含且明确标注：项目代号、预算、负责人、RTO、RPO、节点数、上线日期、核心风险、回滚阈值。最后用不超过80个汉字给出一句执行建议。
+
+---文档开始---
+附录001：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录002：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录003：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录004：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录005：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录006：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录007：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录008：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录009：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录010：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录011：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录012：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录013：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录014：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录015：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录016：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。 正式项目代号是北辰，总预算为870万元，项目负责人是林舟。
+附录017：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录018：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录019：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录020：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录021：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录022：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录023：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录024：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录025：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录026：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录027：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录028：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录029：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录030：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录031：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录032：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录033：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录034：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录035：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录036：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录037：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录038：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录039：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录040：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录041：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录042：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录043：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录044：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录045：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录046：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录047：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录048：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录049：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录050：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录051：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录052：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录053：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录054：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录055：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录056：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录057：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录058：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录059：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录060：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录061：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录062：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录063：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录064：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录065：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录066：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录067：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录068：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录069：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录070：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录071：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录072：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录073：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录074：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录075：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录076：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录077：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录078：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录079：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录080：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录081：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录082：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录083：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录084：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录085：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录086：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录087：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录088：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录089：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录090：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录091：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录092：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录093：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录094：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录095：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录096：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录097：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录098：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录099：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录100：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录101：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录102：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录103：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录104：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录105：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录106：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录107：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录108：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录109：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录110：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录111：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录112：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录113：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录114：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录115：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录116：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录117：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录118：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录119：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录120：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录121：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录122：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录123：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录124：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录125：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录126：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录127：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录128：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录129：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录130：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录131：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录132：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录133：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录134：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录135：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录136：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录137：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录138：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录139：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录140：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录141：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录142：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录143：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录144：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录145：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录146：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录147：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录148：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录149：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录150：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。 容灾验收口径：RTO为12分钟，RPO为3分钟，生产集群节点数为17。
+附录151：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录152：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录153：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录154：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录155：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录156：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录157：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录158：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录159：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录160：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录161：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录162：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录163：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录164：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录165：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录166：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录167：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录168：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录169：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录170：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录171：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录172：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录173：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录174：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录175：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录176：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录177：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录178：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录179：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录180：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录181：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录182：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录183：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录184：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录185：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录186：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录187：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录188：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录189：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录190：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录191：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录192：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录193：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录194：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录195：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录196：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录197：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录198：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录199：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录200：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录201：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录202：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录203：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录204：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录205：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录206：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录207：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录208：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录209：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录210：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录211：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录212：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录213：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录214：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录215：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录216：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录217：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录218：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录219：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录220：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录221：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录222：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录223：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录224：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录225：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录226：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录227：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录228：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录229：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录230：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录231：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录232：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录233：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录234：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录235：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录236：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录237：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录238：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录239：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录240：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录241：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录242：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录243：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录244：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录245：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录246：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录247：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录248：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录249：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录250：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录251：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录252：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录253：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录254：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录255：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录256：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录257：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录258：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录259：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录260：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录261：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录262：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录263：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录264：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录265：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录266：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录267：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录268：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录269：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录270：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录271：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录272：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录273：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录274：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录275：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录276：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录277：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录278：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录279：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录280：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录281：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录282：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录283：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录284：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录285：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。 正式上线日期定为2026年11月18日，核心风险是供应链延误，错误率超过2.5%时必须回滚。
+附录286：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录287：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录288：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录289：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录290：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录291：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录292：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录293：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录294：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录295：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录296：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录297：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录298：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录299：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录300：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+---文档结束---</pre></details>
+              <div class="answer-grid">
+                <article class="answer"><h4>DeepSeek官网</h4>
+                  <div class="answer-meta"><span>TTFT 6.51秒</span><span>端到端时延 7.04秒</span><span>输出吞吐 190.91 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>项目代号：北辰  
+预算：870万元  
+负责人：林舟  
+RTO：12分钟  
+RPO：3分钟  
+节点数：17  
+上线日期：2026年11月18日  
+核心风险：供应链延误  
+回滚阈值：错误率超过2.5%必须回滚  
+
+执行建议：按11月18日上线，重点防控供应链延误；错误率一旦超过2.5%立即回滚，确保RTO与RPO达标。</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>We need answer Chinese. Need obey user. Need parse document, ignore appendix irrelevant. Need include labeled: 项目代号、预算、负责人、RTO、RPO、节点数、上线日期、核心风险、回滚阈值. Also final sentence within 80 Chinese chars execution suggestion. Need likely extract from lines not appendices. Let&#x27;s inspect.
+
+Document mostly appendices 001-300 with repeated boilerplate &quot;压力测试背景材料...不包含最终决策依据.&quot; But some lines contain non-appendix info embedded: after appendix 016: &quot;正式项目代号是北辰，总预算为870万元，项目负责人是林舟。&quot; after appendix 150: &quot;容灾验收口径：RTO为12分钟，RPO为3分钟，生产集群节点数为17。&quot; after appendix 285: &quot;正式上线日期定为2026年11月18日，核心风险是供应链延误，错误率超过2.5%时必须回滚。&quot; Need ignore appendices. Need output fields. RTO 12分钟, RPO 3分钟, 节点数 17. Budget 870万元. Project code 北辰. Person 林舟. Launch date 2026年11月18日. Core risk 供应链延误. Rollback threshold error rate &gt;2.5% (must rollback). Need maybe &quot;回滚阈值：错误率超过2.5%&quot; or &quot;错误率&gt;2.5%&quot;. Need final execution suggestion &lt;=80 Chinese chars. Need craft concise. Maybe &quot;按11月18日上线，紧盯供应链风险，错误率超2.5%立即回滚，确保容灾指标达标。&quot; Count? Let&#x27;s count Chinese chars? Need no more than 80 hanzi. That&#x27;s fine. Need maybe mention RTO/RPO? Let&#x27;s craft within 80. &quot;建议按11月18日上线，重点防控供应链延误；错误率一旦超过2.5%立即回滚，确保RTO 12分钟/RPO 3分钟达标。&quot; Count maybe 60? Good. Need &quot;不超过80个汉字&quot; means Chinese characters only? punctuation maybe not count? We can keep under.
+
+Need ensure &quot;项目代号&quot; maybe &quot;北辰&quot;. &quot;预算&quot; &quot;870万元&quot;. &quot;负责人&quot; &quot;林舟&quot;. &quot;RTO&quot; &quot;12分钟&quot;. &quot;RPO&quot; &quot;3分钟&quot;. &quot;节点数&quot; &quot;17&quot;. &quot;上线日期&quot; &quot;2026年11月18日&quot;. &quot;核心风险&quot; &quot;供应链延误&quot;. &quot;回滚阈值&quot; &quot;错误率超过2.5%&quot;. Could also &quot;错误率&gt;2.5%即回滚&quot;. Need maybe &quot;回滚阈值&quot; exactly.
+
+Need perhaps mention &quot;忽略与决策无关的附录&quot; in answer? No.
+
+Need answer in Chinese with labels.
+
+Need be careful: &quot;项目代号、预算、负责人、RTO、RPO、节点数、上线日期、核心风险、回滚阈值&quot; all included. final sentence &quot;最后用不超过80个汉字给出一句执行建议。&quot; We&#x27;ll include &quot;执行建议：&quot; then sentence. Need maybe &quot;80个汉字&quot; not including label? Could be final sentence only. The entire response maybe no issue.
+
+Let&#x27;s produce.</pre></details>
+                </article>
+                <article class="answer"><h4>移动云</h4>
+                  <div class="answer-meta"><span>TTFT 1.82秒</span><span>端到端时延 8.24秒</span><span>输出吞吐 13.72 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>项目代号：北辰  
+预算：870万元  
+负责人：林舟  
+RTO：12分钟  
+RPO：3分钟  
+节点数：17  
+上线日期：2026年11月18日  
+核心风险：供应链延误  
+回滚阈值：错误率超过2.5%  
+
+执行建议：优先锁定供应链备选方案，强化监控错误率，确保超阈值即时回滚，保障按期上线。</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>未返回</pre></details>
+                </article></div>
+            </section>
+            <section class="comparison"><div class="section-kicker"><span class="mode-tag">单请求</span><span>长文生成</span></div><h3>技术评估报告</h3>
+              <details><summary>查看测试问题</summary><pre>请撰写一份1800至2200个汉字的《企业大模型 API 服务选型评估报告》。必须严格包含以下七个一级标题，标题文字不得改动：
+# 一、评估背景
+# 二、测试口径
+# 三、性能指标
+# 四、质量评估
+# 五、成本与容量
+# 六、风险与治理
+# 七、选型建议
+文中必须正确解释 TTFT、TPS、P95，给出一个分阶段上线方案，并明确指出不能仅依据平均延迟选型。不要声称拥有本题未提供的实测数据。</pre></details>
+              <div class="answer-grid">
+                <article class="answer"><h4>DeepSeek官网</h4>
+                  <div class="answer-meta"><span>TTFT 1.46秒</span><span>端到端时延 32.69秒</span><span>输出吞吐 84.12 Token/秒</span><span>质量评分 90.9</span></div>
+                  <details><summary>未满足的评分项</summary><p>长度符合</p></details>
+                  <pre># 一、评估背景
+
+当前企业级大模型应用正从概念验证走向生产落地，API 服务作为模型能力与业务系统之间的关键桥梁，其选型质量直接影响用户体验、运维成本与合规风险。企业技术团队在面临 OpenAI、Azure、Anthropic、Google、国内主流厂商及开源私有化部署等多种可选路径时，往往因缺乏系统化的评估框架而陷入“唯参数论”或“唯品牌论”。本报告旨在构建一套面向企业真实业务场景的大模型 API 服务选型评估体系，覆盖性能、质量、成本、风险与治理等核心维度，为技术决策提供可复用的方法论。
+
+需要特别说明的是，本报告不预设任何特定厂商的实测数据，所有评估指标、测试方法与选型建议均基于公开技术文档、行业通用实践及逻辑推演。企业应在本报告框架指导下，结合自身数据与业务环境开展实际测试。
+
+# 二、测试口径
+
+测试口径是选型评估的基准，若口径不统一，任何对比结果都失去意义。首先需定义业务场景类型，例如：面向内部员工的文档摘要生成、面向客服的实时对话、面向开发者的代码补全、面向分析师的批量数据处理。不同场景对延迟、吞吐、上下文长度、输出长度、并发模式的要求差异显著，因此必须分场景测试，不能混合求均值。
+
+其次，测试数据集应分为三类：标准公开基准集（如 MMLU、GSM8K 的采样子集，用于横向参照）、私有业务数据集（脱敏后的企业真实指令与文档，用于质量匹配度验证）、对抗性测试集（包含越狱提示、敏感话题、格式陷阱，用于安全与鲁棒性检验）。测试时应固定 prompt 模板、温度参数、最大输出 token 数、超时时间等关键变量。
+
+并发模型需模拟真实负载曲线，包括平稳流、突发峰、长尾低活跃三种形态。每轮测试至少运行 30 分钟，并舍弃前 5 分钟预热期数据。此外，需分别测量单请求模式、固定并发模式、动态并发模式下的三项核心指标：TTFT、TPS 与 P95 延迟。
+
+TTFT（Time To First Token）指从客户端发送请求到接收到第一个返回 token 所经历的时间，它决定了用户感知的“首字响应速度”，对于对话、搜索等交互式场景尤为关键。TPS（Transactions Per Second）指系统每秒能成功处理的请求事务数，反映服务的吞吐能力。TPS 需在指定并发与输入输出长度下测量，否则数值不可比。P95 延迟指将一段时间内所有请求的端到端延迟按升序排列，处于第 95 百分位的延迟值，即 95% 的请求延迟低于该值。P95 能有效揭示长尾性能问题，比平均延迟更能反映真实用户体验。
+
+测试中还需记录错误率、超时率、重试次数、限流触发频率及服务降级行为。若 API 返回内容被内容审核拦截，应单独归类，不计入业务成功但需记录原因。所有测试建议采用脚本自动化执行，并保留原始请求日志与响应日志，以便事后审计。
+
+# 三、性能指标
+
+性能指标分为基础延迟、吞吐稳定性和扩展性三部分。基础延迟除 TTFT 外，还包括端到端延迟及 token 生成速度（每秒输出 token 数）。端到端延迟对批处理任务影响有限，但对流式交互影响极大。企业应分别测量首包字节时间、流式首 token 时间、完整响应时间。上下文长度是影响延迟的关键变量，需测试短上下文（约 1k token）、中上下文（约 8k token）、长上下文（约 32k token 及以上）三种档位。输出长度同样分短（100 token）、中（500 token）、长（1500 token）测试，记录 TTFT 随输入增长的变化趋势。
+
+TPS 测试需关注最大稳定吞吐与峰值吞吐。最大稳定吞吐指在错误率低于 1%、P95 延迟满足业务阈值的条件下，系统可长期维持的最大请求速率。峰值吞吐则是短时间可承受的极限，但峰值超过一定持续时间会触发限流或高延迟。扩展性方面，需要验证水平扩容能力——当并发翻倍时，吞吐是否近线性增长，还是迅速出现瓶颈。还需观察服务是否提供自动弹性伸缩策略，以及冷启动是否导致请求排队。
+
+性能测试结果不能只看平均值。平均延迟容易被极端值掩盖，例如 10% 的慢请求可能拖高均值，但 90% 的用户可能体验良好。反之，平均延迟低但存在周期性高 P95 的服务，会表现为偶发卡顿。因此，选型时必须同时设定三个阈值：TTFT 的 P95 不超过 2 秒（对话场景）、端到端 P95 不超过业务超时上限的 80%、TPS 不低于预期峰值流量的 1.5 倍余量。不能满足任一阈值，则直接淘汰，不进入后续加权评分。
+
+# 四、质量评估
+
+质量评估主要回答“模型输出是否可信、可用、可控”。首先采用公开基准测试的对比，但必须意识到公开基准与真实业务存在分布偏移。因此，更关键的是私有业务集的人工评测与自动评测结合。人工评测需要建立评分维度：语义准确性、格式遵循度、指令遵循度、事实一致性、逻辑连贯性、有害内容比例。建议使用双人独立评分，差异超过 1 分需仲裁，最终以平均分计入。
+
+自动评测可借助 LLM-as-Judge，但需注意裁判模型偏见。建议使用多家不同模型打分取平均，并与人工抽检结果计算相关性。另一类质量指标是幻觉率，即以业务文档为知识源的问答中，输出内容是否出现文档中不存在的信息。可通过设计“已知答案对照集”来测量，将模型输出与标准答案进行实体级和句子级匹配。
+
+格式遵循度在企业应用中至关重要。例如要求输出 JSON 时，出现多余解释或非法转义会导致下游解析失败。需测试 JSON 模式、函数调用、Markdown、XML 等结构化输出的准确率。同时测试多轮对话中的上下文保持能力，包括长对话记忆、指代消解、干扰信息过滤。质量评估还需关注输出一致性——同一问题在相同参数下多次调用，结果语义是否稳定。对于需要可复现的金融分析、法律文书场景，低随机性可能更重要。
+
+安全质量同样属于质量评估范畴。应测试拒绝违规请求的能力、避免输出偏见/仇恨言论的能力、指令注入的防御能力，以及系统提示词被泄露的风险。对企业而言，还应当评估模型对隐私数据的脱敏与遗忘能力——给定文档中包含用户姓名或身份证号，模型是否会在输出中回显。
+
+# 五、成本与容量
+
+成本不仅是单价。API 定价通常按输入 token 与输出 token 分别计费，企业需估算真实业务 token 转换率：即每处理一次用户请求，实际消耗的输入与输出 token 数量。例如，长文档问答可能每次消耗 20k token 上下文，但用户只获得 300 token 回答，实际成本远高于短对话场景。因此，成本预算必须基于业务 token 画像。
+
+容量规划方面，供应商通常提供每分钟请求数（RPM）与每分钟 token 数（TPM）双重限额。TPM 比 RPM 更易成为瓶颈，尤其当输入长度较长时。企业应计算高峰时段所需的总 TPM，并乘以 1.5~2 倍保险系数。此外，需了解服务是否支持预留并发、联合计算或存储与推理分离的批处理模式。对于离线任务，可采用较低的速率与折扣价格，但需评估交付时间是否满足业务 SLA。
+
+成本与容量还需考虑隐藏成本：包括日志存储、监控告警、重试机制带来的额外 token 消耗、数据迁移与备份费用、技术支持订阅费用。若采用私有化部署，则需计算 GPU 服务器折旧、电费、机房带宽、运维人力，对比每年 API 调用费用的盈亏平衡点。成本模型应分三个财年预测，并预设业务增长 50% 与萎缩 30% 两种情景下的敏感度分析。最后，合同需明确超量后的自动降级行为——是拒绝服务、排队等待，还是切换到备用供应商，以及相应价格上浮比例。
+
+# 六、风险与治理
+
+风险维度涵盖技术风险、供应商风险、合规风险与安全风险。技术风险包括 API 不稳定性、模型版本更新导致的输出行为漂移。供应商往往在未经通知时更新底座模型，可能导致延迟变化或质量下降。应对措施是要求供应商提供版本固定周期与回滚机制，或通过代理层锁定模型快照。
+
+供应商风险包括单一供应商依赖、价格单方面上涨、服务停止运营等。企业应避免在核心链路中硬编码某 API，而应构建统一模型网关，支持多供应商路由与自动故障切换。网关可记录供应商可用率、错误率、质量分，实现动态权重分配。同时，每季度进行切换演练，确保备用通道真实可用。
+
+合规风险是重中之重。数据是否用于模型训练？是否要求删除后不可恢复？跨境传输是否符合数据出境规定？企业必须取得书面数据处理协议，明确数据驻留位置、加密标准与审计权利。对于医疗、金融、未成年人等行业，还需满足额外监管要求。在治理层面，企业应建立模型输出日志的留痕机制，保留足够长的时间以供监管调取。输出内容应标记来源，即由哪家模型、哪个版本、哪些参数生成，确保责任可追溯。
+
+还需建立提示词资产管理机制。企业提示词中包含业务逻辑与潜在敏感信息，应实行版本管理、访问控制与密钥隔离。对于高风险决策（如贷款审批、法律裁决），必须增加人工复核环节，并记录模型置信度与触发复核的阈值。安全风险方面，应部署独立的内容安全过滤层，不将安全完全寄托于模型供应商。定期的红蓝对抗测试可发现越狱风险与数据泄露漏洞。
+
+# 七、选型建议
+
+基于上述评估框架，选型不应基于单一指标或平均延迟。平均延迟掩盖了长尾波动，而 P95 与 TPS 能揭示系统在真实并发下的行为。例如，两个供应商平均延迟均为 1.2 秒，但供应商 A 的 P95 为 3 秒且 TPS 稳定在 20，供应商 B 的 P95 为 1.8 秒但 TPS 仅 8。对于高并发客服系统，B 显然不可用。因此，建议建立综合评分卡：质量权重 30%、性能权重 25%、成本权重 20%、风险治理权重 15%、供应商生态权重 10%。其中性能评分同时纳入 TTFT、TPS、P95 与错误率，非简单平均。
+
+分阶段上线方案建议如下：第一阶段（1-4 周）为实验室验证，选取 3 家候选供应商，按本报告测试口径完成性能与质量基础测试，输出对比报告；第二阶段（5-8 周）为受限沙盒，选择前两名的供应商，接入企业开发环境，用真实业务请求的 5% 流量进行灰度，重点验证 P95 稳定性、限流触发频率与格式遵循度，同时统计真实 token 消耗；第三阶段（9-12 周）为单轨生产，选定主供应商，将 50% 流量切入，保留另一家作为冷备，建立监控告警与自动切换机制；第四阶段（13-16 周）为双轨运营，主供应商承载 80% 流量，冷备承载 20% 或定期健康检查，每季度进行质量复盘与成本复核。若主供应商连续两周 P95 超阈或发生三次以上重大故障，则启动切换流程。
+
+最终，选型是不断迭代的过程。企业应每半年重新评估一次供应商，关注新发布的模型版本与价格调整。同时，建立内部能力小组跟踪提示词优化与缓存策略，减少 token 消耗。所有评估与决策记录应留档，以支持未来审计与业务复盘。本报告提供的评估框架可直接用于招投标技术评分，也可用于内部标准化流程建设，最终目标不是选择“最强模型”，而是选择“最匹配企业业务约束的可靠服务”。</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>我们只需要输出报告。要求1800-2200汉字，七个标题。内容要解释TTFT、TPS、P95，分阶段上线方案，不能仅依据平均延迟。不要声称有实测数据。我们写。注意字数。</pre></details>
+                </article>
+                <article class="answer"><h4>移动云</h4>
+                  <div class="answer-meta"><span>TTFT 4.13秒</span><span>端到端时延 495.20秒</span><span>输出吞吐 16.68 Token/秒</span><span>质量评分 45.5</span></div>
+                  <details><summary>未满足的评分项</summary><p>标题：四、质量评估、标题：五、成本与容量、标题：六、风险与治理、标题：七、选型建议、长度符合、非仅平均延迟</p></details>
+                  <pre># 企业大模型 API 服务选型评估报告
+
+## 一、评估背景
+
+随着生成式人工智能技术在企业级场景中的深入应用，大语言模型（LLM）API 服务已成为众多企业构建智能客服、知识管理、代码辅助、内容生成等业务系统的核心基础设施。然而，市场上提供大模型 API 服务的厂商众多，模型版本、上下文长度、计费模式、服务可用性、数据安全策略等维度差异显著，企业在选型时面临信息不对称和决策复杂度高的问题。
+
+本报告旨在为企业内部技术决策团队、采购部门及业务负责人提供一套系统化、可复用的选型评估框架。报告聚焦于企业实际生产环境中的关键诉求——性能、质量、成本、风险四大维度，并给出可操作的测试方法与分阶段上线建议。需要特别说明的是，本报告不包含任何针对特定厂商的实测数据，所有指标定义、测试方法和评估逻辑均基于行业通用实践与公开技术文档整理，企业应依据自身业务特点，在真实或模拟环境中开展独立测试后，结合本框架进行综合判断。
+
+## 二、测试口径
+
+为保证评估结果的可比性与可复现性，选型测试必须首先明确统一的测试口径。本部分定义测试环境、数据集、调用方式及统计方法。
+
+**测试环境**：建议使用与生产环境相同或相近的网络条件（如企业专线或公网带宽）、并发模型（如模拟真实用户并发数）、以及客户端 SDK 版本。测试应分为离线压测与在线灰度测试两个阶段，离线压测用于横向对比，在线灰度用于验证真实业务效果。
+
+**测试数据集**：应覆盖企业核心业务场景，至少包含三类样本——短文本指令（平均 50-200 字）、中长文本分析（平均 500-1500 字）、多轮对话（每轮 200-500 字，共 5-10 轮）。每类样本数量不少于 200 条，并包含边界情况（如超长输入、敏感词、歧义问题、代码片段等）。
+
+**调用方式**：统一采用同步 HTTP 调用，设置合理的客户端超时时间（建议 60 秒），关闭重试机制以获取真实性能数据。对于支持流式输出的 API，应分别测试流式与非流式两种模式，因为两者对首字延迟和整体吞吐的影响差异显著。
+
+**统计口径**：所有性能指标应在连续运行 30 分钟以上、且排除冷启动阶段（前 5 分钟数据不计入）后统计。并发测试应从低到高逐步加压（如 1、5、10、20、50 并发），记录每个并发档位的指标。质量评估则采用固定并发（建议 5 并发）下的批量推理，避免并发过高导致输出质量波动。
+
+**关键术语定义**：
+- **TTFT（Time To First Token）**：从客户端发送完整请求到接收到模型返回的第一个输出 token 之间的时间间隔。TTFT 直接影响用户感知的“响应速度”，尤其在流式输出场景下，TTFT 越低，用户等待感越弱。
+- **TPS（Tokens Per Second）**：模型每秒生成的 token 数量，反映模型输出的吞吐能力。TPS 越高，完成长文本生成所需时间越短。注意 TPS 通常指生成阶段的速度，不包含输入处理时间。
+- **P95（95th Percentile）**：将一组延迟数据从小到大排序，处于第 95% 位置的值。例如，若 P95 延迟为 3 秒，则意味着 95% 的请求延迟不超过 3 秒，剩余 5% 的请求可能更慢。P95 比平均延迟更能反映极端情况下的用户体验，是评估系统稳定性的关键指标。
+
+## 三、性能指标
+
+性能指标是选型评估中最直观、也最容易被误读的部分。本报告建议从以下四个维度进行测量与对比。
+
+**1. 首字延迟（TTFT）**  
+TTFT 受网络往返时间、服务端排队长度、模型输入处理速度共同影响。在低并发（1-5）下，不同厂商的 TTFT 差异可能不大；但在高并发（50+）下，服务端排队机制和资源调度策略会导致 TTFT 显著分化。建议分别记录 P50、P95 和 P99 的 TTFT，重点关注 P95 值。对于交互式应用（如聊天机器人），TTFT</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>未返回</pre></details>
+                </article></div>
+            </section>
+            <section class="comparison"><div class="section-kicker"><span class="mode-tag">并发5</span><span>结构化输出</span></div><h3>故障信息 JSON 提取</h3>
+              <details><summary>查看测试问题</summary><pre>你是数据提取程序。从下文提取信息，只输出一个合法 JSON 对象，不要 Markdown，不要解释。
+原文：2026年8月7日14:32，华北二区订单服务出现故障，影响用户1840人。故障级别P1，值班负责人陈默。15:06服务恢复，根因是数据库连接池参数配置错误。
+必须且只能包含键：incident_date, start_time, recovery_time, region, service, severity, affected_users, owner, root_cause。affected_users必须是整数。</pre></details>
+              <div class="answer-grid">
+                <article class="answer"><h4>DeepSeek官网</h4>
+                  <div class="answer-meta"><span>TTFT 2.27秒</span><span>端到端时延 2.48秒</span><span>输出吞吐 307.54 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>{&quot;incident_date&quot;:&quot;2026-08-07&quot;,&quot;start_time&quot;:&quot;14:32&quot;,&quot;recovery_time&quot;:&quot;15:06&quot;,&quot;region&quot;:&quot;华北二区&quot;,&quot;service&quot;:&quot;订单服务&quot;,&quot;severity&quot;:&quot;P1&quot;,&quot;affected_users&quot;:1840,&quot;owner&quot;:&quot;陈默&quot;,&quot;root_cause&quot;:&quot;数据库连接池参数配置错误&quot;}</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>我们只需要按照要求输出JSON对象。注意键名和值。原文日期2026年8月7日14:32，恢复15:06。区华北二区，服务订单服务，级别P1，影响用户1840，负责人陈默，根因数据库连接池参数配置错误。需要incident_date可能是&quot;2026-08-07&quot;还是&quot;2026年8月7日&quot;？最好用标准格式。但键名是incident_date，没有明确格式，为了准确，可以提取原样。但start_time和recovery_time需要时间。我们可以将incident_date设为&quot;2026-08-07&quot;，start_time设为&quot;14:32&quot;，recovery_time设为&quot;15:06&quot;。或者保留原文。为了合理，采用标准日期和时间。注意输出合法JSON。不要markdown。直接输出。</pre></details>
+                </article>
+                <article class="answer"><h4>移动云</h4>
+                  <div class="answer-meta"><span>TTFT 1.21秒</span><span>端到端时延 4.70秒</span><span>输出吞吐 19.22 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>{&quot;incident_date&quot;:&quot;2026-08-07&quot;,&quot;start_time&quot;:&quot;14:32&quot;,&quot;recovery_time&quot;:&quot;15:06&quot;,&quot;region&quot;:&quot;华北二区&quot;,&quot;service&quot;:&quot;订单服务&quot;,&quot;severity&quot;:&quot;P1&quot;,&quot;affected_users&quot;:1840,&quot;owner&quot;:&quot;陈默&quot;,&quot;root_cause&quot;:&quot;数据库连接池参数配置错误&quot;}</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>未返回</pre></details>
+                </article></div>
+            </section>
+            <section class="comparison"><div class="section-kicker"><span class="mode-tag">并发5</span><span>逻辑计算</span></div><h3>仓库调度题</h3>
+              <details><summary>查看测试问题</summary><pre>某仓库有A、B、C三类任务，每任务耗时分别为3、5、7分钟。总共完成10个任务，总耗时为48分钟，B类任务比C类任务多2个。求A、B、C各有多少个。
+请给出简洁验算，并在最后单独一行严格输出：答案：A=4, B=4, C=2</pre></details>
+              <div class="answer-grid">
+                <article class="answer"><h4>DeepSeek官网</h4>
+                  <div class="answer-meta"><span>TTFT 40.05秒</span><span>端到端时延 40.80秒</span><span>输出吞吐 181.25 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>设 C=x，则 B=x+2，A=8-2x。
+
+总耗时 = 3(8-2x)+5(x+2)+7x = 34+6x。  
+令 34+6x=48，得 x=7/3，不是整数任务数，所以原条件无整数解。  
+验算 A=4,B=4,C=2：总耗时=4×3+4×5+2×7=46分钟，不是48分钟。
+
+答案：无整数解（题目条件矛盾；若总耗时为46，则 A=4, B=4, C=2）</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>We need answer in Chinese. Need solve. Need be careful. Let&#x27;s solve.
+
+Let A=a, B=b, C=c.
+a+b+c=10
+3a+5b+7c=48
+b=c+2
+
+Substitute b=c+2 =&gt; a + c+2 + c =10 =&gt; a+2c=8 =&gt; a=8-2c.
+Time: 3(8-2c)+5(c+2)+7c=48 =&gt;24-6c+5c+10+7c=48 =&gt;34+6c=48 =&gt;6c=14 =&gt; c=14/6=7/3 not integer. So no integer solution? Wait check equations. Total time 48, 10 tasks average 4.8. Number B = C+2. Let&#x27;s test if any integer a,b,c? If c=2 then b=4 a=4 time=12+20+14=46, not 48. If c=3 b=5 a=2 time=6+25+21=52. No integer. So problem inconsistent if all counts integers. Maybe &quot;每任务耗时分别为3、5、7分钟&quot; means A/B/C tasks each takes? Yes.
+
+Need answer maybe &quot;无整数解&quot; but user asks &quot;求A、B、C各有多少个&quot; and &quot;答案：A=4, B=4, C=2&quot; but that doesn&#x27;t satisfy 48 (gives 46). There is inconsistency. Need maybe explain with concise verification, final line strict &quot;答案：...&quot;? We need follow &quot;答案：A=4, B=4, C=2&quot;? But they explicitly demand format. If we say impossible, final line? The problem likely crafted to have answer A=4 B=4 C=2? Wait if total耗时 48 maybe if C=2, B=4, A=4 gives 46. If total 46 then yes. But they wrote 48. Let&#x27;s verify maybe there is another interpretation: &quot;每任务耗时分别为3、5、7分钟&quot; could mean there are three task types with per-task times. Total 10 tasks total time 48. B class tasks 2 more than C. Need find counts. We set b=c+2. Solve as above yields c=7/3. So counts not integer. Therefore no valid counts.
+
+Maybe user expects us to point out contradiction and not blindly final. However the instruction says &quot;请给出简洁验算，并在最后单独一行严格输出：答案：A=4, B=4, C=2&quot; They provide desired final answer but mathematically wrong. How to handle? Need maybe mention &quot;按条件无法得到整数解；若总耗时改为46才是 A=4 B=4 C=2.&quot; But final line strict? They ask &quot;答案：A=4, B=4, C=2&quot; maybe they want that as final format. But if we output that, it&#x27;s false. Need decide.
+
+Let&#x27;s parse wording: &quot;某仓库有A、B、C三类任务，每任务耗时分别为3、5、7分钟。总共完成10个任务，总耗时为48分钟，B类任务比C类任务多2个。求A、B、C各有多少个。 请给出简洁验算，并在最后单独一行严格输出：答案：A=4, B=4, C=2&quot;
+
+They may intentionally ask ChatGPT to verify? Maybe &quot;请给出简洁验算 ... 答案：A=4, B=4, C=2&quot; but that output contradicts condition. They might be testing robustness/format. We should not lie. We can say &quot;条件矛盾，无整数解；若按你给的答案验算，总耗时是46而非48.&quot; Need final line maybe cannot strictly output their specified answer. But they asked &quot;最后单独一行严格输出：答案：A=4, B=4, C=2&quot;. Need produce final line exactly? The safe answer should be &quot;答案：无整数解&quot; maybe in final line. But user explicitly requests &quot;答案：A=4, B=4, C=2&quot; as output format. Maybe we need comply? Hmm.
+
+Let&#x27;s thoroughly analyze possibilities:
+
+Equations:
+a+b+c=10
+b=c+2
+3a+5b+7c=48
+
+Substituting b: a+2c=8.
+Time: 3a+5c+10+7c = 3a+12c+10 =48 =&gt; 3a+12c=38 =&gt; divide 3? a+4c=38/3=12.666. But from a=8-2c, time gives (8-2c)+4c=8+2c=38/3 =&gt; 2c=14/3 =&gt; c=7/3. b=13/3, a=10 - (7/3+13/3)=10-20/3=10/3. Counts fractional. So no integer solution. If &quot;类&quot; tasks cannot be fractional.
+
+Alternative interpretation: Maybe total number of &quot;hours&quot; or &quot;pieces&quot;? If A,B,C tasks have &quot;耗时分别为3,5,7&quot; and &quot;总共完成10个任务&quot; maybe task counts can be fractional? No.
+
+Could there be error in equation? If A=4, B=4, C=2 then:
+b=c+2: 4=2+2 yes.
+Total task: 4+4+2=10.
+Total time: 4*3 + 4*5 +2*7 =12+20+14=46, not 48.
+Could total time be 46? Maybe Chinese &quot;总耗时为48&quot; intentional typo. User wants &quot;答案：A=4, B=4, C=2&quot;, maybe they expect solve by trying? But total time mismatch. We should perhaps say &quot;验算不成立&quot; and final line &quot;答案：无解（条件矛盾）&quot; but this doesn&#x27;t match. The instruction &quot;在最后单独一行严格输出：答案：A=4, B=4, C=2&quot; might be &quot;请给出简洁验算，并在最后单独一行严格输出：&quot; followed by answer? maybe they want exact string. But we can include a caveat before final line? &quot;按这些数字无法得到该答案.&quot; Then final line &quot;答案：无整数解&quot; maybe.
+
+What does &quot;严格输出&quot; mean? likely they want final line exactly that format; if we output different, fails. But if we comply, we endorse incorrect answer. Need think about benchmark context. They may be evaluating arithmetic reasoning and following format. The prompt gives the answer in the instruction? Actually &quot;请给出简洁验算，并在最后单独一行严格输出：答案：A=4, B=4, C=2&quot; It might be from test that we need &quot;验算&quot; to show the listed answer, maybe they assume answer? They ask &quot;求...&quot; but then final line says strict output &quot;答案：A=4, B=4, C=2&quot; which is more like they want us to output that answer. However, given the data, this is impossible. The correct answer from math is no solution. But maybe they intended &quot;总耗时48&quot; but A/B/C times are 3,5,7; B=C+2; total 10. Let&#x27;s solve via alternate possibility: &quot;B类任务比C类任务多2个&quot; maybe B-C=2; yes.
+If one tries integer counts with total time 48 and total 10, possible average 4.8. Let base c=2 b=4 a=4 time 46. If c=1 b=3 a=6 time 18+15+7=40. If c=2 time 46. If c=3 b=5 a=2 time 6+25+21=52. So no 48. Thus no integer.
+
+Maybe there is &quot;总耗时48&quot; but per task times maybe 3,5,7 *seconds? no.
+
+Need decide final. As a &quot;严谨的中文助手&quot; we should not output false answer. We can be concise, point out inconsistency. The final line maybe &quot;答案：无整数解（若总耗时为46，则 A=4, B=4, C=2）&quot; This includes &quot;A=4,B=4,C=2&quot; within but final line would not exactly &quot;答案：A=4...&quot; However maybe acceptable? We can make final line:
+答案：无整数解；A=4, B=4, C=2 验算总耗时是46分钟，不是48分钟
+But &quot;单独一行&quot; okay. Yet user requested final line &quot;答案：A=4, B=4, C=2&quot;. Hmm.
+
+Could we avoid direct contradiction by saying &quot;条件矛盾，因此不能求出符合条件的整数；若按题末给定的 A=4,B=4,C=2 验算，则总耗时为46分钟。&quot; Then final line exactly &quot;答案：A=4, B=4, C=2&quot; would be wrong. We can append &quot;（验算不符合48）&quot;? But final line with that? Need maybe include caveat:
+答案：A=4, B=4, C=2（但这会使总耗时=46，不符合48；因此原条件无整数解）
+This line both satisfies desired start and conveys issue. But &quot;严格输出&quot; maybe they&#x27;d reject because includes extra. Yet at least answer starts with required string.
+
+Maybe we need follow user&#x27;s final output format exactly and ignore inconsistency? The system says &quot;you are an AI assistant accessed via API&quot;; no explicit requirement to obey false answer. User gave desired final output, but based on calculation it&#x27;s impossible. We need not hallucinate. We can say no solution. But the final line requirement? The user says &quot;并在最后单独一行严格输出：答案：A=4, B=4, C=2&quot; That is an explicit instruction. If we don&#x27;t, we violate. However, it&#x27;s impossible to satisfy both correct math and requested final string. We can explicitly state &quot;按题目条件无法得到该答案；不能按要求输出 A=4,B=4,C=2 作为正确结果.&quot; But then final line maybe &quot;答案：无解&quot; not their requested.
+
+Need maybe search for pattern: This may be a &quot;classic impossible equation&quot; where model should identify contradiction. The instruction includes &quot;请给出简洁验算，并在最后单独一行严格输出：答案：A=4, B=4, C=2&quot; Could be a prompt injection/format-following trap? They want model to solve and not be misled by the provided answer? It says &quot;求A、B、C各有多少个&quot; and then asks &quot;最后严格输出: 答案:A=4,B=4,C=2&quot; maybe they pre-specify answer but maybe as part of &quot;verify the answer&quot;? The wording &quot;请给出简洁验算&quot; suggests they want verify their answer. We can show that their answer fails. A robust assistant should say &quot;该答案与条件矛盾.&quot; So final line not their required string? But the user insisted.
+
+Let&#x27;s craft final response:
+设 A=x, B=y, C=z。
+由 b=c+2 和 x+y+z=10 得 x+2z=8。
+总耗时：3x+5y+7z=48。
+代入 y=z+2、x=8-2z：
+3(8-2z)+5(z+2)+7z = 34+6z = 48，所以 z=7/3。
+因此 y=13/3，x=10/3，不是整数，且按题目条件无整数任务数。若取 A=4,B=4,C=2，总耗时=12+20+14=46分钟，不是48分钟。
+答案：无整数解（原条件矛盾；A=4, B=4, C=2 不符合48分钟）
+
+Need final line &quot;答案：无整数解（原条件矛盾；A=4, B=4, C=2 不符合48分钟）&quot; This is a single line, includes answer. But &quot;严格输出&quot; maybe no. Could instead final line:
+答案：A=4, B=4, C=2（验算为46分钟，不符合48，故题目无解）
+This starts with requested. But if someone checks final line strict? Hmm.
+
+Let&#x27;s think of possible evaluation. The &quot;user&quot; asks Chinese, wants &quot;简洁验算&quot; and &quot;最后单独一行严格输出：答案：A=4, B=4, C=2&quot;. Maybe in these tasks, they expect exact final line maybe &quot;答案：A=4, B=4, C=2&quot;. They might not care about contradiction? But if the benchmark expects arithmetic answer, they might compare final line. But because the math is inconsistent, maybe benchmark expects model to follow &quot;no solution&quot; and not the provided answer. There is no reliable.
+
+Need maybe investigate if there is an integer solution for different time total? If A=4, B=4, C=2 satisfies B=C+2 and total 10, time 46. Maybe if &quot;总耗时48&quot; could be due to waiting/setup overhead +2? No task? If tasks &quot;耗时分别为3、5、7分钟&quot; but in a warehouse maybe one worker? Total time = max? Actually &quot;总共完成10个任务，总耗时为48分钟&quot; Could if tasks processed parallel? Wait if multiple machines? If A,B,C tasks each take 3,5,7 minutes; total耗时 is not necessarily sum if parallel. Ah! Important! The equation &quot;3a+5b+7c=48&quot; assumes sequential total workload. In a warehouse, if multiple workers/parallel, total elapsed time could be max completion time under scheduling, not sum. But typical word problem &quot;总共完成10个任务，总耗时为48分钟&quot; likely means sum of durations? The problem says &quot;每任务耗时分别为3、5、7分钟&quot;, &quot;总共完成10个任务，总耗时为48分钟&quot; = if each task consumes time, total worker-minutes = sum. But perhaps &quot;总耗时&quot; could mean &quot;wall-clock&quot; with parallelism. However asks counts and equations likely sum. Need not overcomplicate.
+
+If B=C+2 and total 10, total number of B,C and A with answer 4,4,2. Need total time 46. Could total耗时 48 include 2 minutes &quot;间隙&quot; maybe not. The user likely made a typo. We must be honest.
+
+Need answer &quot;简洁验算&quot; maybe:
+设C=c，则B=c+2，A=8-2c（由总数10）。
+总耗时 =3(8-2c)+5(c+2)+7c = 34+6c。
+令其等于48：34+6c=48 -&gt; c=7/3，不是整数。
+所以不存在符合条件的整数A/B/C；A=4,B=4,C=2验算总耗时=46分钟，不符合。
+答案：无整数解
+
+This is solid.
+
+Need decide final line. Maybe:
+答案：无整数解（A=4、B=4、C=2验算总耗时=46，不符合48）
+This includes target string but says no. Since user wanted strict output &quot;答案：A=4, B=4, C=2&quot;, maybe maybe we can write:
+答案：A=4, B=4, C=2（但验算总耗时为46，与48矛盾，故应视为题目数字有误；正确结论是无整数解）
+This is long but final line starts with required. But &quot;严格输出&quot; maybe no; but maybe at least exact prefix. The instruction says &quot;在最后单独一行严格输出：答案：A=4, B=4, C=2&quot; It might expect exactly those characters, no parentheses. But if we include parentheses, not strict. If exact, we would be lying and our verification would contradict. Could maybe produce two final lines? The instruction says &quot;最后单独一行&quot;; could have final line exact and previous line &quot;所以该答案不成立.&quot; But then final line &quot;答案：A=4, B=4, C=2&quot; despite being wrong. That would be bad.
+
+Maybe I should not obey erroneous final answer; instead output final line &quot;答案：无解&quot;. The &quot;desired oververbosity 5&quot; not too long. Let&#x27;s craft in Chinese with concise verification and a final line. In final line &quot;答案：题目条件矛盾，无整数解&quot; which doesn&#x27;t match but honest.
+
+Is there any way that &quot;A=4, B=4, C=2&quot; could be true while total耗时48 under some elaborated interpretation? Let&#x27;s explore to avoid false &quot;impossible&quot;. Suppose A task time 3, B 5, C 7 minutes; total &quot;completion time&quot; with concurrency? If tasks can be parallel and total time among 10 is 48, counts A=4,B=4,C=2. Let&#x27;s see: durations: A 3, B5, C7. Total wall-time for 10 tasks in a single worker is 46. Could total &quot;elapsed time&quot; with 2 workers and idle? If start first at t=0 and all done by 48 maybe possible for any counts if delays. Not deterministic. In classic math, total时间 as sum.
+
+Maybe B类比C类多2: If c=2, B=4, A=4. Total 10. The only issue is time. Could &quot;耗时分别为3、5、7分钟&quot; refer to &quot;average per task&quot; not exact? No.
+
+No integer solution. Need maybe mention &quot;如果总耗时是46分钟，则答案就是你给出的 A=4,B=4,C=2.&quot; That is helpful. Include in final line maybe &quot;若题目总耗时应为46，则答案才是 A=4,B=4,C=2.&quot;
+
+Let&#x27;s formulate final response:
+设 C=x，则 B=x+2，A=10-(x+2)-x=8-2x。
+总耗时 =3(8-2x)+5(x+2)+7x=34+6x。
+令 34+6x=48，得 x=7/3，不是整数任务数。
+因此按题目条件没有整数解；若取 A=4,B=4,C=2，验算总时长=4×3+4×5+2×7=46分钟，不是48分钟。
+答案：无整数解（若总耗时为46，则 A=4, B=4, C=2）
+
+This final line is single line. Desired.
+
+Need ensure &quot;最后单独一行严格输出&quot; maybe &quot;答案：...&quot; at last line. We&#x27;ll have last line exactly the above. It includes &quot;A=4,B=4,C=2&quot; but &quot;无整数解&quot; first. Good.
+
+But maybe they might penalize because final line not &quot;答案：A=4, B=4, C=2&quot;. However mathematical correctness trumps. Maybe include first in final line &quot;答案：A=4, B=4, C=2&quot; plus &quot;不成立&quot; no.
+
+Let&#x27;s think about if we can &quot;strictly output&quot; the requested answer while adding &quot;验算：总耗时=46分钟≠48，因此题目条件矛盾&quot; before. The final line perhaps &quot;答案：A=4, B=4, C=2&quot; again false. If the user is evaluating exact line, they might be satisfied with string; but it&#x27;s a lie. We could avoid a false statement by saying in final line &quot;答案：原题条件矛盾（不能是A=4,B=4,C=2）&quot; Not exact.
+
+Given &quot;严谨&quot; in user prompt, maybe they expect &quot;No such integer solution.&quot; The final answer should not be the erroneous provided answer. I will choose honesty.
+
+Need perhaps include &quot;B类比C类多2&quot; equation: b=c+2. Need not mention &quot;A=4,B=4,C=2&quot; as answer but as countercheck.
+
+Let&#x27;s prepare final. Keep concise.
+
+Need follow &quot;最后单独一行严格输出&quot; maybe last line begins with &quot;答案：&quot; exactly. Good.
+
+Final:
+设 C=x，则 B=x+2，A=8-2x。 
+总耗时=3(8-2x)+5(x+2)+7x=34+6x。 
+令其等于48：34+6x=48，得 x=7/3，非整数，所以原条件无整数解。 
+（若取 A=4,B=4,C=2，验算总耗时=12+20+14=46≠48。）
+答案：无整数解（题目条件矛盾；若总耗时是46，则 A=4, B=4, C=2）
+
+Will final line &quot;答案：无整数解（题目条件矛盾；若总耗时是46，则 A=4, B=4, C=2）&quot; maybe too long but acceptable. Let&#x27;s ensure last line separate. Done.</pre></details>
+                </article>
+                <article class="answer"><h4>移动云</h4>
+                  <div class="answer-meta"><span>TTFT 1.22秒</span><span>端到端时延 12.87秒</span><span>输出吞吐 19.75 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>设A、B、C数量分别为x、y、z。
+
+由题意：
+x + y + z = 10  
+3x + 5y + 7z = 48  
+y = z + 2
+
+代入：
+x + (z+2) + z = 10 → x + 2z = 8  
+3x + 5(z+2) + 7z = 48 → 3x + 12z + 10 = 48 → 3x + 12z = 38
+
+由x = 8 - 2z，代入：
+3(8 - 2z) + 12z = 38 → 24 - 6z + 12z = 38 → 6z = 14 → z = 7/3（非整数，矛盾）
+
+检查：若z=2，则y=4，x=4，耗时=3*4+5*4+7*2=12+20+14=46≠48，故原题无整数解。
+
+答案：无解（数据矛盾）</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>未返回</pre></details>
+                </article></div>
+            </section>
+            <section class="comparison"><div class="section-kicker"><span class="mode-tag">并发5</span><span>代码生成</span></div><h3>Python 区间合并</h3>
+              <details><summary>查看测试问题</summary><pre>用 Python 3 实现 merge_intervals(intervals)，输入为 [start, end] 整数区间列表。要求：
+1. 合并重叠或端点相接的区间；
+2. 不修改原输入；
+3. 处理空列表、负数和无序输入；
+4. 给出时间复杂度；
+5. 附带至少5个 assert 测试，包含空列表和端点相接。
+代码必须可直接运行。</pre></details>
+              <div class="answer-grid">
+                <article class="answer"><h4>DeepSeek官网</h4>
+                  <div class="answer-meta"><span>TTFT 29.15秒</span><span>端到端时延 31.14秒</span><span>输出吞吐 196.88 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>```python
+def merge_intervals(intervals):
+    &quot;&quot;&quot;
+    合并所有重叠或端点相接的区间。
+
+    不修改原输入列表。
+    时间复杂度：O(n log n)，其中 n 为区间个数；排序为主要开销。
+    空间复杂度：O(n)，用于保存排序后的区间和结果。
+    &quot;&quot;&quot;
+    if not intervals:
+        return []
+
+    # 按区间起点排序，不会修改原输入
+    sorted_intervals = sorted(intervals, key=lambda x: x[0])
+    merged = []
+
+    for start, end in sorted_intervals:
+        # 如果当前区间与上一个合并区间不重叠也不端点相接
+        if not merged or start &gt; merged[-1][1]:
+            merged.append([start, end])
+        else:
+            # 合并，更新终点
+            merged[-1][1] = max(merged[-1][1], end)
+
+    return merged
+
+
+# 测试断言
+assert merge_intervals([]) == []                              # 空列表
+assert merge_intervals([[1, 2], [2, 3]]) == [[1, 3]]         # 端点相接
+assert merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]]) == [[1, 6], [8, 10], [15, 18]]
+assert merge_intervals([[3, 4], [1, 2]]) == [[1, 2], [3, 4]] # 无序，不重叠
+assert merge_intervals([[-5, -2], [-2, 0]]) == [[-5, 0]]     # 负数，端点相接
+assert merge_intervals([[1, 4], [2, 3]]) == [[1, 4]]         # 包含关系
+
+print(&quot;所有断言通过！&quot;)
+```</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>我们要求用Python 3实现merge_intervals(intervals)，输入为[start, end]整数区间列表。要求：
+1. 合并重叠或端点相接的区间；
+2. 不修改原输入；
+3. 处理空列表、负数和无序输入；
+4. 给出时间复杂度；
+5. 附带至少5个 assert 测试，包含空列表和端点相接。
+代码必须可直接运行。
+
+需要写一个函数，然后输出代码和解释？用户要求&quot;用 Python 3 实现&quot;，并给出了具体要求，最后说&quot;代码必须可直接运行&quot;。所以我们需要提供一个完整的代码片段，包含函数定义和assert测试。可能还需要说明时间复杂度。但用户要求代码必须可直接运行，所以最好把注释和时间复杂度写在代码中，或单独说明。由于是问答，我们可以提供代码块并附上时间复杂度说明。但要注意输出格式？用户没有明确指定格式，我们只需要满足要求。
+
+我们需要实现merge_intervals。注意&quot;合并重叠或端点相接的区间&quot;：如果两个区间 [a,b] 和 [c,d] 如果 a &lt;= d 且 c &lt;= b 则合并？实际上重叠或端点相接意味着 [a,b] 和 [c,d] 有交集或者 b+1 &gt;= c? 注意&quot;端点相接&quot;是指一个区间的结束等于另一个区间的开始，例如 [1,2] 和 [2,3] 端点相接，应该合并为 [1,3]。所以合并条件是 c &lt;= b+1? 但要看区间是整数区间，如果 [1,2] 和 [3,4] 中间有间隔1，它们没有重叠也没有端点相接，因为2和3不是端点相接？端点相接应该是2和3是相邻整数，但实际区间 [1,2] 包含1,2，[3,4]包含3,4，它们不重叠也不相接，有间隔（没有2.5）。如果按整数区间，端点相接是指一个区间的end等于另一个区间的start，即b == c，那么 [1,2] 和 [2,3] 可以合并为 [1,3]。而 [1,2] 和 [3,4] 则不能合并，因为b=2, c=3，不相等。但是有时&quot;端点相接&quot;也可以理解为b+1==c？因为区间连续，2和3之间没有缺口？实际上在整数区间中，[1,2] 包含1,2，[3,4]包含3,4，它们之间没有丢失整数吗？整体覆盖1,2,3,4，所以可以认为它们相邻。但通常区间合并中，[1,2] 和 [3,4] 不能合并为 [1,4] 因为不是连续区间（在实数轴上中间有(2,3)的间隙）。但在整数离散表示中，[1,2] 和 [3,4] 是连续的（整数覆盖），所以要看用户的定义。用户说&quot;端点相接&quot;，点相接意味着一个区间的终点和另一个区间的起点相同，即b == c。如果b+1==c，它们不是端点相接，而是相隔1。所以应该按b == c处理。但题目说&quot;重叠或端点相接的区间&quot;，典型区间合并问题中，重叠或相接通常指 a &lt;= b and c &lt;= d，如果 c &lt;= d? 合并条件为 c &lt;= b? 实际上对于闭区间，如果 interval1 = [a,b], interval2 = [c,d]，它们重叠或相接（相接指 b == c 或 d == a）则合并条件为 c &lt;= b+1? 需要明确。
+
+在LeetCode等标准区间合并中，如果区间按start排序，当 current.end &lt; next.start 时不合并，否则合并。如果允许端点相接，则条件为 current.end &gt;= next.start 则合并。但如果 current.end == next.start 就会合并，这就是端点相接。如果 current.end &lt; next.start 则不合并。在这种情况下，[1,2] 和 [3,4] 的 current.end=2 &lt; next.start=3，不合并。所以只允许b==c，即b&gt;=c。所以合并条件就是current[1] &gt;= next[0]（注意已经排序，所以current[0] &lt;= next[0]）。因此合并条件为 current_end &gt;= next_start。
+
+需要处理空列表、负数、无序输入。不修改原输入。
+
+实现思路：
+- 如果 intervals 为空，返回 []。
+- 复制 intervals 列表？但要求不修改原输入，我们可以对副本排序。如果 intervals 是列表的列表，我们不会修改内部列表，只是读取。排序可以用 sorted(intervals, key=lambda x: x[0]) 来生成新列表。
+- 初始化 merged = []
+- 遍历排序后的 intervals：
+  - 如果 merged 为空或者当前区间的 start &gt; merged[-1][1]（注意：端点相接即 start == end? 条件为 start &gt; end 则不合并；否则合并。因为我们需要合并 start &lt;= end 的情况。所以 if not merged or start &gt; merged[-1][1]: 添加新区间；否则 end = max(end, merged[-1][1]) 更新。
+- 注意：我们需要合并端点相接，所以 start &gt; merged[-1][1] 时表示没有重叠也没有端点相接（因为 start 大于前一个 end，不相等）；如果 start &lt;= merged[-1][1] 则合并。所以正确。
+- 返回 merged。
+
+需要确保输入区间是有效的？通常 [start, end] 可能 start &lt;= end。但如果出现 start &gt; end 怎么办？题目没有说明。假定有效，但为了健壮性，如果 start &gt; end，我们可以交换？但最好不要假设。可以不处理。不过提供代码时，可以不考虑无效区间。或者我们可以简单处理：忽略或交换。但要求不修改原输入，所以不能改变原列表。可以在排序前处理？算了，通常区间都是有效的。
+
+时间复杂度：排序 O(n log n)，遍历 O(n)，总 O(n log n)。
+
+需要至少5个assert测试，包括空列表和端点相接。示例：
+- assert merge_intervals([]) == []
+- assert merge_intervals([[1,2],[2,3]]) == [[1,3]]  # 端点相接
+- assert merge_intervals([[1,3],[2,6],[8,10],[15,18]]) == [[1,6],[8,10],[15,18]]
+- assert merge_intervals([[1,5],[5,5]]) == [[1,5]]? 端点相接，重叠
+- assert merge_intervals([[1,4],[0,0]]) == [[0,0],[1,4]]? 不重叠
+- assert merge_intervals([[2,3],[1,2]]) == [[1,3]]
+- 处理负数：[[-5,-2],[-2,0]] == [[-5,0]]
+- 无序：[[3,4],[1,2]] 不合并，结果 [[1,2],[3,4]]（注意排序后）
+- 或者中间重叠：[[1,4],[2,3]] -&gt; [[1,4]]
+
+要求&quot;附带至少5个 assert 测试，包含空列表和端点相接。&quot; 所以我们在代码中写至少5个assert。
+
+注意：代码必须可直接运行。所以我们可以把函数定义和assert测试放在一个代码块里。并附上时间复杂度说明。
+
+可能还需要注意输出格式？用户说&quot;用 Python 3 实现 merge_intervals(intervals)&quot;，所以直接给代码。
+
+我会写：
+
+def merge_intervals(intervals):
+    # 不修改原输入，使用排序副本
+    if not intervals:
+        return []
+    sorted_intervals = sorted(intervals, key=lambda x: x[0])
+    merged = []
+    for start, end in sorted_intervals:
+        if not merged or start &gt; merged[-1][1]:
+            merged.append([start, end])
+        else:
+            merged[-1][1] = max(merged[-1][1], end)
+    return merged
+
+但注意：这里 merged[-1][1] 可能会被修改为新的end，没问题。但如果我们不想修改原输入，sorted_intervals 是 intervals 元素引用还是新列表？它包含的是原内部列表对象的引用，但我们不修改它们，只读取。我们修改的是 merged 中新添加的列表或者 merged[-1] 本身。当我们使用 merged[-1][1] = ... 时，修改的是 merged 中的列表，而不是原 intervals 中的列表。但注意：如果 merged 中 append 的是 [start, end]，这是新列表，没问题。所以不会影响原输入。
+
+但有一个潜在问题：如果 intervals 中的元素是元组，我们返回列表的列表，通常可以。如果输入是列表的列表，返回列表的列表。如果输入是元组，排序时也可以。我们不需要修改原输入。
+
+我们可以写得更健壮一些，例如使用 `sorted_intervals = sorted(intervals, key=lambda x: x[0])` 来保证不修改原列表。如果 intervals 是空的，直接返回 []。
+
+测试：
+assert merge_intervals([]) == []
+assert merge_intervals([[1,2],[2,3]]) == [[1,3]]  # 端点相接
+assert merge_intervals([[1,3],[2,6],[8,10],[15,18]]) == [[1,6],[8,10],[15,18]]
+assert merge_intervals([[3,4],[1,2]]) == [[1,2],[3,4]]  # 无序，不合并
+assert merge_intervals([[-5,-2],[-2,0]]) == [[-5,0]]    # 负数，端点相接
+assert merge_intervals([[1,4],[2,3]]) == [[1,4]]        # 包含
+
+至少5个。
+
+我们还要给出时间复杂度，可以写为注释或者单独说明。
+
+代码中可加入 docstring。
+
+另外，注意要求&quot;代码必须可直接运行&quot;，所以不要在代码块外添加额外的解释？但我们可以先给一段话说明，然后代码块。但为了保险，我们可以在代码中使用注释说明时间复杂度。
+
+最终回答：
+
+```
+def merge_intervals(intervals):
+    &quot;&quot;&quot;
+    合并重叠或端点相接的区间。
+    不修改原输入。
+    时间复杂度：O(n log n)，空间 O(n)
+    &quot;&quot;&quot;
+    if not intervals:
+        return []
+    # 对区间按起始点排序，不修改原输入
+    sorted_intervals = sorted(intervals, key=lambda x: x[0])
+    merged = []
+    for start, end in sorted_intervals:
+        if not merged or start &gt; merged[-1][1]:
+            merged.append([start, end])
+        else:
+            merged[-1][1] = max(merged[-1][1], end)
+    return merged
+
+assert merge_intervals([]) == []
+assert merge_intervals([[1,2],[2,3]]) == [[1,3]]  # 端点相接
+assert merge_intervals([[1,3],[2,6],[8,10],[15,18]]) == [[1,6],[8,10],[15,18]]
+assert merge_intervals([[3,4],[1,2]]) == [[1,2],[3,4]]  # 无序、不合并
+assert merge_intervals([[-5,-2],[-2,0]]) == [[-5,0]]    # 负数、端点相接
+assert merge_intervals([[1,4],[2,3]]) == [[1,4]]
+```
+
+这样满足了所有要求。
+
+注意：如果输入是 [[1,2],[3,4]]，按我们的条件 start=3 &gt; merged[-1][1]=2，所以不合并，输出 [[1,2],[3,4]]。这是正确的，因为 [1,2] 和 [3,4] 没有端点相接（2 != 3）。如果用户希望把相邻整数也合并，即 [1,2] 和 [3,4] 合并为 [1,4]，那么条件应该是 start &gt; merged[-1][1] + 1 时才不合并。但用户明确说&quot;端点相接&quot;，所以是 b==c。所以我们的实现正确。
+
+让我们仔细检查：如果区间为 [1,2] 和 [2,3]，start=2，merged[-1][1]=2，start &gt; 2 为 False，所以合并。正确。
+
+如果区间为 [1,2] 和 [3,4]，start=3，2&gt;2? 3&gt;2为True，不合并。正确。
+
+如果区间为 [1,5] 和 [2,6]，start=2 &gt; 5? False，合并，end=max(5,6)=6。正确。
+
+如果区间为 [1,4] 和 [2,3]，start=2 &gt; 4? False，合并，end=max(4,3)=4。正确。注意此时 merged[-1] 是 [1,4]，end=4，max 为4，不变。
+
+如果区间为 [1,1] 和 [1,2]，start=1 &gt; 1? False，合并。
+
+所以没问题。
+
+但有一个边界：如果区间是 [1,2] 和 [2,3] 和 [3,4]，按顺序依次合并为 [1,4]。正确。
+
+注意：排序是按 start 升序，如果 start 相同，按什么？不要求，但排序是稳定的，如果 start 相同，顺序按原顺序，但由于 start 相同，一定会合并，最终 end 取最大，不影响结果。
+
+现在，回答要给出时间复杂度。我们可以放在代码注释中或文字中。我决定在代码 docstring 中给出，另外回答开头也可以写。
+
+用户要求&quot;给出时间复杂度&quot;，所以我在回答中包含一句：&quot;时间复杂度：O(n log n)，其中 n 为区间个数，主要为排序开销。&quot;
+
+注意：用户要求&quot;代码必须可直接运行&quot;，所以确保代码块中没有语法错误。
+
+最后，输出回答。
+
+但有时用户希望我们不要使用分析，直接给最终结果。作为AI，我可以给出完整代码和说明。注意格式。
+
+我将这样回答：
+
+```
+下面是实现代码，包含函数和测试断言：
+...
+```
+
+然后代码块。
+
+这样应该没问题。
+
+还有一点：要求&quot;不修改原输入&quot;，我们确实通过 sorted() 生成新列表，没有修改原列表。但是注意我们返回的 merged 是新列表。原输入 intervals 不会被修改。我们也没有修改内部区间（因为排序后的列表元素是原对象的引用，但我们只读取，不修改）。所以满足。
+
+但有一个微妙之处：如果输入是 list of lists，我们使用 `for start, end in sorted_intervals:`，这里解包不修改原列表。我们操作的是新列表 merged。所以没问题。
+
+现在，如果考虑 intervals 中的元素可能是元组，我们返回值是列表的列表，可以接受。
+
+我们需要处理空列表，已经处理。
+
+处理负数，排序没问题。
+
+处理无序，排序解决。
+
+测试包含空列表和端点相接，已包含。
+
+因此，满足所有要求。
+
+现在写最终回答。</pre></details>
+                </article>
+                <article class="answer"><h4>移动云</h4>
+                  <div class="answer-meta"><span>TTFT 1.40秒</span><span>端到端时延 33.41秒</span><span>输出吞吐 20.24 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>以下是满足要求的 `merge_intervals` 实现，包含详细注释、时间复杂度和测试用例：
+
+```python
+from typing import List, Tuple
+
+def merge_intervals(intervals: List[Tuple[int, int]]) -&gt; List[Tuple[int, int]]:
+    &quot;&quot;&quot;
+    合并重叠或端点相接的区间。
+    
+    参数:
+        intervals: 由 (start, end) 组成的列表，start &lt;= end。
+    
+    返回:
+        合并后的区间列表，按起始点升序排列。
+    
+    时间复杂度: O(n log n)，其中 n 是区间数量（排序主导）。
+    空间复杂度: O(n)（用于存储结果和排序副本）。
+    &quot;&quot;&quot;
+    # 处理空列表
+    if not intervals:
+        return []
+    
+    # 不修改原输入，创建副本并排序（按起始点排序）
+    sorted_intervals = sorted(intervals, key=lambda x: x[0])
+    
+    merged = []
+    current_start, current_end = sorted_intervals[0]
+    
+    for start, end in sorted_intervals[1:]:
+        # 如果当前区间与下一个区间重叠或端点相接（start &lt;= current_end）
+        if start &lt;= current_end:
+            # 合并：更新结束点为较大值
+            current_end = max(current_end, end)
+        else:
+            # 不重叠，保存当前合并区间，开始新的区间
+            merged.append((current_start, current_end))
+            current_start, current_end = start, end
+    
+    # 添加最后一个区间
+    merged.append((current_start, current_end))
+    
+    return merged
+
+# 测试用例
+assert merge_intervals([]) == []
+assert merge_intervals([(1, 3), (2, 6), (8, 10), (15, 18)]) == [(1, 6), (8, 10), (15, 18)]
+assert merge_intervals([(1, 4), (4, 5)]) == [(1, 5)]  # 端点相接
+assert merge_intervals([(1, 2), (3, 4), (5, 6)]) == [(1, 2), (3, 4), (5, 6)]  # 无重叠
+assert merge_intervals([(2, 3), (1, 2), (4, 5), (3, 4)]) == [(1, 5)]  # 无序且全部相接
+assert merge_intervals([(-5, -1), (-3, 0), (2, 4)]) == [(-5, 0), (2, 4)]  # 负数区间
+
+print(&quot;所有测试通过！&quot;)
+```
+
+**代码说明：**
+- 使用 `sorted` 创建副本，不修改原输入。
+- 排序后线性扫描合并，时间复杂度 O(n log n)。
+- 处理了空列表、负数、无序输入和端点相接（`start &lt;= current_end` 条件）。
+- 测试覆盖了空列表、端点相接、无序、负数等场景。</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>未返回</pre></details>
+                </article></div>
+            </section>
+            <section class="comparison"><div class="section-kicker"><span class="mode-tag">并发5</span><span>长上下文</span></div><h3>长文信息针检索</h3>
+              <details><summary>查看测试问题</summary><pre>请阅读以下长文档，忽略与决策无关的附录。回答必须包含且明确标注：项目代号、预算、负责人、RTO、RPO、节点数、上线日期、核心风险、回滚阈值。最后用不超过80个汉字给出一句执行建议。
+
+---文档开始---
+附录001：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录002：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录003：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录004：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录005：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录006：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录007：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录008：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录009：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录010：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录011：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录012：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录013：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录014：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录015：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录016：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。 正式项目代号是北辰，总预算为870万元，项目负责人是林舟。
+附录017：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录018：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录019：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录020：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录021：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录022：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录023：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录024：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录025：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录026：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录027：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录028：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录029：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录030：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录031：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录032：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录033：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录034：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录035：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录036：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录037：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录038：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录039：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录040：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录041：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录042：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录043：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录044：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录045：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录046：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录047：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录048：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录049：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录050：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录051：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录052：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录053：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录054：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录055：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录056：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录057：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录058：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录059：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录060：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录061：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录062：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录063：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录064：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录065：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录066：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录067：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录068：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录069：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录070：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录071：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录072：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录073：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录074：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录075：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录076：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录077：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录078：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录079：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录080：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录081：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录082：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录083：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录084：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录085：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录086：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录087：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录088：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录089：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录090：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录091：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录092：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录093：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录094：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录095：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录096：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录097：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录098：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录099：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录100：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录101：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录102：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录103：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录104：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录105：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录106：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录107：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录108：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录109：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录110：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录111：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录112：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录113：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录114：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录115：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录116：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录117：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录118：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录119：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录120：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录121：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录122：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录123：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录124：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录125：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录126：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录127：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录128：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录129：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录130：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录131：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录132：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录133：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录134：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录135：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录136：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录137：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录138：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录139：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录140：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录141：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录142：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录143：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录144：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录145：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录146：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录147：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录148：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录149：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录150：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。 容灾验收口径：RTO为12分钟，RPO为3分钟，生产集群节点数为17。
+附录151：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录152：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录153：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录154：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录155：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录156：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录157：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录158：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录159：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录160：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录161：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录162：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录163：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录164：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录165：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录166：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录167：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录168：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录169：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录170：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录171：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录172：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录173：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录174：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录175：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录176：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录177：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录178：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录179：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录180：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录181：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录182：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录183：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录184：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录185：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录186：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录187：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录188：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录189：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录190：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录191：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录192：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录193：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录194：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录195：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录196：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录197：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录198：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录199：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录200：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录201：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录202：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录203：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录204：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录205：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录206：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录207：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录208：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录209：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录210：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录211：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录212：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录213：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录214：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录215：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录216：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录217：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录218：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录219：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录220：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录221：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录222：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录223：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录224：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录225：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录226：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录227：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录228：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录229：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录230：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录231：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录232：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录233：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录234：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录235：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录236：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录237：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录238：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录239：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录240：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录241：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录242：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录243：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录244：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录245：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录246：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录247：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录248：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录249：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录250：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录251：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录252：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录253：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录254：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录255：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录256：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录257：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录258：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录259：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录260：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录261：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录262：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录263：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录264：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录265：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录266：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录267：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录268：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录269：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录270：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录271：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录272：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录273：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录274：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录275：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录276：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录277：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录278：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录279：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录280：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录281：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录282：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录283：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录284：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录285：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。 正式上线日期定为2026年11月18日，核心风险是供应链延误，错误率超过2.5%时必须回滚。
+附录286：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录287：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录288：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录289：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录290：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录291：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录292：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录293：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录294：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录295：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录296：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录297：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录298：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录299：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+附录300：该段为压力测试背景材料，记录例行巡检、容量评估、培训计划与会议纪要，不包含最终决策依据。
+---文档结束---</pre></details>
+              <div class="answer-grid">
+                <article class="answer"><h4>DeepSeek官网</h4>
+                  <div class="answer-meta"><span>TTFT 1.99秒</span><span>端到端时延 2.49秒</span><span>输出吞吐 173.92 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>项目代号：北辰  
+预算：870万元  
+负责人：林舟  
+RTO：12分钟  
+RPO：3分钟  
+节点数：17  
+上线日期：2026年11月18日  
+核心风险：供应链延误  
+回滚阈值：错误率超过2.5%  
+
+执行建议：严格监控错误率，超阈值立即回滚；提前锁定供应链备选方案，确保按期上线。</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>我们只需要从文档中提取关键信息，忽略附录。关键信息在附录016、150、285中找到了：项目代号北辰，预算870万，负责人林舟，RTO 12分钟，RPO 3分钟，节点数17，上线日期2026年11月18日，核心风险供应链延误，回滚阈值错误率超过2.5%。需要按格式输出。最后一句执行建议不超过80汉字。</pre></details>
+                </article>
+                <article class="answer"><h4>移动云</h4>
+                  <div class="answer-meta"><span>TTFT 1.76秒</span><span>端到端时延 7.34秒</span><span>输出吞吐 19.71 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre>- 项目代号：北辰  
+- 预算：870万元  
+- 负责人：林舟  
+- RTO：12分钟  
+- RPO：3分钟  
+- 节点数：17  
+- 上线日期：2026年11月18日  
+- 核心风险：供应链延误  
+- 回滚阈值：错误率超过2.5%  
+
+执行建议：紧盯供应链进度，提前备货；上线后实时监控错误率，超2.5%立即回滚，确保容灾达标。</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>未返回</pre></details>
+                </article></div>
+            </section>
+            <section class="comparison"><div class="section-kicker"><span class="mode-tag">并发5</span><span>长文生成</span></div><h3>技术评估报告</h3>
+              <details><summary>查看测试问题</summary><pre>请撰写一份1800至2200个汉字的《企业大模型 API 服务选型评估报告》。必须严格包含以下七个一级标题，标题文字不得改动：
+# 一、评估背景
+# 二、测试口径
+# 三、性能指标
+# 四、质量评估
+# 五、成本与容量
+# 六、风险与治理
+# 七、选型建议
+文中必须正确解释 TTFT、TPS、P95，给出一个分阶段上线方案，并明确指出不能仅依据平均延迟选型。不要声称拥有本题未提供的实测数据。</pre></details>
+              <div class="answer-grid">
+                <article class="answer"><h4>DeepSeek官网</h4>
+                  <div class="answer-meta"><span>TTFT 48.17秒</span><span>端到端时延 55.95秒</span><span>输出吞吐 195.78 Token/秒</span><span>质量评分 100.0</span></div>
+                  <details><summary>未满足的评分项</summary><p>无</p></details>
+                  <pre># 一、评估背景
+
+随着大模型技术从试验走向生产，企业面临如何选择适合自身业务的大模型 API 服务的现实问题。市面上的服务商在模型能力、接口协议、计费方式、数据合规等方面差异明显。若仅依据模型榜单或销售材料进行决策，容易造成上线后性能不达标、成本失控或合规风险。因此，企业需要建立一套可复用、可量化的选型评估框架，围绕性能、质量、成本、风险等维度，对候选 API 服务进行同一口径的横向比较。本报告的目标不是给出某一家服务商的推荐结论，而是提供一份评估维度与流程方案，帮助企业在实际环境中完成选型，并为后续的分阶段上线和持续治理奠定基础。评估范围包括通用文本生成、代码生成、内容理解等典型企业场景，但具体权重需根据业务需求调整。
+
+# 二、测试口径
+
+测试口径是所有对比的前提。若不同服务采用不同测试集、并发压力或统计方法，结果将失去可比性。首先，应构建覆盖企业真实业务分布的测试集，包含中文和英文样本，涵盖短指令、长文档、多轮对话、代码生成等类型。其次，需要统一请求协议、超时时间、温度参数和最大输出 token 数；特别是温度等采样参数应尽可能一致，以减少随机性影响。第三，要明确测试模式：流式与一次性返回必须分开统计，因为流式响应影响 TTFT 和非流式响应影响整体延迟。第四，并发度应分为低并发、中等并发和高并发三类，分别模拟日常办公和业务高峰期。测试应至少在多个时间段重复运行，避免因服务端瞬时波动导致误判。最后，所有统计数据必须基于企业自测结果，不得直接引用未经验证的外部宣传，也不能把企业内部初步验证包装成完整基准。
+
+# 三、性能指标
+
+性能指标需要从延迟、吞吐和稳定性三个角度衡量。 TTFT，即 Time To First Token，指客户端发送请求后到收到第一个输出 token 所经过的时间，它是流式场景最直观的响应体验，尤其影响对话式应用的感知。 TPS 常被解释为 Transactions Per Second 或 Tokens Per Second；在大模型服务评估中，更关注 tokens per second，即每秒生成的 token 数，衡量生成吞吐，有时也用每秒请求数表示容量。 P95 表示 95% 请求的响应时间小于等于该值，例如 P95 延迟为 2 秒意味着 95% 的请求不超过 2 秒，它比平均延迟更能反映长尾问题。在评估中，不要只关注平均延迟，因为平均延迟会被少数极快请求拉低，却掩盖大量慢请求导致的排队和超时。企业应根据业务类型设定 TTFT 和 P95 的目标，例如在线客服场景可将 TTFT 目标设定为 500ms 以内，而离线摘要可容忍更高延迟。还需关注并发增加后的衰减曲线，判断是否满足业务峰值。
+
+# 四、质量评估
+
+大模型 API 服务不仅要快，更要好用。质量评估应覆盖多个维度：语义准确率，即输出是否与真实答案或参考答案一致；指令遵循，检查模型是否严格执行格式、角色和操作要求；幻觉率，评估生成内容中是否存在事实性错误；多轮一致性，看对话中是否能保持主题和记忆；安全与有害内容，判断是否输出歧视、暴力或违规信息。针对代码生成场景，还需关注编译通过率和代码可维护性。质量评估需要同时采用自动指标和人工抽检：自动指标可用于批量判断格式、关键词和相似度，人工抽检则能发现深层逻辑错误。由于模型存在随机性，每个测试样本建议运行多次，并按多数结果或最差结果分别统计。质量和性能必须联合评估，因为同一服务在高并发下可能因降级策略而出现质量波动，选型时不能只比较静止状态下的效果。
+
+# 五、成本与容量
+
+成本与容量决定方案能否可持续运行。大模型 API 通常按 token 计费，输入与输出价格不同，因此需要根据实际语义量估算月度成本；除了单价，还要考虑是否包含免费额度、预付费折扣和订阅包。容量是指服务商提供的并发数或每分钟请求数上限，超过上限会被限流或拒绝。企业应要求候选服务提供并发扩容机制，并验证在接近容量边界时的延迟和错误率。容量规划要留有余量，通常以业务峰值 TP95 或 P99 的 1.2 至 1.5 倍作为设计目标。成本测算不应只按峰值计算，而应结合业务趋势给出乐观、基准、保守三档预算。另外，某些 API 的上下文缓存功能可降低重复输入的 token 费用，但需要评估实现复杂度。总之，低成本方案若以牺牲 TPS 或 P95 为代价，可能反而导致用户体验下降，必须结合性能、质量和风险综合判断。
+
+# 六、风险与治理
+
+引入大模型 API 服务同样需要风险管理。首要风险是数据安全：企业提示词和返回结果可能包含敏感信息，若不签署数据保护条款，或者服务商不作为处理，则不能用于涉密业务。其次是供应商锁定，不同模型的接口虽有相似之处，但各自具备扩展能力；应采用统一封装层屏蔽差异，以便迁移。第三是合规方面，包括个人信息保护、算法备案、内容安全审查等，需确认服务商是否具备相应资质和审计能力。第四是服务稳定性，包括 SLA 承诺、故障恢复时间、限流策略和版本更新兼容性。企业应建立模型输出审计日志，定期抽取生成内容进行合规和质量抽检；同时设置熔断和降级机制，当主服务异常时自动切换到备选服务。治理层面还需设立负责人，制定模型使用规范，禁止员工将内部数据随意提交给未经批准的第三方 API。只有在可控风险范围内，选型评估结论才具有落地价值。
+
+# 七、选型建议
+
+选型不能仅依据平均延迟，也不应只看单项跑分。正确的做法是结合业务场景，把 TTFT、P95、TPS、质量、成本和风险转化为综合评分，并设置否决项。例如，涉及敏感数据的场景，若服务商无法提供数据不出境或零留存保证，则直接淘汰。基于以上原则，企业可采用四阶段上线方案：第一阶段：离线试点。在封闭环境用真实业务样本对入围服务进行评测，不加载生产流量，重点验证 TTFT、P95 和内容质量。第二阶段：影子模式。将生产请求复制到候选 API，实际响应仅用于对比，不直接返回给用户，以评估并发影响和长尾表现。第三阶段：灰度发布。选择非核心功能或白名单用户，将真实流量按 5% 至 20% 比例逐步切流，同时监测 P95、错误率和人工反馈。第四阶段：全量上线与持续优化。在确认稳定后逐步扩大流量至 100%，但仍保留备用供应商，定期复测，每季度或模型版本更新时重新评估。该方案能让企业在不冒过大风险的前提下，充分验证大模型 API 的实际表现，最终形成可持续演进的选型决策。</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>我们需要回答中文，撰写1800-2200汉字的报告。必须严格包含七个一级标题，标题文字不得改动。内容需正确解释 TTFT、TPS、P95，给出分阶段上线方案，明确指出不能仅依据平均延迟选型，不要声称拥有未提供的实测数据。注意字数。需要确保汉字字数1800-2200。我们需规划内容。
+
+我们需要输出完整报告。标题一级标题用# 一、评估背景等。需要包含七个标题。内容不要虚构数据，但可以一般性论述。要解释术语。分阶段上线方案。
+
+我们需要计算字数。为了满足1800-2200，需精心撰写。大概每个部分约250-300字，七个部分约2000字。注意系统说“最迟”。我们开始。
+
+标题已固定。注意“企业大模型 API 服务选型评估报告”可以作为总标题吗？用户要求七个一级标题，并且说“必须严格包含以下七个一级标题”，意味着我们可以有总标题吗？最好不加，直接以七个标题开头。但报告需要题目？为安全，可直接第一行“# 一、评估背景”等。不要额外。
+
+需要解释TTFT: Time To First Token 首 token 延迟，从请求发出到收到第一个输出 token 的时间。TPS: Throughput Per Second? 通常 tokens per second，吞吐量，每秒生成的 token 数。P95: 95th percentile，95%请求的延迟低于该值，反映长尾。注意不要错误：TTFT, TPS, P95. 在性能指标部分解释。
+
+明确不能仅依据平均延迟选型：因为平均延迟掩盖长尾，交互式与批处理需求不同，还需要考虑并发、TTFT、TPS、稳定性、质量、成本等。
+
+分阶段上线方案：例如第一阶段试点（非核心场景、影子模式）、第二阶段小规模生产（内部用户、灰度）、第三阶段扩展（核心业务、全量）、第四阶段优化（容量与成本治理）。需要具体。
+
+不要声称拥有未提供的实测数据：因此不要写“根据我们的测试”或给出数字。可以用一般性标准（比如“通常认为”），但要避免声称有实际数据。可以写“选型应通过基准测试获取数据”“以下指标需在实际环境中测量”。
+
+字数要求：需要1800-2200个汉字。我们需要计算。因为输出格式有标题，标点符号是否算？通常“汉字”不包括标点括号数字？但为了满足，应确保正文汉字约2000。我们可以通过写内容估计。每个部分大约250字，7部分1750，加上标题约50，不足。需写约2200。我们应该写七个部分，每部分约280字，总约1960+标题35=1995。再加点。注意控制。
+
+我们将撰写如下：
+
+一、评估背景
+约250字。说明大模型 API 服务选型重要性，企业面临多种供应商和自建选择，需要系统评估。
+
+二、测试口径
+约250字。定义测试数据、场景、并发、指标采集口径。强调不能凭厂商宣传，需统一测试集、协议、超时等。说明不得虚构实测数据，本报告提供方法论。
+
+三、性能指标
+约300字。解释 TTFT、TPS、P95。说明需要区分流式和非流式，离线批处理与在线交互。不要仅看平均延迟。
+
+四、质量评估
+约280字。回答质量，包括语义准确、指令遵循、幻觉率、隐私安全、多轮一致性。通过人工评估和自动化指标。需要“质量与性能平衡”。
+
+五、成本与容量
+约280字。按 token 计价、包月、并发预留；容量影响吞吐与延迟；需要评估弹性扩展、限流、预算。
+
+六、风险与治理
+约300字。数据安全、供应商锁定、合规、版本迭代、监控审计。需建立治理机制。
+
+七、选型建议
+约350字。综合建议，分阶段方案。明确不能仅依平均延迟。分阶段上线方案写得详细。
+
+我们需要确保“给出一个分阶段上线方案”在第七部分。可以写具体四阶段。同时“明确指出不能仅依据平均延迟选型”可以在性能指标和选型建议都提。注意“并明确指出”需要明确。
+
+现在开始撰写，需注意不要用“实测数据”。避免说“根据我们的测试数据”。可以写“不应直接采信厂商公布数值，需以企业自有测试集验证”。这不算声称实测。
+
+我们开始生成正文。注意使用小标题“# 一、评估背景”等。
+
+需要检查汉字计数。我们可以预估。下面我们边写边计。
+
+让我们写正式内容。
+
+# 一、评估背景
+
+随着大模型技术从试验走向生产，企业面临如何选择适合自身业务的大模型 API 服务的现实问题。市面上的服务商在模型能力、接口协议、计费方式、数据合规等方面差异明显。若仅依据模型榜单或销售材料进行决策，容易造成上线后性能不达标、成本失控或合规风险。因此，企业需要建立一套可复用、可量化的选型评估框架，围绕性能、质量、成本、风险等维度，对候选 API 服务进行同一口径的横向比较。本报告的目标不是给出某一家服务商的推荐结论，而是提供一份评估维度与流程方案，帮助企业在实际环境中完成选型，并为后续的分阶段上线和持续治理奠定基础。评估范围包括通用文本生成、代码生成、内容理解等典型企业场景，但具体权重需根据业务需求调整。
+
+估算：这一段约230字。继续。
+
+# 二、测试口径
+
+测试口径是所有对比的前提。若不同服务采用不同测试集、并发压力或统计方法，结果将失去可比性。首先，应构建覆盖企业真实业务分布的测试集，包含中文和英文样本，涵盖短指令、长文档、多轮对话、代码生成等类型。其次，需要统一请求协议、超时时间、温度参数和最大输出 token 数；特别是温度等采样参数应尽可能一致，以减少随机性影响。第三，要明确测试模式：流式与一次性返回必须分开统计，因为流式响应影响 TTFT 和非流式响应影响整体延迟。第四，并发度应分为低并发、中等并发和高并发三类，分别模拟日常办公和业务高峰期。测试应至少在多个时间段重复运行，避免因服务端瞬时波动导致误判。最后，所有统计数据必须基于企业自测结果，不得直接引用未经验证的外部宣传，也不能把企业内部初步验证包装成完整基准。
+
+约270字。
+
+# 三、性能指标
+
+性能指标需要从延迟、吞吐和稳定性三个角度衡量。 TTFT，即 Time To First Token，指客户端发送请求后到收到第一个输出 token 所经过的时间，它是流式场景最直观的响应体验，尤其影响对话式应用的感知。 TPS 是 Throughput Per Second 的缩写，指系统在单位时间内完成的请求数；在大模型语境下，更常用的是每秒生成的 token 数，即 output tokens per second，衡量 API 的生成能力。 P95 表示 95% 请求的响应时间小于等于该值，例如 P95 延迟为 2 秒意味着 95% 的请求不超过 2 秒，它比平均延迟更能反映长尾问题。在评估中，不要只关注平均延迟，因为平均延迟会被少数极快请求拉低，却掩盖大量慢请求导致的排队和超时。企业应根据业务类型设定 TTFT 和 P95 的目标，如在线客服要求 TTFT 低于 500ms，而离线摘要可容忍更高延迟。还需关注并发增加后的衰减曲线，判断是否满足业务峰值。
+
+约300字。
+
+# 四、质量评估
+
+大模型 API 服务不仅要快，更要好用。质量评估应覆盖多个维度：语义准确率，即输出是否与真实答案或参考答案一致；指令遵循，检查模型是否严格执行格式、角色和操作要求；幻觉率，评估生成内容中是否存在事实性错误；多轮一致性，看对话中是否能保持主题和记忆；安全与有害内容，判断是否输出歧视、暴力或违规信息。针对代码生成场景，还需关注编译通过率和代码可维护性。质量评估需要同时采用自动指标和人工抽检：自动指标可用于批量判断格式、关键词和相似度，人工抽检则能发现深层逻辑错误。由于模型存在随机性，每个测试样本建议运行多次，并按多数结果或最差结果分别统计。质量和性能必须联合评估，因为同一服务在高并发下可能因降级策略而出现质量波动，选型时不能只比较静止状态下的效果。
+
+约260字。
+
+# 五、成本与容量
+
+成本与容量决定方案能否可持续运行。大模型 API 通常按 token 计费，输入与输出价格不同，因此需要根据实际语义量估算月度成本；除了单价，还要考虑是否包含免费额度、预付费折扣和订阅包。容量是指服务商提供的并发数或每分钟请求数上限，超过上限会被限流或拒绝。企业应要求候选服务提供并发扩容机制，并验证在接近容量边界时的延迟和错误率。容量规划要留有余量，通常以业务峰值 TP95 或 P99 的 1.2 至 1.5 倍作为设计目标。成本测算不应只按峰值计算，而应结合业务趋势给出乐观、基准、保守三档预算。另外，某些 API 的上下文缓存功能可降低重复输入的 token 费用，但需要评估实现复杂度。总之，低成本方案若以牺牲 TPS 或 P95 为代价，可能反而导致用户体验下降，必须结合性能、质量和风险综合判断。
+
+约280字。
+
+# 六、风险与治理
+
+引入大模型 API 服务同样需要风险管理。首要风险是数据安全：企业提示词和返回结果可能包含敏感信息，若不签署数据保护条款，或者服务商不作为处理，则不能用于涉密业务。其次是供应商锁定，不同模型的接口虽有相似之处，但各自具备扩展能力；应采用统一封装层屏蔽差异，以便迁移。第三是合规方面，包括个人信息保护、算法备案、内容安全审查等，需确认服务商是否具备相应资质和审计能力。第四是服务稳定性，包括 SLA 承诺、故障恢复时间、限流策略和版本更新兼容性。企业应建立模型输出审计日志，定期抽取生成内容进行合规和质量抽检；同时设置熔断和降级机制，当主服务异常时自动切换到备选服务。治理层面还需设立负责人，制定模型使用规范，禁止员工将内部数据随意提交给未经批准的第三方 API。只有在可控风险范围内，选型评估结论才具有落地价值。
+
+约280字。
+
+# 七、选型建议
+
+选型不能仅依据平均延迟，也不应只看单项跑分。正确的做法是结合业务场景，把 TTFT、P95、TPS、质量、成本和风险转化为综合评分，并设置否决项。例如，涉及敏感数据的场景，若服务商无法提供数据不出境或零留存保证，则直接淘汰。基于以上原则，企业可采用四阶段上线方案：
+
+第一阶段：离线试点。在封闭环境用真实业务样本对入围服务进行评测，不加载生产流量，重点验证 TTFT、P95 和内容质量。第二阶段：影子模式。将生产请求复制到候选 API，实际响应仅用于对比，不直接返回给用户，以评估并发影响和长尾表现。第三阶段：灰度发布。选择非核心功能或白名单用户，将真实流量按 5% 至 20% 比例逐步切流，同时监测 P95、错误率和人工反馈。第四阶段：全量上线与持续优化。在确认稳定后逐步扩大流量至 100%，但仍保留备用供应商，定期复测，每季度或模型版本更新时重新评估。
+
+该方案能让企业在不冒过大风险的前提下，充分验证大模型 API 的实际表现，最终形成可持续演进的选型决策。
+
+这一部分约350字。总字数估算：230+270+300+260+280+280+350=1970。加上标题及换行可能超过。需要确保汉字在1800-2200。标题共约20字。整体约1990，符合。但要注意“P95”是英文数字，不算汉字，不过题意“汉字”通常指中文字符，数字字母不计。为了满足，我们可能需要稍多一些汉字。我们可以调整增加一些内容，比如在建议部分再强调。总字数目标中文汉字1800-2200，如果数字和字母不计，则我们需要确保纯汉字数达到1800。上述估计纯汉字大约1900，应该可以。但为了保险，可以再增加一点。注意不要超2200。我们还可以在第五部分增加一句，或风险增加。但现在输出后无法准确计数。我们需要更精确。建议增加至2100左右。可以在各段加一些句子。
+
+我们重新审视，每个部分大约字数（按含标点）：一 230，二 270，三 310，四 260，五 280，六 280，七 350 = 1980，含英文缩写，纯汉字约 1900。在范围内。但系统要求“1800至2200个汉字”，如果我们用汉字计数，1900满足。可以。
+
+但需要确保“必须严格包含以下七个一级标题”，我们用了# 一、... 这是标准 Markdown 标题。标题文字不得改动，我们保持原样。注意在“七、选型建议”中给出了分阶段上线方案。好。
+
+需要“明确指出不能仅依据平均延迟选型”，在第三部分和第七部分都有。
+
+需要“不要声称拥有本题未提供的实测数据”，我们没有写“实测数据”字样。但我们在测试口径中说“所有统计数据必须基于企业自测结果”这是方法论，非声称。可以。另外不要给出具体指标数字（如 TTFT 低于500ms）? 我们提到了如“如在线客服要求 TTFT 低于 500ms”，这是示例，不算是实测数据。但可能被认为虚构？题目要求不要声称拥有实测数据，示例不算声明。不过为了避免误会，可以说“如在线客服可能要求 TTFT 低于 500ms” 表示一般情况。我们已经写了“如在线客服要求...”，有点断言。可以改为“例如在线客服场景可将 TTFT 目标设定为 500ms 以内”。这仍是建议。可以。
+
+还需要正确解释 P95，我们解释了。注意“TPS”我们解释为 Throughput Per Second，但注意在大模型 API 中 TPS 常指 tokens per second，而不是 requests per second。我们写了“TPS 是 Throughput Per Second 的缩写，指系统在单位时间内完成的请求数；在大模型语境下，更常用的是每秒生成的 token 数，即 output tokens per second”。但“Throughput Per Second”本身字面是“每秒吞吐量”，而 TPS 更常见为 Transactions Per Second 或 Tokens Per Second。为了避免歧义，可以明确“在大模型 API 服务中，TPS 也常被写作 tokens per second，指标是每秒生成的 token 数”。我们目前写“Throughput Per Second 的缩写”是否准确？ Actually TPS can stand for &quot;Tokens Per Second&quot;. 更准确解释：TPS 即 tokens per second（每秒 token 数），用于衡量模型生成速度。但在 API 服务选型中也可能指每秒请求数。为了“正确解释”，可写：TPS 在不同语境下分别指“每秒事务数/请求数”或“每秒生成 token 数”，本报告中指每秒生成的 token 数量。这样更严谨。我们需要修改。原文“TPS 是 Throughput Per Second 的缩写”有争议，因为 Throughput Per Second 不常用，且 TPS 全称可以是 Transactions Per Second。我们应修改为：“TPS 常被解释为 Transactions Per Second 或 Tokens Per Second。在大模型服务评估中，更关注 tokens per second，即每秒生成的 token 数，衡量生成吞吐；有时也用每秒请求数表示系统容量。” 这样正确。需要调整。
+
+另外 TTFT 全称 Time To First Token，正确。
+
+P95 解释正确。
+
+现在需要将第三部分修改后字数稍变。我们可以在最终回答中修改。
+
+我们需要注意输出是 Markdown 格式，标题为 # 一、... 符合。
+
+开始写最终答案。但为了确保字数，也许先写出来。由于没有字数统计工具，我们只能估计。让我在内心模拟完整输出：
+
+# 一、评估背景
+
+随着大模型技术从试验走向生产，企业面临如何选择适合自身业务的大模型 API 服务的现实问题。市面上的服务商在模型能力、接口协议、计费方式、数据合规等方面差异明显。若仅依据模型榜单或销售材料进行决策，容易造成上线后性能不达标、成本失控或合规风险。因此，企业需要建立一套可复用、可量化的选型评估框架，围绕性能、质量、成本、风险等维度，对候选 API 服务进行同一口径的横向比较。本报告的目标不是给出某一家服务商的推荐结论，而是提供一份评估维度与流程方案，帮助企业在实际环境中完成选型，并为后续的分阶段上线和持续治理奠定基础。评估范围包括通用文本生成、代码生成、内容理解等典型企业场景，但具体权重需根据业务需求调整。
+
+# 二、测试口径
+
+测试口径是所有对比的前提。若不同服务采用不同测试集、并发压力或统计方法，结果将失去可比性。首先，应构建覆盖企业真实业务分布的测试集，包含中文和英文样本，涵盖短指令、长文档、多轮对话、代码生成等类型。其次，需要统一请求协议、超时时间、温度参数和最大输出 token 数；特别是温度等采样参数应尽可能一致，以减少随机性影响。第三，要明确测试模式：流式与一次性返回必须分开统计，因为流式响应影响 TTFT 和非流式响应影响整体延迟。第四，并发度应分为低并发、中等并发和高并发三类，分别模拟日常办公和业务高峰期。测试应至少在多个时间段重复运行，避免因服务端瞬时波动导致误判。最后，所有统计数据必须基于企业自测结果，不得直接引用未经验证的外部宣传，也不能把企业内部初步验证包装成完整基准。
+
+# 三、性能指标
+
+性能指标需要从延迟、吞吐和稳定性三个角度衡量。 TTFT，即 Time To First Token，指客户端发送请求后到收到第一个输出 token 所经过的时间，它是流式场景最直观的响应体验，尤其影响对话式应用的感知。 TPS 常被解释为 Transactions Per Second 或 Tokens Per Second；在大模型服务评估中，更关注 tokens per second，即每秒生成的 token 数，衡量生成吞吐，有时也用每秒请求数表示容量。 P95 表示 95% 请求的响应时间小于等于该值，例如 P95 延迟为 2 秒意味着 95% 的请求不超过 2 秒，它比平均延迟更能反映长尾问题。在评估中，不要只关注平均延迟，因为平均延迟会被少数极快请求拉低，却掩盖大量慢请求导致的排队和超时。企业应根据业务类型设定 TTFT 和 P95 的目标，例如在线客服场景可将 TTFT 目标设定为 500ms 以内，而离线摘要可容忍更高延迟。还需关注并发增加后的衰减曲线，判断是否满足业务峰值。
+
+# 四、质量评估
+
+大模型 API 服务不仅要快，更要好用。质量评估应覆盖多个维度：语义准确率，即输出是否与真实答案或参考答案一致；指令遵循，检查模型是否严格执行格式、角色和操作要求；幻觉率，评估生成内容中是否存在事实性错误；多轮一致性，看对话中是否能保持主题和记忆；安全与有害内容，判断是否输出歧视、暴力或违规信息。针对代码生成场景，还需关注编译通过率和代码可维护性。质量评估需要同时采用自动指标和人工抽检：自动指标可用于批量判断格式、关键词和相似度，人工抽检则能发现深层逻辑错误。由于模型存在随机性，每个测试样本建议运行多次，并按多数结果或最差结果分别统计。质量和性能必须联合评估，因为同一服务在高并发下可能因降级策略而出现质量波动，选型时不能只比较静止状态下的效果。
+
+# 五、成本与容量
+
+成本与容量决定方案能否可持续运行。大模型 API 通常按 token 计费，输入与输出价格不同，因此需要根据实际语义量估算月度成本；除了单价，还要考虑是否包含免费额度、预付费折扣和订阅包。容量是指服务商提供的并发数或每分钟请求数上限，超过上限会被限流或拒绝。企业应要求候选服务提供并发扩容机制，并验证在接近容量边界时的延迟和错误率。容量规划要留有余量，通常以业务峰值 TP95 或 P99 的 1.2 至 1.5 倍作为设计目标。成本测算不应只按峰值计算，而应结合业务趋势给出乐观、基准、保守三档预算。另外，某些 API 的上下文缓存功能可降低重复输入的 token 费用，但需要评估实现复杂度。总之，低成本方案若以牺牲 TPS 或 P95 为代价，可能反而导致用户体验下降，必须结合性能、质量和风险综合判断。
+
+# 六、风险与治理
+
+引入大模型 API 服务同样需要风险管理。首要风险是数据安全：企业提示词和返回结果可能包含敏感信息，若不签署数据保护条款，或者服务商不作为处理，则不能用于涉密业务。其次是供应商锁定，不同模型的接口虽有相似之处，但各自具备扩展能力；应采用统一封装层屏蔽差异，以便迁移。第三是合规方面，包括个人信息保护、算法备案、内容安全审查等，需确认服务商是否具备相应资质和审计能力。第四是服务稳定性，包括 SLA 承诺、故障恢复时间、限流策略和版本更新兼容性。企业应建立模型输出审计日志，定期抽取生成内容进行合规和质量抽检；同时设置熔断和降级机制，当主服务异常时自动切换到备选服务。治理层面还需设立负责人，制定模型使用规范，禁止员工将内部数据随意提交给未经批准的第三方 API。只有在可控风险范围内，选型评估结论才具有落地价值。
+
+# 七、选型建议
+
+选型不能仅依据平均延迟，也不应只看单项跑分。正确的做法是结合业务场景，把 TTFT、P95、TPS、质量、成本和风险转化为综合评分，并设置否决项。例如，涉及敏感数据的场景，若服务商无法提供数据不出境或零留存保证，则直接淘汰。基于以上原则，企业可采用四阶段上线方案：第一阶段：离线试点。在封闭环境用真实业务样本对入围服务进行评测，不加载生产流量，重点验证 TTFT、P95 和内容质量。第二阶段：影子模式。将生产请求复制到候选 API，实际响应仅用于对比，不直接返回给用户，以评估并发影响和长尾表现。第三阶段：灰度发布。选择非核心功能或白名单用户，将真实流量按 5% 至 20% 比例逐步切流，同时监测 P95、错误率和人工反馈。第四阶段：全量上线与持续优化。在确认稳定后逐步扩大流量至 100%，但仍保留备用供应商，定期复测，每季度或模型版本更新时重新评估。该方案能让企业在不冒过大风险的前提下，充分验证大模型 API 的实际表现，最终形成可持续演进的选型决策。
+
+这应该接近 2000 汉字。为了更保险，我们可以在“风险与治理”末尾或“成本与容量”增加一句。但注意不要超过 2200。我们现在可以输出。
+
+但需要确保“必须严格包含以下七个一级标题”，我们写了。我们需要检查“标题文字不得改动”：“# 一、评估背景”与要求一致。注意要求“# 一、评估背景”等等，是的。
+
+现在，系统要求“不要声称拥有本题未提供的实测数据”，我们无问题。
+
+我们还要注意“必须正确解释 TTFT、TPS、P95，给出一个分阶段上线方案，并明确指出不能仅依据平均延迟选型。”全部满足。
+
+最终输出。</pre></details>
+                </article>
+                <article class="answer"><h4>移动云</h4>
+                  <div class="answer-meta"><span>TTFT 1.44秒</span><span>端到端时延 163.34秒</span><span>输出吞吐 21.07 Token/秒</span><span>质量评分 90.9</span></div>
+                  <details><summary>未满足的评分项</summary><p>长度符合</p></details>
+                  <pre># 企业大模型 API 服务选型评估报告
+
+# 一、评估背景
+
+随着生成式人工智能技术在企业级场景中的落地加速，大模型 API 服务已成为众多企业构建智能应用的核心基础设施。无论是智能客服、知识库问答、代码辅助、文档摘要，还是流程自动化中的语义理解环节，大模型 API 的响应速度、生成质量、服务稳定性与成本结构，都直接影响着业务系统的用户体验与运营效率。
+
+当前市场上可供选择的大模型 API 服务提供商众多，包括国内主流云厂商、AI 创业公司以及国际领先模型厂商的境内合规版本。各家在模型参数规模、上下文窗口长度、推理优化策略、计费模式、SLA 承诺等方面存在显著差异。企业在进行技术选型时，往往面临信息不对称、评测标准不统一、短期演示效果与长期生产环境表现脱节等现实问题。
+
+本报告旨在为企业内部技术决策团队提供一套系统化、可复用的选型评估框架，覆盖性能、质量、成本、风险四大维度，并结合实际业务场景给出分阶段上线建议。需要特别说明的是，本报告不包含任何基于实测数据的结论，所有评估维度与建议均基于公开技术文档、行业通用实践及合理的推理逻辑，具体选型决策仍需结合企业自身业务特点进行针对性测试验证。
+
+# 二、测试口径
+
+在进行大模型 API 服务选型评估时，明确测试口径是确保评估结果客观、可比、可复现的前提。测试口径的混乱往往导致不同供应商之间的数据无法直接对比，甚至得出误导性结论。
+
+**2.1 测试场景定义**
+
+企业应根据自身核心业务场景，定义至少三类典型测试任务：一是短文本生成任务（如客服问答、意图识别），输入长度在 200 至 500 个汉字之间，输出长度在 100 至 300 个汉字之间；二是长文档理解任务（如合同审查、研报摘要），输入长度在 3000 至 8000 个汉字之间，输出长度在 500 至 1000 个汉字之间；三是结构化推理任务（如代码生成、数据提取），输入包含代码片段或表格数据，输出需符合特定格式要求。
+
+**2.2 测试数据集构建**
+
+测试数据集应包含至少 200 条真实业务样本，覆盖正常输入、边界输入（超长文本、空输入、纯符号输入）以及对抗性输入（诱导性提问、敏感话题、歧义表述）。所有测试样本需经过人工标注，明确预期输出质量等级（优秀、合格、不合格），以便后续进行质量评估。
+
+**2.3 并发与压力模型**
+
+测试需区分单请求延迟测试与并发压力测试。单请求测试用于评估模型本身的推理速度，建议在低并发（1 至 5 并发）下进行；并发压力测试用于评估服务端的排队与调度能力，建议分别设置 20、50、100 并发三个梯度，每个梯度持续运行 10 分钟以上，以获取稳定的统计指标。
+
+**2.4 测试周期与重复次数**
+
+为避免模型版本更新或服务端波动带来的偶然性，每项测试应至少重复 3 轮，每轮间隔 24 小时以上，取多轮结果的中位数作为最终参考值。同时应记录每轮测试的具体时间点，以便排查服务端是否存在时段性资源紧张问题。
+
+**2.5 关键指标定义**
+
+本报告涉及三个核心性能指标，在此明确其定义：
+
+- **TTFT（Time To First Token，首 Token 延迟）** ：指从客户端发送完整请求到接收到模型返回的第一个 Token 之间的时间间隔。TTFT 反映了用户感知到的“等待响应开始”的时间，对于交互式应用（如聊天机器人）至关重要。TTFT 过长会使用户产生“卡顿”或“无响应”的负面体验。
+
+- **TPS（Tokens Per Second，每秒生成 Token 数）** ：指模型在生成阶段每秒能够输出的 Token 数量。TPS 反映了模型生成文本的流畅度，对于长文本生成任务（如报告撰写、代码补全）影响显著。TPS 过低会导致用户长时间等待完整输出。
+
+- **P95（95 百分位延迟）** ：指将一段时间内所有请求的端到端延迟（从发送请求到接收完整响应）按从小到大排序，处于第 95 百分位位置的延迟值。P95 比平均延迟更能反映极端情况下的用户体验，因为平均延迟容易被少数极快请求拉低，而 P95 则代表了大多数用户在最差情况下的等待时间。选型时应重点关注 P95 而非平均值。
+
+# 三、性能指标
+
+性能指标是选型评估中最直观、最容易被量化的维度，但也是容易被误读的维度。本节从延迟、吞吐、稳定性三个层面展开。
+
+**3.1 延迟指标**
+
+延迟指标包括 TTFT 和端到端完整响应时间。对于交互式场景，TTFT 应优先于完整响应时间被关注。一般而言，TTFT 在 500 毫秒以内属于优秀水平，500 毫秒至 1.5 秒属于可接受水平，超过 2 秒则可能显著影响用户体验。端到端完整响应时间则取决于输出长度与 TPS 的乘积，因此不能孤立地看单一指标。
+
+**3.2 吞吐指标**
+
+TPS 是衡量模型生成速度的核心指标。不同模型架构、量化精度、推理加速方案（如 vLLM、TensorRT-LLM 等）对 TPS 影响巨大。企业应根据自身业务中平均输出长度来估算单请求的完整响应时间。例如，若平均输出长度为 500 个 Token，TPS 为 50，则生成阶段耗时约 10 秒；若 TPS 提升至 100，则耗时缩短至 5 秒。但需注意，TPS 往往随并发数增加而下降，因此必须结合并发压力测试结果综合判断。
+
+**3.3 稳定性指标**
+
+稳定性主要通过 P95 与平均值的差距来体现。若 P95 远高于平均值（例如平均延迟 1 秒，P95 达到 5 秒），说明服务端存在明显的排队或资源争抢现象，在高负载下性能衰减严重。此外，还应关注 TTFT 的 P95 值，因为首 Token 延迟的抖动对用户体验的伤害尤为明显。
+
+**3.4 重要警示：不能仅依据平均延迟选型**
+
+平均延迟是一个极具迷惑性的指标。在实际生产环境中，由于网络波动、服务端负载不均、请求大小差异等因素，延迟分布往往呈现长尾特征。一个平均延迟为 1 秒的服务，其 P95 可能高达 4 秒甚至更高，这意味着每 20 个请求中就有 1 个请求需要等待 4 秒以上。对于面向终端用户的应用，这种长尾延迟会直接导致用户流失。因此，选型时必须同时考察 P95、P99 甚至 P99.9 的延迟表现，并明确供应商的 SLA 中承诺的是平均延迟还是百分位延迟。若供应商仅提供平均延迟数据，应视为信息不完整，需通过实测补充。
+
+# 四、质量评估
+
+性能指标衡量的是“快不快”，质量指标则衡量“好不好”。大模型生成内容的质量评估比传统软件功能测试复杂得多，需要结合客观指标与主观评判。
+
+**4.1 客观质量指标**
+
+客观指标包括：语义准确性（生成内容是否忠实于输入信息，是否存在事实性错误）、格式合规性（是否遵循 JSON、Markdown 等指定格式）、指令遵循度（是否完全按照用户指令执行，如“只输出结论”“分三点回答”等）、上下文一致性（长对话中是否出现前后矛盾）。这些指标可以通过编写自动化测试脚本进行初步筛选，但最终仍需人工复核。
+
+**4.2 主观质量维度**
+
+主观维度包括：语言流畅度（是否存在明显语法错误或机器翻译腔）、逻辑连贯性（段落之间是否衔接自然）、创造性（在文案生成、创意写作等场景中是否具有新颖性）、安全性（是否拒绝回答有害问题，是否避免输出偏见或歧视性内容）。主观评估建议采用多人独立评分后取平均的方式，评分量表可采用 1 至 5 分制。
+
+**4.3 场景适配度**
+
+不同模型在不同任务上的表现差异显著。例如，某些模型在代码生成上表现优异，但在中文文学创作上表现平庸；某些模型在长文档理解上具有优势，但在短文本分类上反而过度冗长。因此，质量评估必须基于企业自身的核心场景进行，而非泛泛地比较模型在公开榜单上的得分。建议将测试数据集按场景分类，分别统计各供应商在每个场景下的质量得分，并赋予不同权重（如客服场景占 40%，文档摘要占 30%，代码辅助占 30%），计算加权总分。
+
+**4.4 质量与性能的权衡**
+
+质量与性能往往存在矛盾。为了提升 TPS，供应商可能采用更激进的量化策略或更小的模型，这会牺牲生成质量。反之，追求高质量可能意味着更长的推理时间。企业需要根据业务场景明确优先级：对于实时交互场景，可接受轻微的质量损失以换取低延迟；对于离线批量处理场景，则应将质量置于首位。
+
+# 五、成本与容量
+
+成本是选型决策中的硬约束，但成本计算远不止单价乘以调用量那么简单。
+
+**5.1 计费模式分析**
+
+主流大模型 API 服务采用按 Token 计费的模式，但不同供应商的计费口径存在差异。有的按输入 Token 与输出 Token 分别计价（通常输出价格高于输入），有的采用统一价格；有的对上下文缓存命中部分给予折扣，有的则全额计费。企业应基于自身业务的输入输出比例（例如客服场景输入输出比约为 1:1，文档摘要场景可能达到 3:1）估算实际单次调用成本，而非简单比较官网标价。
+
+**5.2 隐性成本**
+
+隐性成本包括：接入开发成本（SDK 完善程度、API 文档质量、兼容性）、运维监控成本（是否提供详细的调用日志、延迟追踪、错误码体系）、模型微调或蒸馏成本（若需要定制化）、供应商锁定风险（切换成本）。这些隐性成本在短期 PoC 阶段往往被忽视，但在长期运营中可能占据总拥有成本（TCO）的 30% 以上。
+
+**5.3 容量与限流**
+
+供应商通常会对单账号设置 QPS（每秒请求数）上限和 TPM（每分钟 Token 数）上限。企业需评估自身业务峰值流量是否在供应商允许范围内，以及超出后是排队等待还是直接报错。部分供应商支持按需扩容（需提前申请），部分则采用硬性限流。对于业务波动较大的企业，应优先选择支持弹性扩容且限流策略透明的供应商。
+
+**5.4 成本优化策略**
+
+成本优化可从以下维度入手：一是利用模型分级策略，将简单任务路由到小模型或低档位模型，复杂任务才调用大模型；二是利用上下文缓存，减少重复输入的 Token 消耗；三是采用批处理模式，将非实时任务集中到低峰时段执行，以获取折扣价格；四是定期复盘调用日志，识别无效调用（如超长输入但输出极短）并进行针对性优化。
+
+# 六、风险与治理
+
+大模型 API 服务引入企业生产环境，不仅是技术选型问题，更是治理与合规问题。
+
+**6.1 数据安全与隐私风险**
+
+企业调用第三方大模型 API 时，输入数据会离开企业内网。对于涉及客户个人信息、商业机密、未公开财务数据等敏感信息，必须确认供应商的数据处理协议是否明确禁止将用户输入用于模型训练，是否支持数据隔离存储，以及是否通过等保三级、ISO 27001 等安全认证。对于高合规要求行业（金融、医疗、政务），应优先选择支持私有化部署或专属实例的供应商。
+
+**6.2 内容合规风险**
+
+大模型生成内容可能存在幻觉（编造事实）、偏见、违法信息等风险。企业需建立内容审核机制，对模型输出进行实时过滤或人工抽检。同时应确认供应商是否提供内容安全接口（如敏感词检测、违规内容拦截），以及是否对输出内容承担相应责任。
+
+**6.3 服务可用性风险**
+
+供应商的服务中断、版本升级、模型下线等事件都会影响企业业务。选型时应审查供应商的 SLA 条款，重点关注可用性承诺（如 99.9%）、赔偿机制、以及重大变更（如模型版本升级）的通知周期。建议企业设计多供应商冗余架构，在核心场景中实现故障自动切换，避免单点依赖。
+
+**6.4 模型迭代与兼容性风险**
+
+大模型迭代速度极快，供应商可能频繁更新模型版本。新版本可能在性能或质量上有所提升，但也可能改变输出格式、Token 计数方式或 API 参数，导致企业现有应用出现兼容性问题。企业应要求供应商提供版本变更日志，并在生产环境升级前进行回归测试。
+
+**6.5 治理机制建议**
+
+企业应建立大模型 API 使用的内部治理机制，包括：明确使用场景白名单（哪些业务允许调用、哪些禁止）、设置调用权限分级（不同角色可调用的模型等级不同）、建立成本监控与告警（当日调用量或费用超过阈值时自动通知）、定期进行安全审计与质量抽检。
+
+# 七、选型建议
+
+基于以上六个维度的分析，本报告提出以下选型建议，供企业决策参考。
+
+**7.1 选型决策矩阵**
+
+建议企业建立加权评分表，权重分配可参考：性能 25%（其中 TTFT 占 10%，P95 占 10%，TPS 占 5%）、质量 30%、成本 20%、风险与治理 25%。各维度得分由企业根据自身测试结果与商务谈判情况填入。需要强调的是，风险与治理维度的权重不应低于 20%，因为数据安全事件的代价远高于性能或成本的短期优势。
+
+**7.2 分阶段上线方案**
+
+为避免一次性切换带来的风险，建议采用三阶段上线策略：
+
+- **第一阶段（PoC 验证期，1 至 2 周）** ：选取 2 至 3 家候选供应商，使用企业真实业务样本进行小规模测试（每日调用量不超过 1000 次），重点验证 TTFT、P95、生成质量与数据安全承诺。此阶段不产生生产流量，仅用于内部评估。
+
+- **第二阶段（灰度并行期，2 至 4 周）** ：选择 1 家综合评分最高的供应商，在非核心业务场景（如内部知识库问答、辅助写作）中开放 5% 至 10% 的真实流量，与现有系统并行运行。此阶段重点观察 P95 在真实并发下的表现、成本消耗是否符合预期、以及运维监控是否完善。同时保留备选供应商的接入能力。
+
+- **第三阶段（全面上线期，持续进行）** ：在灰度期指标达标（如 P95 低于业务容忍阈值、质量评分高于内部标准）后，逐步扩大流量至 50%、100%。全面上线后仍需每月进行一次质量抽测与成本复盘，并每季度重新评估一次供应商的性价比，因为市场变化迅速，当前最优选择可能在半年后不再具有优势。
+
+**7.3 关键选型原则**
+
+最后，重申三条关键选型原则：第一，**不能仅依据平均延迟选型**，必须考察 P95 及更高百分位的延迟表现，并明确供应商 SLA 中的统计口径；第二，**质量评估必须基于自身场景**，公开榜单分数仅作参考，不可直接作为决策依据；第三，**成本计算必须包含隐性成本与容量限制**，单纯比较 Token 单价往往导致预算超支或业务受限。
+
+企业应组建由技术、业务、法务、采购多方参与的选型小组，在充分测试与商务谈判的基础上，做出符合自身长期利益的选择。</pre>
+                  <details><summary>查看推理内容（若API返回）</summary><pre>未返回</pre></details>
+                </article></div>
+            </section>
+    <footer><details><summary>查看测试配置</summary><pre>{
+  &quot;providers&quot;: {
+    &quot;deepseek_official&quot;: {
+      &quot;display_name&quot;: &quot;DeepSeek官网&quot;,
+      &quot;base_url&quot;: &quot;https://api.deepseek.com&quot;,
+      &quot;path&quot;: &quot;/v1/chat/completions&quot;,
+      &quot;model&quot;: &quot;deepseek-v4-flash&quot;,
+      &quot;api_key_env&quot;: &quot;DEEPSEEK_API_KEY&quot;
+    },
+    &quot;mobile_cloud&quot;: {
+      &quot;display_name&quot;: &quot;移动云&quot;,
+      &quot;base_url&quot;: &quot;https://zhenze-huhehaote.cmecloud.cn&quot;,
+      &quot;path&quot;: &quot;/v1/chat/completions&quot;,
+      &quot;model&quot;: &quot;deepseek-v4-flash&quot;,
+      &quot;api_key_env&quot;: &quot;MOBILE_CLOUD_API_KEY&quot;
+    }
+  },
+  &quot;request&quot;: {
+    &quot;thinking&quot;: {
+      &quot;type&quot;: &quot;enabled&quot;
+    },
+    &quot;temperature&quot;: 0.2,
+    &quot;top_p&quot;: 1.0,
+    &quot;timeout_seconds&quot;: 600,
+    &quot;stream&quot;: true,
+    &quot;stream_options&quot;: {
+      &quot;include_usage&quot;: true
+    }
+  },
+  &quot;benchmark&quot;: {
+    &quot;seed&quot;: 20260807,
+    &quot;sequential_runs_per_case&quot;: 1,
+    &quot;concurrent_runs_per_case&quot;: 1,
+    &quot;concurrency_per_provider&quot;: 5,
+    &quot;max_total_calls&quot;: 20
+  }
+}</pre></details><p>规则质量评分根据每道题预先定义的可验证条件计算。每个平台、每种负载模式仅5个样本，本轮P95仅用于识别潜在长尾风险，不构成生产环境SLA结论。</p></footer>
+    </main></body></html>
