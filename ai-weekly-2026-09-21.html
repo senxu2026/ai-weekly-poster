@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SENXU AI Weekly Briefing 2026.09.14-09.21</title>
+<link rel="icon" type="image/png" href="assets/senxu-service-logo.png">
+<style>
+@font-face{font-family:'Rajdhani';src:local('Rajdhani'),local('Arial'),local('Helvetica Neue');font-weight:500;font-style:normal}
+</style>
+<style>
+  :root{--bg:#eef2f8;--ink:#16203a;--muted:#5c6b88;--line:rgba(30,64,140,.14);--cyan:#0ca5c4;--blue:#2563eb;--teal:#0d9488;--gold:#c07c00;--card:#fff;--shadow:0 2px 16px rgba(24,48,96,.07)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:var(--bg);overflow-x:hidden}
+  body{font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;color:var(--ink);width:100%;margin:0 auto;-webkit-font-smoothing:antialiased}
+  .poster{position:relative;width:100%;background:radial-gradient(1200px 600px at 80% -5%,rgba(37,99,235,.07),transparent 60%),radial-gradient(1000px 700px at -10% 30%,rgba(13,148,136,.06),transparent 55%),linear-gradient(180deg,#f5f8fd 0%,#eef3fb 45%,#f2f6fc 100%);overflow:hidden}
+  .poster::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(30,64,140,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(30,64,140,.045) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.12))}
+  .wrap{position:relative;z-index:2;padding:0 clamp(20px,4.2vw,56px) clamp(38px,5vw,56px)}
+  .hd{position:relative;padding:clamp(34px,4.6vw,54px) 0 30px;border-bottom:1px solid var(--line)}
+  .kicker{display:flex;align-items:center;gap:12px;margin-bottom:18px}.dot{width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px rgba(12,165,196,.55)}
+  .kicker span{font-family:"Rajdhani";font-weight:700;letter-spacing:.42em;font-size:15px;color:var(--blue);text-transform:uppercase}
+  .title{font-family:"STSong","Songti SC","Noto Serif SC",serif;font-weight:900;font-size:clamp(36px,5.4vw,76px);line-height:1.04;letter-spacing:.01em;color:var(--ink)}
+  .title em{font-style:normal;color:transparent;background:linear-gradient(120deg,var(--blue),var(--cyan) 58%,var(--teal));-webkit-background-clip:text;background-clip:text}
+  .sub{display:flex;align-items:flex-end;justify-content:space-between;margin-top:22px;gap:20px;flex-wrap:wrap}.sub .en{font-family:"Rajdhani";font-weight:600;font-size:20px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;max-width:980px}
+  .daterange{text-align:right}.daterange .lbl{font-size:13px;color:var(--muted);letter-spacing:.2em;margin-bottom:4px}.daterange .val{font-family:"Rajdhani";font-weight:700;font-size:34px;color:var(--ink);letter-spacing:.04em}.scan{position:absolute;top:0;right:0;width:330px;height:100%;opacity:.5;pointer-events:none}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:14px;margin:26px 0 34px}.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;position:relative;overflow:hidden;box-shadow:var(--shadow)}.stat::after{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:linear-gradient(var(--blue),rgba(37,99,235,0))}.stat .num{font-family:"Rajdhani";font-weight:700;font-size:38px;line-height:1;color:var(--blue);word-break:break-word}.stat .num small{font-size:20px;color:var(--ink)}.stat .cap{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.4}
+  .lead{background:linear-gradient(100deg,rgba(37,99,235,.07),rgba(13,148,136,.035));border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:14px;padding:22px 26px;margin-bottom:38px}.lead h3{font-size:15px;letter-spacing:.2em;color:var(--blue);font-weight:700;margin-bottom:14px}.lead ol{list-style:none;counter-reset:l;display:grid;gap:11px}.lead li{counter-increment:l;position:relative;padding-left:40px;font-size:16.5px;line-height:1.55;color:#2b3653}.lead li::before{content:counter(l);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:7px;background:rgba(37,99,235,.10);border:1px solid rgba(37,99,235,.32);color:var(--blue);font-family:"Rajdhani";font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center}.lead b{color:#0f1830}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:20px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px 20px;position:relative;box-shadow:var(--shadow)}.card.span{grid-column:1 / -1}.chd{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:13px;border-bottom:1px dashed var(--line)}.ico{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex:0 0 auto;background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.22)}.chd h2{font-size:21px;font-weight:900;letter-spacing:.01em;color:var(--ink)}.chd .tag{margin-left:auto;font-family:"Rajdhani";font-weight:700;font-size:12px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;white-space:nowrap}
+  .item{display:flex;gap:11px;padding:10px 0;font-size:14.5px;line-height:1.52;color:#33405c;border-top:1px solid rgba(30,64,140,.08)}.item:first-of-type{border-top:none}.item .mk{flex:0 0 auto;margin-top:2px}.item b{color:#0f1830;font-weight:700}.item .ext{color:#6b7a99;font-size:13px}.star{color:var(--gold);font-size:15px}.bul{color:var(--blue)}
+  .hot{background:radial-gradient(600px 200px at 90% 0%,rgba(192,124,0,.09),transparent 60%),linear-gradient(120deg,rgba(13,148,136,.07),#fff);border:1px solid rgba(13,148,136,.32)}.hot .ico{background:rgba(192,124,0,.12);border-color:rgba(192,124,0,.32)}.hot .chd .tag{color:var(--gold)}.insight{margin-top:14px;background:rgba(13,148,136,.08);border:1px solid rgba(13,148,136,.24);border-radius:10px;padding:13px 16px;font-size:14px;line-height:1.55;color:#0c5f57}.insight b{color:#0a7d6f}.twocol{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:6px 28px}
+  .ft{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.ft .brand{display:flex;align-items:center;gap:15px}.logobox{width:164px;height:62px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);overflow:hidden}.logobox img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}.ft .bn{font-size:17px;font-weight:700;color:var(--ink)}.ft .bn small{display:block;font-size:12px;color:var(--muted);font-weight:400;letter-spacing:.08em;margin-top:2px}.ft .note{text-align:right;font-size:12px;color:var(--muted);line-height:1.6;max-width:760px}.disc{margin-top:16px;font-size:11.5px;color:#8090ac;line-height:1.6;text-align:center;letter-spacing:.02em;border-top:1px dashed var(--line);padding-top:14px}
+  @media(max-width:680px){.wrap{padding-left:18px;padding-right:18px}.scan{display:none}.sub{flex-direction:column;align-items:flex-start}.daterange{text-align:left}.daterange .val{font-size:30px}.sub .en{font-size:15px;line-height:1.45}.lead{padding:18px}.lead li{font-size:15px}.chd{align-items:flex-start}.chd .tag{display:none}.ft .note{text-align:left}.card{padding:19px 18px}.item{font-size:14px}.title{font-size:38px}}
+</style>
+</head>
+<body>
+<div class="poster"><div class="wrap">
+  <header class="hd">
+    <svg class="scan" viewBox="0 0 330 360" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke="#2563eb" stroke-width="1" opacity="0.32"><path d="M10 40 H120 L150 70 H320"/><path d="M10 110 H80 L110 140 H230 L260 110 H320"/><path d="M40 200 H170 L200 230 H320"/><path d="M10 300 H110 L140 270 H320"/></g><g fill="#2563eb" opacity="0.55"><circle cx="120" cy="40" r="4"/><circle cx="230" cy="140" r="4"/><circle cx="170" cy="200" r="4"/><circle cx="110" cy="300" r="4"/><circle cx="150" cy="70" r="3"/><circle cx="260" cy="110" r="3"/></g><g fill="#0d9488" opacity="0.7"><circle cx="320" cy="70" r="5"/><circle cx="320" cy="230" r="5"/></g></svg>
+    <div class="kicker"><span class="dot"></span><span>R&amp;D INTELLIGENCE BRIEFING · 周刊</span></div>
+    <h1 class="title">森旭产研 · <em>AI情报周报</em></h1>
+    <div class="sub">
+      <div class="en">Agent · LLM · Compute · Memory · Embodied AI · Power-Compute Synergy</div>
+      <div class="daterange"><div class="lbl">本期覆盖 / COVERAGE</div><div class="val">2026.09.14 — 09.21</div></div>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><div class="num">1<small>万亿</small></div><div class="cap">DeepSeek V4.1 Flash 上线 24 小时内，OpenRouter 处理约 1 万亿 Token</div></div>
+    <div class="stat"><div class="num">205<small>亿元</small></div><div class="cap">上半年国内 AI Agent 市场营收，同比增速 107%</div></div>
+    <div class="stat"><div class="num">4<small>亿美元</small></div><div class="cap">地瓜机器人 C 轮融资，押注具身智能算力底座</div></div>
+    <div class="stat"><div class="num">3.0<small>版</small></div><div class="cap">《人工智能安全治理框架 3.0》发布，聚焦智能体风险前置管控</div></div>
+  </div>
+
+  <div class="lead">
+    <h3>本期三条主线 / KEY THEMES</h3>
+    <ol>
+      <li><b>前沿模型军备再加码</b>：Anthropic 被曝在 IPO 前备新一代模型迎战 GPT-6 Astra；国产侧 DeepSeek V4.1 Flash 上线 24 小时处理约万亿 Token，中美大模型周调用量差距拉到近 3 倍。</li>
+      <li><b>Agent 从选型进入交付</b>：华为云发布 Agentic Cloud 战略、昇腾 950 智算集群月底上线，沙利文与 IDC 同周发布评估榜单，上半年国内 Agent 营收 205 亿元、同比增长 107%。</li>
+      <li><b>算电协同从写进规划走向开始算账</b>：首次写入政府工作报告并纳入“十五五”能源专项规划，首批“算效+算电”双 5A 认证落地，中电联提示供电可靠性已成硬约束。</li>
+    </ol>
+  </div>
+
+  <div class="grid">
+    <section class="card">
+      <div class="chd"><div class="ico">🌐</div><h2>全球模型前沿</h2><div class="tag">Global LLM</div></div>
+      <div class="item"><span class="mk star">★</span><div><b>Anthropic 拟在 IPO 前推出新一代模型</b>（9/19）。事件摘要：路透援引三名知情人士，新模型正在内部最后调优，用于应对 OpenAI GPT-6 Astra。<br><span class="ext">产研影响判断：前沿代差窗口继续缩短，选型应预留模型切换位。</span></div></div>
+      <div class="item"><span class="mk bul">▸</span><div><b>OpenAI、Anthropic、DeepMind 合作开展 AI 安全工作</b>（9/16）。事件摘要：三家头部厂商在安全评测侧建立协作。<br><span class="ext">产研影响判断：安全评测正从各家自证转向行业共建。</span></div></div>
+      <div class="item"><span class="mk bul">▸</span><div><b>大模型价格三个月腰斩</b>（9/19）。事件摘要：7 至 9 月海内外厂商轮番发布新模型，单位价格快速下行。<br><span class="ext">产研影响判断：推理预算宜按季度重估，避免长约锁定高价。</span></div></div>
+    </section>
+
+    <section class="card">
+      <div class="chd"><div class="ico">🇨🇳</div><h2>国产模型与开源生态</h2><div class="tag">China LLM</div></div>
+      <div class="item"><span class="mk star">★</span><div><b>DeepSeek 发布 V4.1 Flash</b>（9/17）。事件摘要：上线不到 24 小时，在 OpenRouter 处理约 1 万亿 Token。<br><span class="ext">产研影响判断：国产模型已具备规模化承载能力，可作为主力备选。</span></div></div>
+      <div class="item"><span class="mk star">★</span><div><b>中国大模型周调用量已近美国 3 倍</b>（9/17）。事件摘要：DoorDash、Airbnb 等海外应用在生产环境使用国产模型。<br><span class="ext">产研影响判断：国产底座的海外可用性提升，出海项目可优先验证。</span></div></div>
+      <div class="item"><span class="mk star">★</span><div><b>阶跃星辰发布 Step Audio 3 系列</b>（9/15）。事件摘要：包含 Realtime、ASR 与 TTS 三款语音模型。<br><span class="ext">产研影响判断：实时语音交互场景的国产底座趋于齐备。</span></div></div>
+      <div class="item"><span class="mk bul">▸</span><div><b>智谱拟登科创板募资不超 150 亿元</b>（9/20）。事件摘要：MaaS API 平台 ARR 约 17 亿元，过去 12 个月提升 60 倍，毛利率 18.9%。<br><span class="ext">产研影响判断：供应商财务透明度提高，长期合作可评估其续航能力。</span></div></div>
+    </section>
+
+    <section class="card">
+      <div class="chd"><div class="ico">🤖</div><h2>Agent 规模化落地</h2><div class="tag">Agents</div></div>
+      <div class="item"><span class="mk star">★</span><div><b>华为云发布 Agentic Cloud 战略</b>（9/18）。事件摘要：全联接大会宣布智果 AgentArts 已服务超百家企事业单位。<br><span class="ext">产研影响判断：行业智能体开始有标准交付形态可参照。</span></div></div>
+      <div class="item"><span class="mk star">★</span><div><b>沙利文发布桌面 AI 智能体市场报告</b>（9/20）。事件摘要：腾讯 WorkBuddy 位列中国个人端与企业级桌面智能体双榜第一。<br><span class="ext">产研影响判断：桌面 Agent 成为独立品类，工位级部署进入评测视野。</span></div></div>
+      <div class="item"><span class="mk star">★</span><div><b>国内 AI Agent 市场上半年营收约 205 亿元</b>（9/18）。事件摘要：同比增速 107%，市场进入规模化落地阶段。<br><span class="ext">产研影响判断：增速快于模型 API 本身，预算应向应用层倾斜。</span></div></div>
+      <div class="item"><span class="mk bul">▸</span><div><b>IDC 发布企业级通用 Agent 技术评估</b>（9/17）。事件摘要：中国电信星辰 TeleAgent 进入国内第一梯队。<br><span class="ext">产研影响判断：选型可依据标准化实测，减少自建评测成本。</span></div></div>
+    </section>
+
+    <section class="card">
+      <div class="chd"><div class="ico">⚙️</div><h2>算力 / 芯片</h2><div class="tag">Compute</div></div>
+      <div class="item"><span class="mk star">★</span><div><b>国产算力利用率出现分化</b>（9/15）。事件摘要：IDC 与信通院调研 250 家企业，GPU 采购量持续增长，能稳定输出的 Token 未同步增加。<br><span class="ext">产研影响判断：买卡不等于有算力，异构调度成为真实产能瓶颈。</span></div></div>
+      <div class="item"><span class="mk star">★</span><div><b>灵衢昇腾 950 智算集群 9 月 30 日国内上线</b>（9/18）。事件摘要：华为全联接大会公布集群服务上线时间。<br><span class="ext">产研影响判断：国产训练集群可售可用，替代路径有了明确时间点。</span></div></div>
+      <div class="item"><span class="mk star">★</span><div><b>英伟达称明年芯片销量将翻倍</b>（9/18）。事件摘要：黄仁勋表示 GPU 与 CPU 仍供不应求。<br><span class="ext">产研影响判断：供给紧张放大国产替代窗口，采购需提前锁定。</span></div></div>
+      <div class="item"><span class="mk bul">▸</span><div><b>华为轮值董事长预计 2027 年中国 AI 训练大规模转向华为</b>（9/19）。事件摘要：训练侧国产化被给出明确时间表。<br><span class="ext">产研影响判断：技术栈迁移应提前做兼容性与迁移成本验证。</span></div></div>
+    </section>
+
+    <section class="card span hot">
+      <div class="chd"><div class="ico">🔋</div><h2>算电协同 · AI 与电力</h2><div class="tag">★ 本期重点 / Power-Compute</div></div>
+      <div class="twocol">
+        <div class="item"><span class="mk star">★</span><div><b>“算电协同”首次写入政府工作报告</b>（9/15）。事件摘要：同时纳入《新型能源体系建设“十五五”规划》等多项能源专项规划。<br><span class="ext">产研影响判断：算电协同由技术议题升为国家规划议题，政策窗口打开。</span></div></div>
+        <div class="item"><span class="mk star">★</span><div><b>中电联提示供电可靠性已成硬约束</b>（9/16）。事件摘要：2026 能源绿色发展大会披露互联网数据中心用电数据，强调不能承受一次停电。<br><span class="ext">产研影响判断：储能与调峰配置由选配转为刚需。</span></div></div>
+        <div class="item"><span class="mk star">★</span><div><b>商汤临港 AIDC 获“算效+算电”双 5A 认证</b>（9/12）。事件摘要：中国信通院发布首批算电协同测评认证成果。<br><span class="ext">产研影响判断：认证等级将成为智算中心招商与融资的凭证。</span></div></div>
+        <div class="item"><span class="mk bul">▸</span><div><b>中美同步收紧数据中心用能监管</b>（9/15 至 9/18）。事件摘要：工信部与发改委印发《电子信息制造业发展“十五五”规划》；美国弗吉尼亚州签署数据中心问责令，覆盖透明度、环境审查与能源成本。<br><span class="ext">产研影响判断：绿色算力合规正成为跨境共同门槛。</span></div></div>
+      </div>
+      <div class="insight"><b>产研视角：</b>算电协同已从“写进规划”转入“开始算账”，测评认证、供电可靠性与绿电配比开始有可量化标尺。森旭可继续以抽蓄电站的储能调峰能力为锚点，推进“蓄能智筑 + AI”的政策级叙事。</div>
+    </section>
+
+    <section class="card">
+      <div class="chd"><div class="ico">💻</div><h2>AI 编程 / Coding Agent</h2><div class="tag">Coding</div></div>
+      <div class="item"><span class="mk star">★</span><div><b>智谱 ZCode “静默上传代码”风波升级</b>（9/20）。事件摘要：问题源于一次普通磁盘清理被发现，已有企业发函追责。<br><span class="ext">产研影响判断：编码类 Agent 的数据边界应作为采购红线前置审查。</span></div></div>
+      <div class="item"><span class="mk star">★</span><div><b>Claude Code 项目功能升级</b>（9/19）。事件摘要：支持多智能体并行处理大型任务。<br><span class="ext">产研影响判断：大型重构可行性提高，但需配套过程留痕与回退。</span></div></div>
+      <div class="item"><span class="mk bul">▸</span><div><b>Arc 推出 AI 编码代理 Arc Studio</b>（9/18）。事件摘要：以自然语言在数分钟内生成含前端、后端与合约的全栈应用。<br><span class="ext">产研影响判断：模板化场景的交付成本快速下降。</span></div></div>
+    </section>
+
+    <section class="card">
+      <div class="chd"><div class="ico">🦾</div><h2>具身智能</h2><div class="tag">Embodied AI</div></div>
+      <div class="item"><span class="mk star">★</span><div><b>地瓜机器人完成 4 亿美元 C 轮融资</b>（9/17）。事件摘要：用于强化旭日芯片全算力段布局与全链路软件平台。<br><span class="ext">产研影响判断：资本押注算力底座而非整机，该环节确定性更高。</span></div></div>
+      <div class="item"><span class="mk star">★</span><div><b>智身科技完成数亿元 B 轮融资</b>（9/20）。事件摘要：阿联酋磊石资本领投，截至今年 6 月累计量产超 1.5 万台，覆盖电力、石化、消防、应急等行业。<br><span class="ext">产研影响判断：电力场景已有量产机型进入，需关注其运维类能力边界。</span></div></div>
+      <div class="item"><span class="mk bul">▸</span><div><b>上半年中国具身智能赛道融资超 935 亿元</b>（9/18）。事件摘要：同比约增 5 倍，行业峰会主论调转向真实场景落地。<br><span class="ext">产研影响判断：从演示能力转向可交付能力，是采购判断的分水岭。</span></div></div>
+    </section>
+
+    <section class="card">
+      <div class="chd"><div class="ico">🧠</div><h2>RAG / 长期记忆</h2><div class="tag">RAG</div></div>
+      <div class="item"><span class="mk star">★</span><div><b>华为云提出“算力之外拼记忆”</b>（9/18）。事件摘要：企业级 AI 产品矩阵把记忆能力摆到与算力同级。<br><span class="ext">产研影响判断：Agent 竞争转向跨会话持久化，记忆层需要独立设计。</span></div></div>
+      <div class="item"><span class="mk star">★</span><div><b>Claude Code 原生支持 AGENTS.md</b>（9/19）。事件摘要：向 OpenAI 提出的项目指令文件格式靠拢。<br><span class="ext">产研影响判断：上下文入口标准化，同一份规则可跨 Agent 复用。</span></div></div>
+      <div class="item"><span class="mk bul">▸</span><div><b>开放 Agent Skills 标准落地</b>（9/19）。事件摘要：云栖大会 Skill 已上线多款 AI 平台，主流 Agent 可直接调用。<br><span class="ext">产研影响判断：能力以技能包为单位分发，可复用资产需提前规划。</span></div></div>
+    </section>
+
+    <section class="card">
+      <div class="chd"><div class="ico">📜</div><h2>政策 / 安全治理</h2><div class="tag">Policy</div></div>
+      <div class="item"><span class="mk star">★</span><div><b>《人工智能安全治理框架 3.0》发布</b>（9/14）。事件摘要：在国家网络安全宣传周开幕式发布，聚焦智能体风险前置管控。<br><span class="ext">产研影响判断：智能体项目需在设计期就落实权限与留痕要求。</span></div></div>
+      <div class="item"><span class="mk star">★</span><div><b>信通院联合中国政法大学发布《智能体治理研究报告（2026 年）》</b>（9/18）。事件摘要：智能体治理被单独立题研究。<br><span class="ext">产研影响判断：权限、留痕与责任归属是企业侧最先要补的功课。</span></div></div>
+      <div class="item"><span class="mk bul">▸</span><div><b>最高人民法院出台涉人工智能纠纷案件审理意见</b>（9/18）。事件摘要：明确相关案件的裁判口径。<br><span class="ext">产研影响判断：AI 纠纷有了裁判规则，合同条款需同步更新。</span></div></div>
+      <div class="item"><span class="mk bul">▸</span><div><b>美国参议员提出《禁止超级人工智能法案》</b>（9/16）。事件摘要：要求由 NIST 先建立联邦安全标准。<br><span class="ext">产研影响判断：中美治理路径分化，出海合规需分区设计。</span></div></div>
+    </section>
+  </div>
+
+  <footer class="ft">
+    <div class="brand"><div class="logobox"><img src="assets/senxu-service-logo.png" alt="森旭服务 Logo"></div><div class="bn">产研 · AI 情报周报<small>SENXU R&amp;D · WEEKLY AI BRIEFING</small></div></div>
+    <div class="note">信息来源机构汇总：路透、财新、21 世纪经济报道、36Kr、InfoQ、新京报、中国信通院、中国电力企业联合会、华为、腾讯、沙利文、IDC、DeepSeek、阶跃星辰等。<br>仅供产研线内部参考 · 数据截止日期：2026.09.21 12:00（Asia/Shanghai）</div>
+  </footer>
+  <div class="disc">免责声明：本周报整理自公开网络资讯，仅供内部参考，不构成任何投资、经营或决策建议；具体信息以各主体官方发布为准。正文不展示逐条来源链接，避免阅读干扰；如需溯源，请依据页脚机构清单核验原始发布。</div>
+</div></div>
+</body>
+</html>
